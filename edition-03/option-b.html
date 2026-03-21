@@ -1,0 +1,637 @@
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <!-- LinkedIn / Open Graph -->
+  <meta property="og:type"         content="article">
+  <meta property="og:site_name"    content="RD Chronicles">
+  <meta property="og:title" content="RD Chronicles #3 — PepsiCo ran 847 virtual factory experiments before moving a single machine.">
+  <meta property="og:description" content="The factory that exists twice. Physical AI on production lines. What this means for engineers, PMs, and R&D practitioners. By Gilles Pradel.">
+  <meta property="og:image" content="https://rdchronicles.fr/edition-03/og-option-b.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:url" content="https://rdchronicles.fr/edition-03/option-b.html">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="RD Chronicles #1 — The lab that runs itself at 3am. What that means for your career.">
+  <meta name="twitter:description" content="A self-driving lab is running 847 experiments right now. The agentic AI shift — and what it means for engineers, PMs, and R&D practitioners. By Gilles Pradel.">
+  <meta name="twitter:image" content="https://rdchronicles.fr/edition-03/og-option-b.png">
+  <meta name="author"              content="Gilles Pradel">
+  <!-- LinkedIn / Open Graph — rich preview card -->
+  <meta property="og:type"        content="article">
+  <meta property="og:site_name"   content="RD Chronicles">
+  <meta property="og:title" content="RD Chronicles #3 — PepsiCo ran 847 virtual factory experiments before moving a single machine.">
+  <meta property="og:description" content="The factory that exists twice. Physical AI on production lines. What this means for engineers, PMs, and R&D practitioners. By Gilles Pradel.">
+  <meta property="og:image" content="https://rdchronicles.fr/edition-03/og-option-b.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:url" content="https://rdchronicles.fr/edition-03/option-b.html">
+  <meta name="twitter:card"       content="summary_large_image">
+  <meta name="twitter:title"      content="RD Chronicles #1 — The lab that runs itself at 3am. What that means for your career.">
+  <meta name="twitter:description" content="A self-driving lab is running 847 experiments right now. The agentic AI shift — and what it means for engineers, PMs, and R&D practitioners. By Gilles Pradel.">
+  <meta name="twitter:image" content="https://rdchronicles.fr/edition-03/og-option-b.png">
+  <meta name="author"             content="Gilles Pradel">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RD Chronicles — Edition #3 · Option B · PepsiCo ran 847 virtual factory experiments</title>
+  <meta name="description" content="PepsiCo ran every scenario virtually before touching a single machine. Humanoid robots on production floors. Additive manufacturing as a production pathway. By Gilles Pradel.">
+  <meta property="og:title" content="RD Chronicles #3 — PepsiCo ran 847 virtual factory experiments before moving a single machine.">
+  <meta property="og:description" content="The factory that exists twice. Physical AI on production lines. What this means for engineers, PMs, and R&D practitioners. By Gilles Pradel.">
+  <meta property="og:type" content="article">
+  <meta name="keywords" content="digital twin, physical AI, manufacturing, additive manufacturing, NPD, virtual prototyping, Industry 5.0, engineering career, product development">
+
+  <!-- Fonts: editorial, warm, storytelling feel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+      --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+      --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+      --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+      --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+      --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+      --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+      --text-hero: clamp(3rem,     0.5rem  + 7vw,    8rem);
+
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+      --space-4: 1rem;    --space-5: 1.25rem; --space-6: 1.5rem;
+      --space-8: 2rem;    --space-10: 2.5rem; --space-12: 3rem;
+      --space-16: 4rem;   --space-20: 5rem;   --space-24: 6rem;
+      --space-32: 8rem;
+
+      --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem;
+      --radius-xl: 1rem; --radius-full: 9999px;
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --content-narrow: 640px; --content-default: 880px; --content-wide: 1200px;
+
+      --font-display: 'Instrument Serif', 'Georgia', serif;
+      --font-body: 'Satoshi', 'Inter', sans-serif;
+      --font-ui: 'General Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    /* DARK MODE (default) */
+    :root, [data-theme="dark"] {
+      --color-bg:              #111210;
+      --color-surface:         #181917;
+      --color-surface-2:       #1e1f1c;
+      --color-surface-offset:  #222420;
+      --color-divider:         #2a2c28;
+      --color-border:          #333530;
+      --color-text:            #e5e3de;
+      --color-text-muted:      #80827a;
+      --color-text-faint:      #4a4c46;
+      --color-text-inverse:    #111210;
+      /* Warm amber accent for storytelling/human edition */
+      --color-primary:         #e8a030;
+      --color-primary-hover:   #f0b04a;
+      --color-primary-active:  #c88020;
+      --color-primary-highlight: #2e2410;
+      --color-secondary:       #5ba89a;
+      --color-secondary-dim:   #0f2522;
+      --color-text-drop:       #c4a882;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.7);
+    }
+
+    [data-theme="light"] {
+      --color-bg:              #faf8f4;
+      --color-surface:         #ffffff;
+      --color-surface-2:       #f7f5f0;
+      --color-surface-offset:  #f0ede6;
+      --color-divider:         #e0dbd2;
+      --color-border:          #ccc8bf;
+      --color-text:            #1c1b18;
+      --color-text-muted:      #5c5a54;
+      --color-text-faint:      #9a9890;
+      --color-text-inverse:    #ffffff;
+      --color-primary:         #b07010;
+      --color-primary-hover:   #8c5a08;
+      --color-primary-active:  #6a4406;
+      --color-primary-highlight: #fef3d8;
+      --color-secondary:       #2a7a6a;
+      --color-secondary-dim:   #d8f0ec;
+      --color-text-drop:       #6b5a40;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.09);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    /* ===== BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body { min-height: 100dvh; font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text); background: var(--color-bg); line-height: 1.65; }
+    img, svg { display: block; max-width: 100%; }
+    p, li { max-width: 70ch; text-wrap: pretty; }
+    h1,h2,h3,h4 { text-wrap: balance; }
+    button { cursor: pointer; background: none; border: none; color: inherit; font: inherit; }
+    a { color: var(--color-primary); text-decoration: none; transition: color var(--transition-interactive); }
+    a:hover { color: var(--color-primary-hover); }
+    ::selection { background: var(--color-primary-highlight); color: var(--color-text); }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: var(--content-default); margin: 0 auto; padding: 0 var(--space-6); }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: oklch(from var(--color-bg) l c h / 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--color-divider);
+      padding: var(--space-4) 0;
+    }
+    .site-header.scrolled { box-shadow: var(--shadow-md); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); }
+    .logo { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; }
+    .logo-svg { width: 32px; height: 32px; flex-shrink: 0; }
+    .logo-text { font-family: var(--font-display); font-size: var(--text-base); font-weight: 400; color: var(--color-text); letter-spacing: 0.01em; }
+    .logo-edition { font-family: var(--font-ui); font-size: var(--text-xs); color: var(--color-text-muted); }
+    .header-actions { display: flex; align-items: center; gap: var(--space-3); }
+    .badge-option {
+      font-family: var(--font-ui); font-size: var(--text-xs); font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      padding: var(--space-1) var(--space-3); border-radius: var(--radius-full);
+      background: var(--color-primary); color: var(--color-text-inverse);
+    }
+    .theme-toggle { padding: var(--space-2); border-radius: var(--radius-md); color: var(--color-text-muted); transition: color var(--transition-interactive), background var(--transition-interactive); display: flex; align-items: center; }
+    .theme-toggle:hover { color: var(--color-text); background: var(--color-surface-offset); }
+    .switch-btn { font-family: var(--font-ui); font-size: var(--text-xs); color: var(--color-text-muted); padding: var(--space-1) var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-full); transition: all var(--transition-interactive); }
+    .switch-btn:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-highlight); }
+
+    /* ===== HERO — editorial / magazine style ===== */
+    .hero {
+      padding: clamp(var(--space-16), 10vw, var(--space-32)) 0 0;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-ui); font-size: var(--text-xs); font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-secondary);
+      margin-bottom: var(--space-6);
+    }
+    .hero-title {
+      font-family: var(--font-display); font-size: var(--text-3xl);
+      font-weight: 400; line-height: 1.08; letter-spacing: -0.01em;
+      color: var(--color-text); margin-bottom: var(--space-6);
+    }
+    .hero-title em { font-style: italic; color: var(--color-primary); }
+    .hero-lead {
+      font-size: var(--text-lg); color: var(--color-text-muted); font-weight: 400;
+      line-height: 1.6; max-width: 56ch; margin-bottom: var(--space-8);
+    }
+    .hero-byline { display: flex; flex-wrap: wrap; gap: var(--space-6); margin-bottom: var(--space-10); }
+    .hero-byline-item { display: flex; flex-direction: column; gap: var(--space-1); }
+    .hero-byline-label { font-family: var(--font-ui); font-size: var(--text-xs); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-faint); }
+    .hero-byline-value { font-size: var(--text-sm); color: var(--color-text-muted); }
+
+    /* Scene block */
+    .scene-block {
+      margin: var(--space-8) 0;
+      padding: var(--space-8) var(--space-10);
+      background: var(--color-surface);
+      border-radius: var(--radius-xl);
+      border-left: 4px solid var(--color-primary);
+      border: 1px solid var(--color-border);
+      position: relative;
+      overflow: hidden;
+    }
+    .scene-block::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    }
+    .scene-number {
+      font-family: var(--font-display); font-size: var(--text-hero);
+      font-weight: 400; line-height: 0.85; color: var(--color-primary);
+      opacity: 0.12; position: absolute; top: var(--space-4); right: var(--space-6);
+      pointer-events: none; user-select: none;
+    }
+    .scene-text {
+      font-family: var(--font-display); font-size: var(--text-xl);
+      font-weight: 400; line-height: 1.35; color: var(--color-text);
+      font-style: italic; position: relative; z-index: 1;
+    }
+    .scene-caption {
+      margin-top: var(--space-4); font-family: var(--font-ui);
+      font-size: var(--text-xs); color: var(--color-text-faint); font-style: normal;
+    }
+
+    /* ===== ARTICLE BODY ===== */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 240px; gap: var(--space-12);
+      align-items: start; margin-top: var(--space-8);
+    }
+    @media (max-width: 720px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-sidebar { display: none; }
+    }
+    .article-prose p {
+      font-size: var(--text-base); line-height: 1.8; color: var(--color-text);
+      margin-bottom: var(--space-5); max-width: 65ch;
+    }
+    .article-prose strong { font-weight: 600; color: var(--color-text); }
+    .article-prose em { color: var(--color-primary); font-style: normal; }
+
+    /* Sidebar */
+    .article-sidebar { position: sticky; top: 80px; }
+    .sidebar-card {
+      background: var(--color-surface); border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl); padding: var(--space-5); margin-bottom: var(--space-4);
+    }
+    .sidebar-card-label { font-family: var(--font-ui); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-faint); margin-bottom: var(--space-3); }
+    .sidebar-stat { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 400; color: var(--color-primary); line-height: 1.1; }
+    .sidebar-stat-label { font-family: var(--font-ui); font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-2); line-height: 1.4; }
+    .sidebar-stat-source { font-family: var(--font-ui); font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-2); }
+
+    /* ===== DROP CAP ===== */
+    .drop-cap::first-letter {
+      font-family: var(--font-display); font-size: 4.5rem; font-weight: 400;
+      float: left; line-height: 0.75; margin-right: var(--space-2); margin-top: var(--space-2);
+      color: var(--color-primary);
+    }
+
+    /* ===== SECTION DIVIDER ===== */
+    .section-divider {
+      display: flex; align-items: center; gap: var(--space-4);
+      margin: clamp(var(--space-10), 6vw, var(--space-16)) 0 var(--space-8);
+    }
+    .section-divider-line { flex: 1; height: 1px; background: var(--color-divider); }
+    .section-divider-label { font-family: var(--font-ui); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-text-faint); white-space: nowrap; }
+
+    /* ===== RADAR CARDS — editorial style ===== */
+    .radar-list { display: flex; flex-direction: column; gap: 1px; margin-top: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-xl); overflow: hidden; }
+    .radar-item {
+      display: grid; grid-template-columns: 48px 1fr auto;
+      gap: var(--space-4); align-items: start;
+      padding: var(--space-5) var(--space-6);
+      background: var(--color-surface);
+      transition: background var(--transition-interactive);
+    }
+    .radar-item:not(:last-child) { border-bottom: 1px solid var(--color-divider); }
+    .radar-item:hover { background: var(--color-surface-offset); }
+    .radar-item-num { font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 400; color: var(--color-primary); opacity: 0.4; line-height: 1; padding-top: var(--space-1); }
+    .radar-item-content {}
+    .radar-item-title { font-family: var(--font-ui); font-size: var(--text-base); font-weight: 600; color: var(--color-text); margin-bottom: var(--space-2); line-height: 1.3; }
+    .radar-item-body { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; max-width: none; margin-bottom: var(--space-3); }
+    .radar-item-why { font-family: var(--font-ui); font-size: var(--text-xs); color: var(--color-secondary); font-weight: 500; }
+    .radar-item-link { font-family: var(--font-ui); font-size: var(--text-xs); color: var(--color-text-muted); align-self: start; padding-top: var(--space-2); white-space: nowrap; }
+    .radar-item-link a { color: var(--color-primary); }
+    .radar-item-link a:hover { color: var(--color-primary-hover); }
+
+    /* ===== T-SHAPE VISUAL ===== */
+    .t-shape-wrapper { margin: var(--space-8) 0; display: flex; flex-direction: column; align-items: center; }
+    .t-shape { width: 100%; max-width: 520px; }
+    .t-shape-top {
+      height: 56px; background: var(--color-surface);
+      border: 1px solid var(--color-border); border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-ui); font-size: var(--text-sm); font-weight: 600; color: var(--color-text);
+      gap: var(--space-2);
+    }
+    .t-shape-top .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--color-primary); }
+    .t-shape-bottom {
+      width: 33%; margin: 0 auto;
+      background: var(--color-primary-highlight); border: 1px solid var(--color-primary);
+      border-top: none; border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      padding: var(--space-4) var(--space-3); text-align: center;
+    }
+    .t-shape-bottom-label { font-family: var(--font-ui); font-size: var(--text-xs); color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* ===== CTA ===== */
+    .cta-section {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8) var(--space-8);
+      margin: var(--space-8) 0;
+    }
+    .cta-section h3 { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 400; font-style: italic; color: var(--color-text); margin-bottom: var(--space-4); }
+    .cta-section p { font-size: var(--text-base); color: var(--color-text-muted); max-width: 58ch; margin-bottom: var(--space-6); }
+    .linkedin-btn {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      padding: var(--space-3) var(--space-6); background: #0a66c2; color: #fff;
+      border-radius: var(--radius-lg); font-family: var(--font-ui); font-weight: 600; font-size: var(--text-sm);
+      text-decoration: none; transition: background var(--transition-interactive), transform var(--transition-interactive);
+    }
+    .linkedin-btn:hover { background: #0856ab; transform: translateY(-1px); color: #fff; }
+    .cta-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-5); }
+    .cta-tag { font-family: var(--font-ui); font-size: var(--text-xs); color: var(--color-text-muted); padding: var(--space-1) var(--space-3); background: var(--color-surface-offset); border: 1px solid var(--color-border); border-radius: var(--radius-full); transition: all var(--transition-interactive); }
+    .cta-tag:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-highlight); }
+
+    /* ===== FOOTER ===== */
+    .site-footer { border-top: 1px solid var(--color-divider); padding: var(--space-10) 0; margin-top: var(--space-16); }
+    .footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); }
+    .footer-left { font-family: var(--font-ui); font-size: var(--text-xs); color: var(--color-text-faint); line-height: 1.7; }
+    .footer-right { font-family: var(--font-ui); font-size: var(--text-xs); color: var(--color-text-faint); }
+    .footer-right a { color: var(--color-text-muted); }
+    .footer-right a:hover { color: var(--color-primary); }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-in { opacity: 1; }
+    @supports (animation-timeline: scroll()) {
+      .fade-in { opacity: 0; animation: reveal-fade linear both; animation-timeline: view(); animation-range: entry 0% entry 80%; }
+    }
+    @keyframes reveal-fade { to { opacity: 1; } }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 640px) {
+      .hero-title { font-size: var(--text-2xl); }
+      .scene-text { font-size: var(--text-lg); }
+      .scene-block { padding: var(--space-6); }
+      .radar-item { grid-template-columns: 36px 1fr; }
+      .radar-item-link { display: none; }
+      .header-actions .switch-btn { display: none; }
+    }
+  </style>
+
+  <script>
+    (function(){
+      const r = document.documentElement;
+      let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+      r.setAttribute('data-theme', d);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="logo">
+          <svg class="logo-svg" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <circle cx="16" cy="16" r="3" fill="var(--color-primary)"/>
+            <ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/>
+            <ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="var(--color-primary)" stroke-width="1.5" fill="none" transform="rotate(60 16 16)"/>
+            <ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="var(--color-primary)" stroke-width="1.5" fill="none" transform="rotate(120 16 16)"/>
+          </svg>
+          <div>
+            <div class="logo-text">RD Chronicles</div>
+            <div class="logo-edition">Edition #3 · April 2026</div>
+          </div>
+        </a>
+        <div class="header-actions">
+          <span class="badge-option">Option B</span>
+          <a href="option-a.html" class="switch-btn">Switch to Option A →</a>
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Practitioners Edition · Physical AI &amp; Digital Twins</p>
+      <h1 class="hero-title">PepsiCo ran <em>847 virtual</em><br>factory experiments<br>before moving a<br>single machine.</h1>
+      <p class="hero-lead">The factory that exists twice — once in the virtual world, once in the real one. Here's what it means for engineers, PMs, and anyone who still builds physical prototypes first.</p>
+      <div class="hero-byline">
+        <div class="hero-byline-item">
+          <span class="hero-byline-label">Written by</span>
+          <span class="hero-byline-value">Gilles Pradel</span>
+        </div>
+        <div class="hero-byline-item">
+          <span class="hero-byline-label">Published</span>
+          <span class="hero-byline-value">April 17, 2026</span>
+        </div>
+        <div class="hero-byline-item">
+          <span class="hero-byline-label">Read time</span>
+          <span class="hero-byline-value">5 min</span>
+        </div>
+        <div class="hero-byline-item">
+          <span class="hero-byline-label">For</span>
+          <span class="hero-byline-value">Engineers · PMs · R&amp;D Practitioners</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPENING SCENE -->
+  <div class="container">
+    <div class="scene-block fade-in">
+      <div class="scene-number" aria-hidden="true">3</div>
+      <p class="scene-text">"Picture a lab where no one is in. It's 3am. An AI agent just ran 847 experiments, discarded 612, flagged 14 candidates, and drafted a hypothesis for tomorrow's team meeting. No one pressed start. No one is watching."</p>
+      <p class="scene-caption">That lab exists today. And it changes everything about what "doing R&D" means.</p>
+    </div>
+  </div>
+
+  <!-- MAIN ARTICLE -->
+  <main>
+    <div class="container" style="margin-top: var(--space-10);">
+      <div class="article-layout">
+
+        <!-- PROSE -->
+        <div class="article-prose">
+
+          <p class="drop-cap fade-in">Last year, <em>Nature</em> named autonomous "self-driving" laboratories (SDLs) one of the top technologies to watch. By early 2026, they've moved from academic curiosity to commercial reality.</p>
+
+          <p class="fade-in">Here's how they work. An SDL is a closed-loop system: AI designs the experiment, robotics execute it, sensors collect the data, machine learning interprets the results — then the cycle restarts with a better hypothesis. No human hand touches a pipette between iterations.</p>
+
+          <p class="fade-in">The productivity numbers are staggering. <strong>Equipment utilization increases of 60%.</strong> Chemical R&D processes running up to <strong>100× faster</strong> through robotic synthesis. Platforms like Strateos are already offering cloud-based autonomous lab access — meaning a team in Lyon or Parma can submit a protocol and wake up to results from a California lab without ever booking a flight.</p>
+
+          <!-- DIVIDER -->
+          <div class="section-divider fade-in">
+            <div class="section-divider-line"></div>
+            <span class="section-divider-label">But here's the real story</span>
+            <div class="section-divider-line"></div>
+          </div>
+
+          <p class="fade-in">Before you panic about what this means for your job — the scientists at these labs aren't disappearing. They're being <em>freed</em>. The grunt work — running dilutions, compiling spreadsheets, catching instrument drift — gets handed to the agent. The human gets to do the thing only humans can: <strong>ask better questions.</strong></p>
+
+          <p class="fade-in">The shift is from <strong>scientist-as-technician</strong> to <strong>scientist-as-strategist</strong>. For engineers and PMs in industrial manufacturing, the parallel is direct. Instead of running one physical prototype per month, you run 200 virtual variants overnight in a digital twin, then build only the one that passes 94% of your test cases.</p>
+
+          <p class="fade-in">Your job doesn't disappear — it moves <em>upstream</em>, into the design of the experiment, the framing of the problem, and the judgment call on which signal actually matters.</p>
+
+          <!-- T-SHAPE VISUAL -->
+          <div class="t-shape-wrapper fade-in" aria-label="T-shaped skill diagram">
+            <div style="font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-faint); margin-bottom: var(--space-4); font-family: var(--font-ui);">The T-skill nobody is talking about</div>
+            <div class="t-shape">
+              <div class="t-shape-top">
+                <span class="dot"></span>
+                Broad AI Orchestration Fluency
+                <span class="dot"></span>
+              </div>
+              <div class="t-shape-bottom">
+                <div class="t-shape-bottom-label">Deep Domain Expertise</div>
+              </div>
+            </div>
+            <p style="font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-3); font-family: var(--font-ui); text-align: center; max-width: 40ch;">The T-shape of the next decade: deep domain knowledge + the ability to collaborate intelligently with autonomous systems.</p>
+          </div>
+
+          <p class="fade-in">The teams that will thrive are the ones building what I'd call <strong>AI orchestration fluency</strong> — knowing not just how to use tools, but how to architect systems where AI agents and human experts divide the work intelligently.</p>
+
+          <p class="fade-in">This isn't a distant future. McKinsey says agentic AI could reshape 75–85% of life sciences R&D workflows this year. Deloitte's 2026 survey says 80% of manufacturing executives are already allocating budgets for it. The 3am lab isn't the competition. It's your new teammate.</p>
+
+          <!-- SECTION: RADAR -->
+          <div class="section-divider fade-in">
+            <div class="section-divider-line"></div>
+            <span class="section-divider-label">📡 The Radar — 3 signals this week</span>
+            <div class="section-divider-line"></div>
+          </div>
+
+          <div class="radar-list fade-in">
+            <div class="radar-item">
+              <div class="radar-item-num">1</div>
+              <div class="radar-item-content">
+                <div class="radar-item-title">Yann LeCun just bet $1B that LLMs are the wrong answer</div>
+                <p class="radar-item-body">AMI Labs — the startup LeCun founded after leaving Meta — announced a $1.03B seed raise to build world models, not language models. JEPA: AI that understands physical causality, not just pattern-match on text. For engineers, this means the next generation of design AI assistants will simulate physics and predict machine behavior.</p>
+                <div class="radar-item-why">→ Relevant for: anyone designing systems that interact with the physical world</div>
+              </div>
+              <div class="radar-item-link"><a href="https://www.wired.com/story/yann-lecun-raises-dollar1-billion-to-build-ai-that-understands-the-physical-world/" target="_blank" rel="noopener">Wired ↗</a></div>
+            </div>
+            <div class="radar-item">
+              <div class="radar-item-num">2</div>
+              <div class="radar-item-content">
+                <div class="radar-item-title">Digital twins cutting dev time in half — for real this time</div>
+                <p class="radar-item-body">Protolabs' 2026 report confirms: digital twin technology is now genuinely reducing development times by 20–50%. 86% of manufacturing leaders see it as applicable to their operations. Add AI-driven continuous integration and stage-gate review meetings actually start shrinking.</p>
+                <div class="radar-item-why">→ Relevant for: NPD engineers, product managers, manufacturing R&D</div>
+              </div>
+              <div class="radar-item-link"><a href="https://www.protolabs.com/resources/guides-and-trend-reports/innovation-in-manufacturing-2026/" target="_blank" rel="noopener">Protolabs ↗</a></div>
+            </div>
+            <div class="radar-item">
+              <div class="radar-item-num">3</div>
+              <div class="radar-item-content">
+                <div class="radar-item-title">Gartner: 40% of enterprise apps embed AI agents by 2026</div>
+                <p class="radar-item-body">Passive assistants are becoming proactive workflow partners. The catch? Gartner also predicts 40% of autonomous AI initiatives will be abandoned by 2027 due to unclear ROI or poor governance. Agents without architecture are expensive noise.</p>
+                <div class="radar-item-why">→ Relevant for: anyone deciding where to actually invest in AI tooling</div>
+              </div>
+              <div class="radar-item-link"><a href="https://www.forbes.com/sites/markminevich/2025/12/31/agentic-ai-takes-over-11-shocking-2026-predictions/" target="_blank" rel="noopener">Forbes ↗</a></div>
+            </div>
+          </div>
+
+          <!-- SECTION: FRAMEWORK SPOTLIGHT -->
+          <div class="section-divider fade-in">
+            <div class="section-divider-line"></div>
+            <span class="section-divider-label">📐 Framework spotlight</span>
+            <div class="section-divider-line"></div>
+          </div>
+
+          <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-6);" class="fade-in">
+            <p style="font-family: var(--font-ui); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-faint); margin-bottom: var(--space-3);">RD Maturity Framework · The Skill Gap at Level 2→3</p>
+            <p style="font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.7; max-width: none;">Moving from Level 2 to Level 3 on <em style="color: var(--color-primary); font-style: normal;">Technology Evaluation & Development</em> means going from "we test AI tools on isolated projects" to "AI forecasting models support most of our technology and market trend analyses." That gap isn't filled by buying software. It's filled by building a team that knows how to frame problems for AI systems — and evaluate their outputs critically. <strong>That's the T-shaped skill nobody is hiring for yet.</strong></p>
+          </div>
+
+          <!-- CTA -->
+          <div class="cta-section fade-in" style="margin-top: var(--space-10);">
+            <h3>Have you worked with a self-driving lab or agentic AI system in your R&D environment?</h3>
+            <p>What worked, what didn't — and what would you have done differently? Share your experience below. This community's ground-level signal is worth more than any McKinsey slide.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; margin-bottom: var(--space-5);">
+              <a href="https://www.linkedin.com/in/gillespradel" class="linkedin-btn" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                Comment on LinkedIn
+              </a>
+              <a href="option-a.html" class="switch-btn" style="font-size: var(--text-sm);">Read Option A — Strategy Edition →</a>
+            </div>
+            <div class="cta-tags">
+              <span class="cta-tag">#RDChronicles</span>
+              <span class="cta-tag">#AgenticAI</span>
+              <span class="cta-tag">#SelfDrivingLab</span>
+              <span class="cta-tag">#ManufacturingEngineer</span>
+              <span class="cta-tag">#ProductDevelopment</span>
+              <span class="cta-tag">#DigitalTwin</span>
+              <span class="cta-tag">#EngineeringInnovation</span>
+              <span class="cta-tag">#Industry50</span>
+              <span class="cta-tag">#RDLeadership</span>
+              <span class="cta-tag">#AITransformation</span>
+              <span class="cta-tag">#NewProductDevelopment</span>
+              <span class="cta-tag">#FutureOfWork</span>
+            </div>
+          </div>
+
+        </div><!-- end .article-prose -->
+
+        <!-- SIDEBAR -->
+        <aside class="article-sidebar" aria-label="Key statistics">
+          <div class="sidebar-card">
+            <div class="sidebar-card-label">McKinsey 2025</div>
+            <div class="sidebar-stat">75–85%</div>
+            <div class="sidebar-stat-label">of R&D workflows reshaped by agentic AI</div>
+          </div>
+          <div class="sidebar-card">
+            <div class="sidebar-card-label">R&D World, 2025</div>
+            <div class="sidebar-stat">+60%</div>
+            <div class="sidebar-stat-label">equipment utilization in AI-managed labs</div>
+          </div>
+          <div class="sidebar-card">
+            <div class="sidebar-card-label">Protolabs 2026</div>
+            <div class="sidebar-stat">20–50%</div>
+            <div class="sidebar-stat-label">reduction in development time with digital twins</div>
+          </div>
+          <div class="sidebar-card">
+            <div class="sidebar-card-label">AMI Labs, March 2026</div>
+            <div class="sidebar-stat">$1.03B</div>
+            <div class="sidebar-stat-label">raised to build world models (JEPA) — Europe's largest seed round</div>
+          </div>
+          <div class="sidebar-card" style="border-color: var(--color-primary); background: var(--color-primary-highlight);">
+            <div class="sidebar-card-label" style="color: var(--color-primary);">Next Edition</div>
+            <div style="font-family: var(--font-ui); font-size: var(--text-sm); color: var(--color-text-muted);">April 10, 2026<br>Theme: Org Models &amp; Team Excellence</div>
+          </div>
+        </aside>
+
+      </div><!-- end .article-layout -->
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <strong>RD Chronicles</strong> by Gilles Pradel · Published every 2 weeks<br>
+          Next edition: May 1, 2026 · Theme: Innovation Culture &amp; Open Innovation
+        </div>
+        <div class="footer-right">
+          <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    (function(){
+      const t = document.querySelector('[data-theme-toggle]');
+      const r = document.documentElement;
+      let d = r.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+      r.setAttribute('data-theme', d);
+      const moonIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      const sunIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+      if (t) {
+        t.innerHTML = d === 'dark' ? moonIcon : sunIcon;
+        t.addEventListener('click', () => {
+          d = d === 'dark' ? 'light' : 'dark';
+          r.setAttribute('data-theme', d);
+          t.innerHTML = d === 'dark' ? moonIcon : sunIcon;
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
