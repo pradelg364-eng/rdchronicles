@@ -8,784 +8,461 @@
         Created with Perplexity Computer
         https://www.perplexity.ai/computer
 -->
-
-<!-- Perplexity Computer Attribution — SEO Meta Tags -->
 <meta name="generator" content="Perplexity Computer">
 <meta name="author" content="Perplexity Computer">
 <meta property="og:see_also" content="https://www.perplexity.ai/computer">
 <link rel="author" href="https://www.perplexity.ai/computer">
-
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <!-- LinkedIn / Open Graph -->
-  <meta property="og:type"         content="article">
-  <meta property="og:site_name"    content="RD Chronicles">
-  <meta property="og:title"        content="RD Chronicles #1 — Your R&D lab just got a co-pilot. Are you ready to let it drive?">
-  <meta property="og:description"  content="75–85% of R&D workflows reshaped by AI agents. A data-driven deep-dive into agentic AI, self-driving labs, and R&D maturity for C-Suite leaders. By Gilles Pradel.">
-  <meta property="og:image"        content="https://rdchronicles.fr/edition-01/og-option-a.png">
-  <meta property="og:image:width"  content="1200">
-  <meta property="og:image:height" content="627">
-  <meta property="og:url"          content="https://rdchronicles.fr/edition-01/option-a.html">
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="RD Chronicles #1 — Your R&D lab just got a co-pilot. Are you ready to let it drive?">
-  <meta name="twitter:description" content="75–85% of R&D workflows reshaped by AI agents. A data-driven deep-dive into agentic AI, self-driving labs, and R&D maturity for C-Suite leaders. By Gilles Pradel.">
-  <meta name="twitter:image"       content="https://rdchronicles.fr/edition-01/og-option-a.png">
-  <meta name="author"              content="Gilles Pradel">
-  <!-- LinkedIn / Open Graph — rich preview card -->
-  <meta property="og:type"        content="article">
-  <meta property="og:site_name"   content="RD Chronicles">
-  <meta property="og:title"       content="RD Chronicles #1 — Your R&D lab just got a co-pilot. Are you ready to let it drive?">
-  <meta property="og:description" content="75–85% of R&D workflows reshaped by AI agents. A data-driven deep-dive into agentic AI, self-driving labs, and R&D maturity for C-Suite leaders and strategists. By Gilles Pradel.">
-  <meta property="og:image"       content="https://rdchronicles.fr/edition-01/og-option-a.png">
-  <meta property="og:image:width"  content="1200">
-  <meta property="og:image:height" content="627">
-  <meta property="og:url"         content="https://rdchronicles.fr/edition-01/option-a.html">
-  <meta name="twitter:card"       content="summary_large_image">
-  <meta name="twitter:title"      content="RD Chronicles #1 — Your R&D lab just got a co-pilot. Are you ready to let it drive?">
-  <meta name="twitter:description" content="75–85% of R&D workflows reshaped by AI agents. A data-driven deep-dive into agentic AI, self-driving labs, and R&D maturity for C-Suite leaders and strategists. By Gilles Pradel.">
-  <meta name="twitter:image"      content="https://rdchronicles.fr/edition-01/og-option-a.png">
-  <meta name="author"             content="Gilles Pradel">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RD Chronicles — Edition #1 · Option A · Agentic AI for R&D Leaders</title>
-  <meta name="description" content="Your R&D lab just got a co-pilot. Are you ready to let it drive? A data-driven deep-dive into agentic AI, self-driving labs, and R&D maturity for C-Suite and strategists.">
-  <meta property="og:title" content="RD Chronicles — Agentic AI & the Self-Driving R&D Lab">
-  <meta property="og:description" content="75–85% of R&D workflows reshaped by AI agents. What's your strategy?">
-  <meta property="og:type" content="article">
-  <meta name="keywords" content="R&D strategy, agentic AI, R&D maturity, self-driving labs, AI in manufacturing, Industry 5.0, digital twin, engineering leadership, R&D transformation">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your R&D lab just got a co-pilot. Are you ready to let it drive?</title>
+<meta name="description" content="Agentic AI, self-driving labs, and R&D maturity — a data-driven deep-dive for R&D leaders and C-Suite executives. By Gilles Pradel.">
+<meta property="og:type"         content="article">
+<meta property="og:site_name"    content="RD Chronicles">
+<meta property="og:title"        content="Your R&D lab just got a co-pilot. Are you ready to let it drive?">
+<meta property="og:description"  content="75–85% of R&D workflows reshaped by AI agents. A data-driven deep-dive into agentic AI, self-driving labs, and R&D maturity for C-Suite leaders. By Gilles Pradel.">
+<meta property="og:image"        content="https://rdchronicles.fr/edition-01/og-option-a.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:url"          content="https://rdchronicles.fr/edition-01/option-a.html">
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Your R&D lab just got a co-pilot. Are you ready to let it drive?">
+<meta name="twitter:description" content="75–85% of R&D workflows reshaped by AI agents. A data-driven deep-dive into agentic AI, self-driving labs, and R&D maturity for C-Suite leaders. By Gilles Pradel.">
+<meta name="twitter:image"       content="https://rdchronicles.fr/edition-01/og-option-a.png">
+<meta name="author"              content="Gilles Pradel">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+/* ===== DESIGN TOKENS — RD Chronicles Unified Identity ===== */
+:root {
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+  --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+  --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
 
-  <!-- Fonts -->
-  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+  --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;
+  --space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;
+  --space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;
 
-  <style>
-    /* ===== DESIGN TOKENS ===== */
-    :root {
-      --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
-      --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
-      --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
-      --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
-      --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
-      --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
-      --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
-      --text-hero: clamp(3rem,     0.5rem  + 7vw,    8rem);
+  --radius-sm:.375rem;--radius-md:.5rem;--radius-lg:.75rem;
+  --radius-xl:1rem;--radius-full:9999px;
+  --transition: 180ms cubic-bezier(0.16,1,0.3,1);
+  --content: 860px;
 
-      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
-      --space-4: 1rem;    --space-5: 1.25rem; --space-6: 1.5rem;
-      --space-8: 2rem;    --space-10: 2.5rem; --space-12: 3rem;
-      --space-16: 4rem;   --space-20: 5rem;   --space-24: 6rem;
-      --space-32: 8rem;
+  /* Brand fonts */
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body:    'Satoshi', 'Inter', sans-serif;
+  --font-ui:      'General Sans', 'Helvetica Neue', sans-serif;
 
-      --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem;
-      --radius-xl: 1rem; --radius-full: 9999px;
-      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
-      --content-narrow: 640px; --content-default: 900px; --content-wide: 1200px;
+  /* Brand accent — single teal, always */
+  --brand:         #01696F;
+  --brand-hover:   #0c5055;
+  --brand-bg:      #d0f0f0;
+}
 
-      --font-display: 'Cabinet Grotesk', 'Helvetica Neue', sans-serif;
-      --font-body: 'Satoshi', 'Inter', sans-serif;
-    }
+/* DARK (default) */
+:root, [data-theme="dark"] {
+  --bg:        #0f1112;
+  --surface:   #161819;
+  --surface-2: #1c1f20;
+  --surface-off:#212426;
+  --divider:   #272b2d;
+  --border:    #30353a;
+  --text:      #e3e5e8;
+  --muted:     #7a8088;
+  --faint:     #454c52;
+  --inverse:   #0f1112;
+  --brand:     #3ecfcf;
+  --brand-hover:#5dd9d9;
+  --brand-bg:  #0d2828;
+  --shadow:    0 4px 24px rgba(0,0,0,.5);
+}
+[data-theme="light"] {
+  --bg:        #f5f6f8;
+  --surface:   #ffffff;
+  --surface-2: #f9fafb;
+  --surface-off:#edf0f3;
+  --divider:   #dde1e7;
+  --border:    #c8cfd8;
+  --text:      #1a1d22;
+  --muted:     #58606e;
+  --faint:     #9aa0aa;
+  --inverse:   #ffffff;
+  --brand:     #01696F;
+  --brand-hover:#0c5055;
+  --brand-bg:  #d0f0f0;
+  --shadow:    0 4px 24px rgba(0,0,0,.08);
+}
 
-    /* ===== DARK MODE (default) ===== */
-    :root, [data-theme="dark"] {
-      --color-bg:              #0e0f11;
-      --color-surface:         #141618;
-      --color-surface-2:       #1a1d20;
-      --color-surface-offset:  #1f2226;
-      --color-divider:         #252a2f;
-      --color-border:          #2d3238;
-      --color-text:            #e2e4e8;
-      --color-text-muted:      #7a8190;
-      --color-text-faint:      #454b55;
-      --color-text-inverse:    #0e0f11;
-      /* RD Chronicles accent: electric teal-blue */
-      --color-primary:         #3ecfcf;
-      --color-primary-hover:   #5dd9d9;
-      --color-primary-active:  #2ab8b8;
-      --color-primary-highlight: #0f2b2b;
-      --color-accent-warm:     #f5a623;
-      --color-accent-warm-dim: #3a2a0a;
-      --color-success:         #5cb85c;
-      --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.5);
-      --shadow-lg: 0 12px 40px rgba(0,0,0,0.6);
-    }
+/* ===== BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;scroll-padding-top:80px}
+body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);color:var(--text);background:var(--bg);line-height:1.65}
+img,svg{display:block;max-width:100%}
+p,li{max-width:70ch;text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+button{cursor:pointer;background:none;border:none;color:inherit;font:inherit}
+a{color:var(--brand);text-decoration:none;transition:color var(--transition)}
+a:hover{color:var(--brand-hover)}
+::selection{background:var(--brand-bg);color:var(--text)}
+.container{max-width:var(--content);margin:0 auto;padding:0 var(--space-6)}
 
-    [data-theme="light"] {
-      --color-bg:              #f4f6f8;
-      --color-surface:         #ffffff;
-      --color-surface-2:       #f9fafb;
-      --color-surface-offset:  #eef0f3;
-      --color-divider:         #dde1e7;
-      --color-border:          #c9cfd8;
-      --color-text:            #1a1d22;
-      --color-text-muted:      #5a6170;
-      --color-text-faint:      #9aa0aa;
-      --color-text-inverse:    #ffffff;
-      --color-primary:         #0d8080;
-      --color-primary-hover:   #0a6b6b;
-      --color-primary-active:  #085555;
-      --color-primary-highlight: #d0f0f0;
-      --color-accent-warm:     #d4860d;
-      --color-accent-warm-dim: #fef5e0;
-      --color-success:         #2e7d32;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
-      --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
-    }
+/* ===== HEADER ===== */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:oklch(from var(--bg) l c h / 0.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--divider);
+  padding:var(--space-4) 0;
+}
+.site-header.scrolled{box-shadow:var(--shadow)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.logo{display:flex;align-items:center;gap:var(--space-3);text-decoration:none}
+.logo-mark{width:28px;height:28px;flex-shrink:0}
+.logo-name{font-family:var(--font-display);font-size:var(--text-base);color:var(--text);letter-spacing:.01em}
+.logo-tag{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);letter-spacing:.02em}
+.header-right{display:flex;align-items:center;gap:var(--space-3)}
+.companion-link{
+  font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);
+  padding:var(--space-1) var(--space-3);
+  border:1px solid var(--border);border-radius:var(--radius-full);
+  transition:all var(--transition);white-space:nowrap;
+}
+.companion-link:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-bg)}
+.theme-toggle{padding:var(--space-2);border-radius:var(--radius-md);color:var(--muted);display:flex;align-items:center;transition:all var(--transition)}
+.theme-toggle:hover{color:var(--text);background:var(--surface-off)}
 
-    /* ===== BASE ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html {
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      scroll-behavior: smooth;
-      scroll-padding-top: var(--space-16);
-    }
-    body {
-      min-height: 100dvh;
-      font-family: var(--font-body);
-      font-size: var(--text-base);
-      color: var(--color-text);
-      background: var(--color-bg);
-      line-height: 1.65;
-    }
-    img, svg { display: block; max-width: 100%; }
-    p, li { max-width: 70ch; text-wrap: pretty; }
-    h1,h2,h3,h4 { text-wrap: balance; line-height: 1.15; font-family: var(--font-display); }
-    button { cursor: pointer; background: none; border: none; color: inherit; font: inherit; }
-    a { color: var(--color-primary); text-decoration: none; transition: color var(--transition-interactive); }
-    a:hover { color: var(--color-primary-hover); }
-    ::selection { background: var(--color-primary-highlight); color: var(--color-text); }
-    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+/* ===== HERO ===== */
+.hero{
+  position:relative;overflow:hidden;
+  padding:clamp(var(--space-16),10vw,var(--space-32)) 0 clamp(var(--space-10),6vw,var(--space-20));
+}
+.hero-grid{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--divider) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--divider) 1px,transparent 1px);
+  background-size:48px 48px;opacity:.3;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 0%,black 30%,transparent 100%);
+}
+.hero-glow{position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:300px;pointer-events:none;background:radial-gradient(ellipse,var(--brand) 0%,transparent 70%);opacity:.05}
+.hero-inner{position:relative;z-index:1}
+.hero-theme{
+  display:inline-flex;align-items:center;gap:var(--space-2);
+  font-family:var(--font-ui);font-size:var(--text-xs);font-weight:600;
+  text-transform:uppercase;letter-spacing:.12em;color:var(--brand);
+  margin-bottom:var(--space-6);
+}
+.hero-theme-dot{width:5px;height:5px;border-radius:50%;background:var(--brand);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-title{
+  font-family:var(--font-display);font-size:var(--text-3xl);font-weight:400;
+  line-height:1.08;letter-spacing:-.01em;color:var(--text);
+  margin-bottom:var(--space-6);
+}
+.hero-title em{font-style:italic;color:var(--brand)}
+.hero-lead{font-size:var(--text-lg);color:var(--muted);max-width:54ch;margin-bottom:var(--space-8);line-height:1.6}
+.hero-meta{display:flex;flex-wrap:wrap;gap:var(--space-5);margin-bottom:var(--space-10)}
+.hero-meta-item{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint);display:flex;align-items:center;gap:var(--space-2)}
 
-    /* ===== LAYOUT ===== */
-    .container { max-width: var(--content-default); margin: 0 auto; padding: 0 var(--space-6); }
-    .container--wide { max-width: var(--content-wide); margin: 0 auto; padding: 0 var(--space-6); }
+/* STATS STRIP */
+.stats-strip{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  border:1px solid var(--border);border-radius:var(--radius-xl);
+  background:var(--surface);overflow:hidden;
+}
+.stat{padding:var(--space-5) var(--space-6);display:flex;flex-direction:column;gap:var(--space-1)}
+.stat+.stat{border-left:1px solid var(--divider)}
+.stat-num{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--brand);line-height:1;letter-spacing:-.02em}
+.stat-label{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);line-height:1.4}
+.stat-source{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint);margin-top:2px}
 
-    /* ===== HEADER / NAV ===== */
-    .site-header {
-      position: sticky; top: 0; z-index: 100;
-      background: oklch(from var(--color-bg) l c h / 0.85);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--color-divider);
-      padding: var(--space-4) 0;
-      transition: box-shadow var(--transition-interactive);
-    }
-    .site-header.scrolled { box-shadow: var(--shadow-md); }
-    .header-inner {
-      display: flex; align-items: center; justify-content: space-between; gap: var(--space-4);
-    }
-    .logo { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; }
-    .logo-svg { width: 32px; height: 32px; flex-shrink: 0; }
-    .logo-text { font-family: var(--font-display); font-size: var(--text-sm); font-weight: 800;
-      letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text); }
-    .logo-edition { font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 400;
-      letter-spacing: 0.02em; }
-    .header-actions { display: flex; align-items: center; gap: var(--space-3); }
-    .badge-option {
-      font-family: var(--font-display); font-size: var(--text-xs); font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.1em;
-      padding: var(--space-1) var(--space-3);
-      border-radius: var(--radius-full);
-      background: var(--color-primary);
-      color: var(--color-text-inverse);
-    }
-    .theme-toggle {
-      padding: var(--space-2); border-radius: var(--radius-md);
-      color: var(--color-text-muted); transition: color var(--transition-interactive), background var(--transition-interactive);
-      display: flex; align-items: center;
-    }
-    .theme-toggle:hover { color: var(--color-text); background: var(--color-surface-offset); }
-    .switch-btn {
-      font-size: var(--text-xs); color: var(--color-text-muted); text-decoration: none;
-      padding: var(--space-1) var(--space-3); border: 1px solid var(--color-border);
-      border-radius: var(--radius-full); transition: all var(--transition-interactive);
-    }
-    .switch-btn:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-highlight); }
+/* ===== ARTICLE LAYOUT ===== */
+.article{margin-top:var(--space-12)}
+.article-grid{display:grid;grid-template-columns:1fr 220px;gap:var(--space-12);align-items:start}
+@media(max-width:720px){.article-grid{grid-template-columns:1fr}.sidebar{display:none}}
 
-    /* ===== HERO ===== */
-    .hero {
-      position: relative; overflow: hidden;
-      padding: clamp(var(--space-16), 10vw, var(--space-32)) 0 clamp(var(--space-12), 8vw, var(--space-24));
-      background: var(--color-bg);
-    }
-    .hero-grid-bg {
-      position: absolute; inset: 0; pointer-events: none;
-      background-image:
-        linear-gradient(var(--color-divider) 1px, transparent 1px),
-        linear-gradient(90deg, var(--color-divider) 1px, transparent 1px);
-      background-size: 48px 48px;
-      opacity: 0.35;
-      mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black 40%, transparent 100%);
-    }
-    .hero-glow {
-      position: absolute; top: -120px; left: 50%; transform: translateX(-50%);
-      width: 800px; height: 400px; pointer-events: none;
-      background: radial-gradient(ellipse, var(--color-primary) 0%, transparent 70%);
-      opacity: 0.06;
-    }
-    .hero-content { position: relative; z-index: 1; }
-    .hero-kicker {
-      display: inline-flex; align-items: center; gap: var(--space-2);
-      font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;
-      color: var(--color-primary); margin-bottom: var(--space-6);
-    }
-    .hero-kicker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-primary); animation: pulse 2s ease infinite; }
-    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
-    .hero-title {
-      font-size: var(--text-3xl); font-weight: 900; letter-spacing: -0.03em;
-      margin-bottom: var(--space-6); color: var(--color-text); max-width: 14ch;
-      line-height: 1.05;
-    }
-    .hero-title em { font-style: normal; color: var(--color-primary); }
-    .hero-subtitle {
-      font-size: var(--text-lg); color: var(--color-text-muted); font-weight: 400;
-      max-width: 55ch; margin-bottom: var(--space-10); line-height: 1.55;
-    }
-    .hero-meta {
-      display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4);
-      font-size: var(--text-xs); color: var(--color-text-faint);
-    }
-    .hero-meta-item { display: flex; align-items: center; gap: var(--space-2); }
-    .hero-stat-strip {
-      margin-top: var(--space-10); padding: var(--space-6);
-      border: 1px solid var(--color-border); border-radius: var(--radius-xl);
-      background: var(--color-surface); display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1px; overflow: hidden; box-shadow: var(--shadow-sm);
-    }
-    .hero-stat {
-      padding: var(--space-5) var(--space-6); background: var(--color-surface);
-      display: flex; flex-direction: column; gap: var(--space-1);
-    }
-    .hero-stat-number {
-      font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 900;
-      color: var(--color-primary); line-height: 1; letter-spacing: -0.03em;
-    }
-    .hero-stat-label { font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.4; }
-    .hero-stat-source { font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-1); }
+/* PROSE */
+.prose p{font-size:var(--text-base);line-height:1.8;color:var(--text);margin-bottom:var(--space-5);max-width:65ch}
+.prose strong{font-weight:600;color:var(--text)}
+.prose em{color:var(--brand);font-style:normal}
 
-    /* ===== SECTION ===== */
-    .section { padding: clamp(var(--space-12), 8vw, var(--space-24)) 0; }
-    .section + .section { border-top: 1px solid var(--color-divider); }
-    .section-label {
-      font-size: var(--text-xs); font-weight: 700; text-transform: uppercase;
-      letter-spacing: 0.14em; color: var(--color-primary);
-      margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-2);
-    }
-    .section-label-num {
-      width: 20px; height: 20px; border-radius: 50%; border: 1px solid var(--color-primary);
-      display: flex; align-items: center; justify-content: center; font-size: 10px; flex-shrink: 0;
-    }
-    .section-title {
-      font-size: var(--text-xl); font-weight: 800; color: var(--color-text);
-      margin-bottom: var(--space-6); letter-spacing: -0.02em;
-    }
+/* Section headers */
+.section-head{
+  font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;
+  text-transform:uppercase;letter-spacing:.14em;color:var(--brand);
+  display:flex;align-items:center;gap:var(--space-2);
+  margin:clamp(var(--space-10),5vw,var(--space-16)) 0 var(--space-5);
+}
+.section-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:400;color:var(--text);margin-bottom:var(--space-6);line-height:1.2}
 
-    /* ===== BODY COPY ===== */
-    .prose { color: var(--color-text); }
-    .prose p { font-size: var(--text-base); line-height: 1.75; margin-bottom: var(--space-5); max-width: 68ch; }
-    .prose strong { color: var(--color-text); font-weight: 600; }
-    .prose em { color: var(--color-primary); font-style: normal; font-weight: 500; }
+/* DIVIDER */
+.divider{display:flex;align-items:center;gap:var(--space-4);margin:clamp(var(--space-8),4vw,var(--space-12)) 0 var(--space-6)}
+.divider-line{flex:1;height:1px;background:var(--divider)}
+.divider-label{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);white-space:nowrap}
 
-    /* ===== PULL QUOTE ===== */
-    .pull-quote {
-      margin: var(--space-8) 0;
-      padding: var(--space-6) var(--space-8);
-      border-left: 3px solid var(--color-primary);
-      background: var(--color-primary-highlight);
-      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-    }
-    .pull-quote p {
-      font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700;
-      color: var(--color-text); line-height: 1.4; max-width: none; margin: 0;
-    }
-    .pull-quote cite {
-      display: block; margin-top: var(--space-3); font-size: var(--text-xs);
-      color: var(--color-text-muted); font-style: normal;
-    }
+/* PULL QUOTE */
+.pull-quote{
+  margin:var(--space-8) 0;
+  padding:var(--space-6) var(--space-8);
+  border-left:3px solid var(--brand);
+  background:var(--brand-bg);
+  border-radius:0 var(--radius-lg) var(--radius-lg) 0;
+}
+.pull-quote p{font-family:var(--font-display);font-size:var(--text-lg);font-style:italic;color:var(--text);line-height:1.45;max-width:none;margin:0}
+.pull-quote cite{display:block;margin-top:var(--space-3);font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);font-style:normal}
 
-    /* ===== MATURITY LEVELS ===== */
-    .maturity-strip {
-      display: flex; gap: var(--space-2); margin: var(--space-8) 0; flex-wrap: wrap;
-    }
-    .maturity-level {
-      flex: 1; min-width: 80px;
-      padding: var(--space-3) var(--space-4);
-      border-radius: var(--radius-md); border: 1px solid var(--color-border);
-      background: var(--color-surface); text-align: center;
-      transition: all var(--transition-interactive);
-    }
-    .maturity-level.active {
-      border-color: var(--color-primary); background: var(--color-primary-highlight);
-      box-shadow: 0 0 0 1px var(--color-primary);
-    }
-    .maturity-level-num {
-      font-family: var(--font-display); font-size: var(--text-xs); font-weight: 700;
-      color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.1em;
-    }
-    .maturity-level.active .maturity-level-num { color: var(--color-primary); }
-    .maturity-level-name {
-      font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-1);
-    }
-    .maturity-level.active .maturity-level-name { color: var(--color-text-muted); }
+/* DROP CAP */
+.drop-cap::first-letter{font-family:var(--font-display);font-size:4rem;float:left;line-height:.8;margin-right:var(--space-2);margin-top:var(--space-2);color:var(--brand)}
 
-    /* ===== QUESTIONS ===== */
-    .questions-list {
-      list-style: none; display: flex; flex-direction: column; gap: var(--space-3);
-      margin: var(--space-6) 0;
-    }
-    .questions-list li {
-      display: flex; gap: var(--space-4); align-items: flex-start;
-      padding: var(--space-4) var(--space-5);
-      background: var(--color-surface); border-radius: var(--radius-lg);
-      border: 1px solid var(--color-border);
-      font-size: var(--text-base); color: var(--color-text); max-width: none;
-      transition: border-color var(--transition-interactive), background var(--transition-interactive);
-    }
-    .questions-list li:hover { border-color: var(--color-primary); background: var(--color-primary-highlight); }
-    .q-num {
-      font-family: var(--font-display); font-size: var(--text-sm); font-weight: 800;
-      color: var(--color-primary); flex-shrink: 0; line-height: 1.6;
-    }
+/* QUESTION LIST */
+.q-list{list-style:none;display:flex;flex-direction:column;gap:var(--space-3);margin:var(--space-6) 0}
+.q-list li{display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-4) var(--space-5);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);font-size:var(--text-base);max-width:none;transition:all var(--transition)}
+.q-list li:hover{border-color:var(--brand);background:var(--brand-bg)}
+.q-n{font-family:var(--font-ui);font-size:var(--text-sm);font-weight:700;color:var(--brand);flex-shrink:0;line-height:1.6}
 
-    /* ===== RADAR CARDS ===== */
-    .radar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-4); margin-top: var(--space-6); }
-    .radar-card {
-      background: var(--color-surface); border: 1px solid var(--color-border);
-      border-radius: var(--radius-xl); padding: var(--space-6);
-      display: flex; flex-direction: column; gap: var(--space-3);
-      transition: border-color var(--transition-interactive), box-shadow var(--transition-interactive), transform var(--transition-interactive);
-    }
-    .radar-card:hover { border-color: var(--color-primary); box-shadow: var(--shadow-md); transform: translateY(-2px); }
-    .radar-card-num {
-      font-family: var(--font-display); font-size: var(--text-xs); font-weight: 800;
-      color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.1em;
-    }
-    .radar-card-title { font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--color-text); line-height: 1.3; }
-    .radar-card-body { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; flex: 1; }
-    .radar-card-impact {
-      font-size: var(--text-xs); color: var(--color-accent-warm); font-weight: 600;
-      padding: var(--space-2) var(--space-3);
-      background: var(--color-accent-warm-dim); border-radius: var(--radius-md);
-    }
-    .radar-card-link {
-      font-size: var(--text-xs); color: var(--color-primary);
-      display: inline-flex; align-items: center; gap: var(--space-1); font-weight: 500;
-    }
-    .radar-card-link:hover { color: var(--color-primary-hover); }
+/* RADAR */
+.radar{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;margin-top:var(--space-6)}
+.signal{display:grid;grid-template-columns:44px 1fr auto;gap:var(--space-4);align-items:start;padding:var(--space-5) var(--space-6);background:var(--surface);transition:background var(--transition)}
+.signal:not(:last-child){border-bottom:1px solid var(--divider)}
+.signal:hover{background:var(--surface-off)}
+.signal-n{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:400;color:var(--brand);opacity:.35;line-height:1;padding-top:2px}
+.signal-title{font-family:var(--font-ui);font-size:var(--text-base);font-weight:600;color:var(--text);margin-bottom:var(--space-2);line-height:1.3}
+.signal-body{font-size:var(--text-sm);color:var(--muted);line-height:1.65;max-width:none;margin-bottom:var(--space-2)}
+.signal-why{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--brand);font-weight:500}
+.signal-src{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);align-self:start;padding-top:4px;white-space:nowrap}
+.signal-src a{color:var(--brand)}
 
-    /* ===== FRAMEWORK SPOTLIGHT ===== */
-    .spotlight {
-      background: var(--color-surface);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-xl);
-      padding: var(--space-8);
-      margin-top: var(--space-6);
-    }
-    .spotlight-header { display: flex; align-items: center; gap: var(--space-4); margin-bottom: var(--space-6); }
-    .spotlight-icon {
-      width: 48px; height: 48px; border-radius: var(--radius-lg);
-      background: var(--color-primary-highlight); border: 1px solid var(--color-primary);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .spotlight-desc { font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.7; }
-    .spotlight-criteria {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: var(--space-3); margin-top: var(--space-6);
-    }
-    .criteria-item {
-      padding: var(--space-4); background: var(--color-surface-offset);
-      border-radius: var(--radius-lg); border: 1px solid var(--color-divider);
-    }
-    .criteria-item-label { font-size: var(--text-xs); font-weight: 700; color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-2); }
-    .criteria-item-text { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.5; }
+/* SPOTLIGHT */
+.spotlight{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-6);margin-top:var(--space-6)}
+.spotlight-title{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin-bottom:var(--space-3)}
+.spotlight-body{font-size:var(--text-base);color:var(--muted);line-height:1.7;max-width:none}
 
-    /* ===== CTA ===== */
-    .cta-box {
-      margin-top: var(--space-6);
-      padding: var(--space-8);
-      background: linear-gradient(135deg, var(--color-primary-highlight) 0%, var(--color-surface) 100%);
-      border: 1px solid var(--color-primary);
-      border-radius: var(--radius-xl);
-    }
-    .cta-box h3 { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 800; color: var(--color-text); margin-bottom: var(--space-4); letter-spacing: -0.02em; }
-    .cta-box p { font-size: var(--text-base); color: var(--color-text-muted); margin-bottom: var(--space-6); max-width: 55ch; }
-    .cta-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
-    .cta-tag {
-      font-size: var(--text-xs); color: var(--color-text-muted);
-      padding: var(--space-1) var(--space-3);
-      background: var(--color-surface-2); border: 1px solid var(--color-border);
-      border-radius: var(--radius-full); transition: all var(--transition-interactive);
-    }
-    .cta-tag:hover { border-color: var(--color-primary); color: var(--color-primary); background: var(--color-primary-highlight); }
+/* CTA */
+.cta{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-8);margin:var(--space-8) 0}
+.cta h3{font-family:var(--font-display);font-size:var(--text-xl);font-weight:400;font-style:italic;color:var(--text);margin-bottom:var(--space-4)}
+.cta p{font-size:var(--text-base);color:var(--muted);max-width:56ch;margin-bottom:var(--space-6)}
+.li-btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-3) var(--space-6);background:#0a66c2;color:#fff;border-radius:var(--radius-lg);font-family:var(--font-ui);font-weight:600;font-size:var(--text-sm);text-decoration:none;transition:all var(--transition)}
+.li-btn:hover{background:#0856ab;transform:translateY(-1px);color:#fff}
+.tags{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-5)}
+.tag{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);padding:var(--space-1) var(--space-3);background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-full);transition:all var(--transition)}
+.tag:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-bg)}
 
-    /* ===== LINKEDIN BTN ===== */
-    .linkedin-btn {
-      display: inline-flex; align-items: center; gap: var(--space-2);
-      padding: var(--space-3) var(--space-6);
-      background: #0a66c2; color: #fff;
-      border-radius: var(--radius-lg); font-weight: 700; font-size: var(--text-sm);
-      text-decoration: none; transition: background var(--transition-interactive), transform var(--transition-interactive);
-    }
-    .linkedin-btn:hover { background: #0856ab; transform: translateY(-1px); color: #fff; }
+/* COMPANION BANNER */
+.companion-banner{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius-xl);padding:var(--space-5) var(--space-6);
+  margin-top:var(--space-6);display:flex;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);
+}
+.companion-banner-text{font-family:var(--font-ui);font-size:var(--text-sm);color:var(--muted)}
+.companion-banner-text strong{color:var(--text);font-weight:600}
 
-    /* ===== FOOTER ===== */
-    .site-footer {
-      border-top: 1px solid var(--color-divider);
-      padding: var(--space-10) 0;
-      margin-top: var(--space-16);
-    }
-    .footer-inner {
-      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-      gap: var(--space-4);
-    }
-    .footer-left { font-size: var(--text-xs); color: var(--color-text-faint); line-height: 1.7; }
-    .footer-right { font-size: var(--text-xs); color: var(--color-text-faint); }
-    .footer-right a { color: var(--color-text-muted); }
-    .footer-right a:hover { color: var(--color-primary); }
+/* SIDEBAR */
+.sidebar{position:sticky;top:80px}
+.scard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-5);margin-bottom:var(--space-4)}
+.scard-label{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin-bottom:var(--space-3)}
+.scard-num{font-family:var(--font-display);font-size:var(--text-xl);color:var(--brand);line-height:1.1}
+.scard-desc{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);margin-top:var(--space-2);line-height:1.4}
+.scard-src{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint);margin-top:4px}
 
-    /* ===== SCROLL ANIMATIONS ===== */
-    .fade-in { opacity: 1; }
-    @supports (animation-timeline: scroll()) {
-      .fade-in {
-        opacity: 0;
-        animation: reveal-fade linear both;
-        animation-timeline: view();
-        animation-range: entry 0% entry 80%;
-      }
-    }
-    @keyframes reveal-fade { to { opacity: 1; } }
+/* FOOTER */
+.site-footer{border-top:1px solid var(--divider);padding:var(--space-10) 0;margin-top:var(--space-16)}
+.footer-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.footer-left{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint);line-height:1.7}
+.footer-right{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint)}
+.footer-right a{color:var(--muted)}
+.footer-right a:hover{color:var(--brand)}
 
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 640px) {
-      .hero-stat-strip { grid-template-columns: 1fr; }
-      .header-actions .switch-btn { display: none; }
-      .maturity-strip { gap: var(--space-1); }
-      .maturity-level { min-width: 60px; padding: var(--space-2) var(--space-2); }
-    }
-  </style>
+/* ANIMATIONS */
+.fade-in{opacity:1}
+@supports(animation-timeline:scroll()){
+  .fade-in{opacity:0;animation:reveal linear both;animation-timeline:view();animation-range:entry 0% entry 80%}
+}
+@keyframes reveal{to{opacity:1}}
 
-  <script>
-    (function(){
-      const r = document.documentElement;
-      let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
-      r.setAttribute('data-theme', d);
-    })();
-  </script>
+/* RESPONSIVE */
+@media(max-width:640px){
+  .stats-strip{grid-template-columns:1fr}
+  .stat+.stat{border-left:none;border-top:1px solid var(--divider)}
+  .signal{grid-template-columns:36px 1fr}.signal-src{display:none}
+  .hero-title{font-size:var(--text-2xl)}
+  .header-right .companion-link{display:none}
+}
+</style>
+<script>(function(){const r=document.documentElement;r.setAttribute('data-theme',matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')})();</script>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header" id="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="#" class="logo" aria-label="RD Chronicles">
-          <!-- SVG Logo: atom/node mark for R&D -->
-          <svg class="logo-svg" viewBox="0 0 32 32" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="3" fill="currentColor" style="color: var(--color-primary)"/>
-            <ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="var(--color-primary)" stroke-width="1.5" fill="none"/>
-            <ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="var(--color-primary)" stroke-width="1.5" fill="none" transform="rotate(60 16 16)"/>
-            <ellipse cx="16" cy="16" rx="13" ry="5.5" stroke="var(--color-primary)" stroke-width="1.5" fill="none" transform="rotate(120 16 16)"/>
-          </svg>
-          <div>
-            <div class="logo-text">RD Chronicles</div>
-            <div class="logo-edition">Edition #1 · March 2026</div>
-          </div>
-        </a>
-        <div class="header-actions">
-          <span class="badge-option">Option A</span>
-          <a href="option-b.html" class="switch-btn">Switch to Option B →</a>
-          <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          </button>
+<header class="site-header" id="hdr">
+  <div class="container">
+    <div class="header-inner">
+      <!-- Logo -->
+      <a href="https://rdchronicles.fr" class="logo">
+        <svg class="logo-mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="2.5" fill="var(--brand)"/>
+          <ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none"/>
+          <ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(60 14 14)"/>
+          <ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(120 14 14)"/>
+        </svg>
+        <div>
+          <div class="logo-name">RD Chronicles</div>
+          <div class="logo-tag">by Gilles Pradel</div>
         </div>
+      </a>
+      <!-- Right -->
+      <div class="header-right">
+        <a href="https://rdchronicles.fr/edition-01/option-b.html" class="companion-link">Practitioners edition →</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-grid-bg" aria-hidden="true"></div>
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="container hero-content">
-      <div class="hero-kicker">
-        <span class="hero-kicker-dot"></span>
-        C-Suite &amp; Strategy Edition · AI &amp; Agentic R&amp;D
-      </div>
-      <h1 class="hero-title">Your R&amp;D lab just got a <em>co-pilot</em>.<br>Are you ready to let it drive?</h1>
-      <p class="hero-subtitle">75–85% of R&D workflows could be reshaped by AI agents this year. What's your strategy? A data-led deep-dive for R&D leaders, C-Suite executives, and product strategists.</p>
-      <div class="hero-meta">
-        <span class="hero-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          Gilles Pradel
-        </span>
-        <span class="hero-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          March 27, 2026
-        </span>
-        <span class="hero-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          5 min read
-        </span>
-      </div>
-
-      <!-- STAT STRIP -->
-      <div class="hero-stat-strip fade-in">
-        <div class="hero-stat">
-          <span class="hero-stat-number">75–85%</span>
-          <span class="hero-stat-label">of R&D workflows reshaped by agentic AI</span>
-          <span class="hero-stat-source">McKinsey CGAR Report, 2025</span>
-        </div>
-        <div class="hero-stat" style="border-left: 1px solid var(--color-divider);">
-          <span class="hero-stat-number">$1.03B</span>
-          <span class="hero-stat-label">raised by Yann LeCun's AMI Labs for world models</span>
-          <span class="hero-stat-source">TechCrunch, March 2026</span>
-        </div>
-        <div class="hero-stat" style="border-left: 1px solid var(--color-divider);">
-          <span class="hero-stat-number">50%</span>
-          <span class="hero-stat-label">reduction in dev time with AI digital threads</span>
-          <span class="hero-stat-source">Protolabs Innovation Report, 2026</span>
-        </div>
-      </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="hero-theme"><span class="hero-theme-dot"></span>AI &amp; Agentic R&amp;D</div>
+    <h1 class="hero-title">Your R&amp;D lab just got a <em>co-pilot</em>.<br>Are you ready to let it drive?</h1>
+    <p class="hero-lead">75–85% of R&D workflows could be reshaped by AI agents this year. What's your strategy? A data-led deep-dive for R&D leaders, C-Suite executives, and product strategists.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Gilles Pradel
+      </span>
+      <span class="hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        5 min read
+      </span>
     </div>
-  </section>
+    <div class="stats-strip fade-in"><div class="stat"><span class="stat-num">75–85%</span><span class="stat-label">of R&D workflows reshaped by agentic AI</span><span class="stat-source">McKinsey CGAR, 2025</span></div><div class="stat"><span class="stat-num">$1.03B</span><span class="stat-label">raised by AMI Labs for world models (Yann LeCun)</span><span class="stat-source">TechCrunch, 2026</span></div><div class="stat"><span class="stat-num">50%</span><span class="stat-label">reduction in dev time with AI-enabled digital threads</span><span class="stat-source">Protolabs, 2026</span></div></div>
+  </div>
+</section>
 
-  <!-- MAIN -->
-  <main>
+<!-- ARTICLE -->
+<main class="article">
+  <div class="container">
+    <div class="article-grid">
+      <div class="prose-col">
+<div class="section-head"> The Big Question</div>
+<div class="prose fade-in">
+  <p class="drop-cap">If 75–85% of your R&D workflows could be reshaped by AI agents this year — what's your excuse for not having a plan?</p>
+  <p>That figure isn't a futurist projection. It's from McKinsey's 2025 Cognitive Generative Agent Readiness report, and it's already being acted on. The question for R&D leaders isn't <em>whether</em> agentic AI will change their labs — it's whether they'll be the architect of that change, or its casualty.</p>
+</div>
 
-    <!-- SECTION 1: BIG IDEA -->
-    <section class="section">
-      <div class="container">
-        <div class="section-label">
-          <span class="section-label-num">01</span>
-          The Big Idea
-        </div>
-        <h2 class="section-title">From R&D to R&P — The Agentic Shift Is Here</h2>
-        <div class="prose fade-in">
-          <p>We've spent two years debating generative AI. That debate is over.</p>
-          <p>2026 is the year the C-suite is demanding a shift from AI experimentation to <strong>AI performance</strong> — and in R&D, that means agentic systems: autonomous agents that don't just generate text, but reason, plan, execute multi-step workflows, and learn from outcomes.</p>
-          <p><strong>Self-driving labs</strong> are the clearest signal. These are closed-loop R&D environments where AI formulates hypotheses, dispatches robotic systems to run experiments, analyzes results in real time, and iterates — with minimal human intervention. <em>Nature</em> listed it as one of the top technologies to watch in 2025. By early 2026, platforms like ORGANA and Strateos are already commercially operational.</p>
-        </div>
+<div class="section-head"> From R&D to R&P — The Agentic Shift Is Here</div>
+<div class="prose fade-in">
+  <p>We've spent two years debating generative AI. That debate is over. 2026 is the year the C-suite is demanding a shift from AI experimentation to <strong>AI performance</strong> — agentic systems that reason, plan, execute multi-step workflows, and learn from outcomes.</p>
+  <p><strong>Self-driving labs</strong> are the clearest signal. Closed-loop environments where AI formulates hypotheses, dispatches robotic systems to run experiments, analyzes results in real time, and iterates — with minimal human intervention. <em>Nature</em> listed it as one of the top technologies to watch. By early 2026, platforms like ORGANA and Strateos are already commercially operational.</p>
+</div>
 
-        <div class="pull-quote fade-in">
-          <p>"The bottleneck isn't the technology — it's maturity readiness. Level 1–2 organizations will bolt agentic AI onto broken processes. Level 4–5 organizations will transform with it."</p>
-          <cite>— RD Chronicles, Edition #1</cite>
-        </div>
+<div class="pull-quote fade-in"><p>The bottleneck isn't the technology — it's maturity readiness. Organizations that bolt agentic AI onto broken processes will fail. Organizations with clean data infrastructure and cross-functional workflows will transform.</p><cite>— RD Chronicles</cite></div>
 
-        <div class="prose fade-in">
-          <p>The IDC 2026 Manufacturing FutureScape puts a hard deadline on this: <strong>by 2028, 65% of G1000 manufacturers will use AI agents</strong> with design and simulation tools to continuously validate product configurations. That's not a pilot — that's a structural shift in how NPD pipelines operate.</p>
-        </div>
+<div class="prose fade-in">
+  <p>The IDC 2026 Manufacturing FutureScape: <strong>by 2028, 65% of G1000 manufacturers will use AI agents</strong> with design and simulation tools to continuously validate product configurations. That's not a pilot — that's a structural shift in how NPD pipelines operate.</p>
+</div>
 
-        <div class="fade-in" style="margin-top: var(--space-8);">
-          <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-4); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;">Three questions every R&D VP should be asking now:</p>
-          <ul class="questions-list" role="list">
-            <li>
-              <span class="q-num">01</span>
-              <span>Do we have the <strong>data governance</strong> to feed agentic systems clean inputs?</span>
-            </li>
-            <li>
-              <span class="q-num">02</span>
-              <span>Are our development pipelines <strong>modular enough</strong> to insert AI agents without rebuilding everything?</span>
-            </li>
-            <li>
-              <span class="q-num">03</span>
-              <span>Are we building our team's <strong>AI orchestration skills</strong>, or still hiring for prompt engineering?</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<p style="font-size:var(--text-sm);color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--space-4)">Three questions for your next leadership review:</p>
+<ul class="q-list fade-in">
+  <li><span class="q-n">01</span><span>Do we have the <strong>data governance</strong> to feed agentic systems clean inputs?</span></li>
+  <li><span class="q-n">02</span><span>Are our development pipelines <strong>modular enough</strong> to insert AI agents without rebuilding everything?</span></li>
+  <li><span class="q-n">03</span><span>Are we building <strong>AI orchestration skills</strong>, or still hiring for prompt engineering?</span></li>
+</ul>
 
-    <!-- SECTION 2: THE RADAR -->
-    <section class="section">
-      <div class="container">
-        <div class="section-label">
-          <span class="section-label-num">02</span>
-          The Radar — 3 Signals This Week
-        </div>
-        <h2 class="section-title">What's Moving the Needle Right Now</h2>
-        <div class="radar-grid">
+<div class="section-head"> The Radar — 3 Signals</div>
+<div class="radar fade-in">
+  <div class="signal">
+  <div class="signal-n">1</div>
+  <div>
+    <div class="signal-title">Yann LeCun's AMI Labs raises $1.03B for World Models</div>
+    <p class="signal-body">LeCun left Meta and closed a $1.03B seed round ($3.5B pre-money) — Europe's largest seed round on record. AMI Labs builds on JEPA: AI that predicts in abstract representation space, not token by token. Applications target robotics, process control, and healthcare.</p>
+    <div class="signal-why">→ LLMs can't understand physical causality. World models might — and this is the architecture that will eventually run your factory floor autonomously.</div>
+  </div>
+  <div class="signal-src"><a href="https://techcrunch.com/2026/03/09/yann-lecuns-ami-labs-raises-1-03-billion-to-build-world-models/" target="_blank" rel="noopener">TechCrunch ↗</a></div>
+</div>
+  <div class="signal">
+  <div class="signal-n">2</div>
+  <div>
+    <div class="signal-title">Deloitte: 80% of manufacturers plan 20%+ budgets on smart manufacturing</div>
+    <p class="signal-body">2026 Deloitte survey of 600 executives: smart manufacturing — including agentic AI — is now the primary driver of competitiveness. Physical AI (humanoid robots, autonomous robotics) is the next wave, with 22% planning deployment within two years.</p>
+    <div class="signal-why">→ If your R&D roadmap doesn't account for physical AI integration in production systems, it's already outdated.</div>
+  </div>
+  <div class="signal-src"><a href="https://www.deloitte.com/us/en/insights/industry/manufacturing-industrial-products/manufacturing-industry-outlook.html" target="_blank" rel="noopener">Deloitte Insights ↗</a></div>
+</div>
+  <div class="signal">
+  <div class="signal-n">3</div>
+  <div>
+    <div class="signal-title">Digital Twins cutting development time by 20–50%</div>
+    <p class="signal-body">Protolabs' 2026 report: 86% of manufacturing leaders view digital twin technology as applicable to their operations. AI-enabled digital threads compress time-to-market by 30% and reduce development costs by 50%.</p>
+    <div class="signal-why">→ If you're still running stage-gate NPD without a digital twin backbone, you're competing with one hand tied behind your back.</div>
+  </div>
+  <div class="signal-src"><a href="https://www.protolabs.com/resources/guides-and-trend-reports/innovation-in-manufacturing-2026/" target="_blank" rel="noopener">Protolabs ↗</a></div>
+</div>
+</div>
 
-          <article class="radar-card fade-in">
-            <span class="radar-card-num">Signal 01</span>
-            <h3 class="radar-card-title">Yann LeCun's AMI Labs raises $1.03B for World Models</h3>
-            <p class="radar-card-body">LeCun left Meta in late 2025 and just closed a $1.03B seed round ($3.5B pre-money) — Europe's largest seed round on record. AMI Labs is building on JEPA: AI that predicts in abstract representation space, not token by token. The industrial applications target robotics, process control, and healthcare.</p>
-            <div class="radar-card-impact">Why it matters: LLMs can't understand physical causality. World models might. This is the architecture that will eventually run your factory floor autonomously.</div>
-            <a href="https://techcrunch.com/2026/03/09/yann-lecuns-ami-labs-raises-1-03-billion-to-build-world-models/" class="radar-card-link" target="_blank" rel="noopener">
-              TechCrunch ↗
-            </a>
-          </article>
+<div class="spotlight fade-in"><div class="spotlight-title">Tool Spotlight — What Level 4 R&D budgeting looks like</div><p class="spotlight-body">Advanced AI-driven scenario modeling consistently guides strategic budget decisions. Predictive analytics proactively highlights inefficiencies. The technology roadmap is living — updated by AI, validated by cross-functional teams. Most industrial R&D organizations are at Level 2–3. The gap isn't a technology problem. It's a data, governance, and culture problem.</p></div>
 
-          <article class="radar-card fade-in">
-            <span class="radar-card-num">Signal 02</span>
-            <h3 class="radar-card-title">Deloitte: 80% of manufacturers plan 20%+ budgets on smart manufacturing</h3>
-            <p class="radar-card-body">The 2026 Deloitte manufacturing survey of 600 executives confirms: smart manufacturing — including agentic AI — is now the primary driver of competitiveness. Physical AI (humanoid robots, autonomous robotics) is the next investment wave, with 22% of manufacturers planning deployment within two years.</p>
-            <div class="radar-card-impact">Why it matters: If your R&D roadmap doesn't account for physical AI integration in your production systems, it's already outdated.</div>
-            <a href="https://www.deloitte.com/us/en/insights/industry/manufacturing-industrial-products/manufacturing-industry-outlook.html" class="radar-card-link" target="_blank" rel="noopener">
-              Deloitte Insights ↗
-            </a>
-          </article>
+<div class="cta fade-in">
+  <h3>What's the single biggest barrier preventing your R&D team from deploying AI agents?</h3>
+  <p>Data quality? Governance? Talent? Leadership buy-in? Drop your answer in the comments — I'm compiling the patterns for an upcoming deep-dive.</p>
+  <a href="https://www.linkedin.com/in/gillespradel" class="li-btn" target="_blank" rel="noopener">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    Commenter sur LinkedIn
+  </a>
+  <div class="tags"><span class="tag">#RDChronicles</span> <span class="tag">#AgenticAI</span> <span class="tag">#IndustrialAI</span> <span class="tag">#RDStrategy</span> <span class="tag">#Industry50</span> <span class="tag">#ManufacturingInnovation</span> <span class="tag">#DigitalTwin</span> <span class="tag">#NPD</span> <span class="tag">#EngineeringLeadership</span> <span class="tag">#AIinRD</span> <span class="tag">#RDTransformation</span> <span class="tag">#FutureOfWork</span></div>
+</div>
 
-          <article class="radar-card fade-in">
-            <span class="radar-card-num">Signal 03</span>
-            <h3 class="radar-card-title">Digital Twins cutting development time by 20–50%</h3>
-            <p class="radar-card-body">Protolabs' 2026 Innovation in Manufacturing report finds 86% of manufacturing leaders now view digital twins as applicable to their operations. Combined with AI-enabled digital threads, teams are compressing time-to-market by 30% while reducing development costs by 50%.</p>
-            <div class="radar-card-impact">Why it matters: If you're still running stage-gate NPD without a digital twin backbone, you're competing with one hand tied behind your back.</div>
-            <a href="https://www.protolabs.com/resources/guides-and-trend-reports/innovation-in-manufacturing-2026/" class="radar-card-link" target="_blank" rel="noopener">
-              Protolabs ↗
-            </a>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: FRAMEWORK SPOTLIGHT -->
-    <section class="section">
-      <div class="container">
-        <div class="section-label">
-          <span class="section-label-num">03</span>
-          Framework Spotlight
-        </div>
-        <h2 class="section-title">What Level 4 R&D Strategy Looks Like in Practice</h2>
-
-        <div class="maturity-strip fade-in" role="list" aria-label="R&D Maturity Levels">
-          <div class="maturity-level" role="listitem">
-            <div class="maturity-level-num">L1</div>
-            <div class="maturity-level-name">Ad hoc</div>
-          </div>
-          <div class="maturity-level" role="listitem">
-            <div class="maturity-level-num">L2</div>
-            <div class="maturity-level-name">Foundational</div>
-          </div>
-          <div class="maturity-level" role="listitem">
-            <div class="maturity-level-num">L3</div>
-            <div class="maturity-level-name">Mainstream</div>
-          </div>
-          <div class="maturity-level active" role="listitem" aria-current="true">
-            <div class="maturity-level-num">L4 ◀</div>
-            <div class="maturity-level-name">Leading</div>
-          </div>
-          <div class="maturity-level" role="listitem">
-            <div class="maturity-level-num">L5</div>
-            <div class="maturity-level-name">Most Advanced</div>
-          </div>
-        </div>
-
-        <div class="spotlight fade-in">
-          <div class="spotlight-header">
-            <div class="spotlight-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-              </svg>
-            </div>
-            <div>
-              <div style="font-family: var(--font-display); font-size: var(--text-base); font-weight: 700; color: var(--color-text);">Level 4 — Leading</div>
-              <div style="font-size: var(--text-sm); color: var(--color-text-muted);">R&D Maturity Framework · Optimize R&D Budgeting &amp; Resource Allocation</div>
-            </div>
-          </div>
-          <p class="spotlight-desc">At Level 4, advanced AI-driven scenario modeling consistently guides strategic budget decisions. Predictive analytics proactively highlights inefficiencies and provides resource prioritization scenarios, enabling timely adjustments. Budget allocation strongly aligns with strategic innovation objectives — enhancing organizational agility and operational effectiveness.</p>
-
-          <div class="spotlight-criteria">
-            <div class="criteria-item">
-              <div class="criteria-item-label">Strategy</div>
-              <div class="criteria-item-text">AI models consistently integrated in roadmap. Precise forecasting of emerging technologies and market demands.</div>
-            </div>
-            <div class="criteria-item">
-              <div class="criteria-item-label">Budgeting</div>
-              <div class="criteria-item-text">Dynamic scenario modeling guides budget decisions. Predictive analytics surfaces inefficiencies before they become crises.</div>
-            </div>
-            <div class="criteria-item">
-              <div class="criteria-item-label">Org Model</div>
-              <div class="criteria-item-text">Agile and decentralized structures with clear guidelines. AI-enhanced workflows boost efficiency and innovation.</div>
-            </div>
-            <div class="criteria-item">
-              <div class="criteria-item-label">Impact</div>
-              <div class="criteria-item-text">Metrics directly linked to strategic goals. Evidence-based narratives reinforce R&D's value to stakeholders.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 4: CTA -->
-    <section class="section">
-      <div class="container">
-        <div class="section-label">
-          <span class="section-label-num">04</span>
-          Join the Conversation
-        </div>
-        <div class="cta-box fade-in">
-          <h3>Where does your R&D sit on the maturity curve?</h3>
-          <p>What's the single biggest barrier preventing your R&D team from deploying AI agents in your development pipeline? Data quality? Governance? Talent? Leadership buy-in? Drop your answer on LinkedIn — I'm compiling the patterns for an upcoming deep-dive.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; margin-bottom: var(--space-6);">
-            <a href="https://www.linkedin.com/in/gillespradel" class="linkedin-btn" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              Reply on LinkedIn
-            </a>
-            <a href="option-b.html" class="switch-btn" style="font-size: var(--text-sm);">Read Option B — Storytelling Edition →</a>
-          </div>
-          <div class="cta-tags">
-            <span class="cta-tag">#RDChronicles</span>
-            <span class="cta-tag">#RDStrategy</span>
-            <span class="cta-tag">#AgenticAI</span>
-            <span class="cta-tag">#IndustrialAI</span>
-            <span class="cta-tag">#RDMaturity</span>
-            <span class="cta-tag">#Industry50</span>
-            <span class="cta-tag">#ManufacturingInnovation</span>
-            <span class="cta-tag">#DigitalTwin</span>
-            <span class="cta-tag">#NewProductDevelopment</span>
-            <span class="cta-tag">#EngineeringLeadership</span>
-            <span class="cta-tag">#AIinRD</span>
-            <span class="cta-tag">#RDTransformation</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-left">
-          <strong>RD Chronicles</strong> by Gilles Pradel<br>
-          Published every 2 weeks · Next edition: April 10, 2026
-        </div>
-        <div class="footer-right">
-          <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
-        </div>
-      </div>
+<div class="companion-banner fade-in">
+  <div class="companion-banner-text">Also in this edition: <strong>Practitioners edition — same topic, storytelling approach</strong></div>
+  <a href="https://rdchronicles.fr/edition-01/option-b.html" class="companion-link">Practitioners edition — same topic, storytelling approach →</a>
+</div>
+</div>
+      <aside class="sidebar"><div class="scard"><div class="scard-label">McKinsey, 2025</div>
+<div class="scard-num">75–85%</div>
+<div class="scard-desc">of R&D workflows reshaped by agentic AI</div>
+</div><div class="scard"><div class="scard-label">TechCrunch, 2026</div>
+<div class="scard-num">$1.03B</div>
+<div class="scard-desc">Yann LeCun's AMI Labs — Europe's largest seed round</div>
+</div><div class="scard"><div class="scard-label">IDC, 2026</div>
+<div class="scard-num">65%</div>
+<div class="scard-desc">of G1000 manufacturers using AI agents in NPD by 2028</div>
+</div><div class="scard"><div class="scard-label">Protolabs, 2026</div>
+<div class="scard-num">50%</div>
+<div class="scard-desc">reduction in dev costs with AI digital threads</div>
+</div></aside>
     </div>
-  </footer>
+  </div>
+</main>
 
-  <script>
-    // Scroll-aware header
-    const header = document.getElementById('site-header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 20);
-    }, { passive: true });
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left"><strong>RD Chronicles</strong> by Gilles Pradel · rdchronicles.fr</div>
+      <div class="footer-right"><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener">Created with Perplexity Computer</a></div>
+    </div>
+  </div>
+</footer>
 
-    // Theme toggle
-    (function(){
-      const t = document.querySelector('[data-theme-toggle]');
-      const r = document.documentElement;
-      let d = r.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
-      r.setAttribute('data-theme', d);
-      const moonIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-      const sunIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
-      if (t) {
-        t.innerHTML = d === 'dark' ? moonIcon : sunIcon;
-        t.addEventListener('click', () => {
-          d = d === 'dark' ? 'light' : 'dark';
-          r.setAttribute('data-theme', d);
-          t.innerHTML = d === 'dark' ? moonIcon : sunIcon;
-        });
-      }
-    })();
-  </script>
-
+<script>
+const h=document.getElementById('hdr');
+window.addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>20),{passive:true});
+(function(){
+  const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
+  let d=r.getAttribute('data-theme')||'dark';
+  const M='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  const S='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+  if(t){t.innerHTML=d==='dark'?M:S;t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.innerHTML=d==='dark'?M:S})}
+})();
+</script>
 </body>
 </html>
