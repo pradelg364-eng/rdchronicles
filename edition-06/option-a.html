@@ -1,0 +1,385 @@
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RD Chronicles — The lab that never sleeps: agentic AI and R&D cycle time</title>
+<meta name="description" content="OpenAI and Ginkgo Bioworks cut protein production costs 40% with GPT-5 autonomous experimentation. Here is what that means for your R&D strategy. By Gilles Pradel.">
+<meta property="og:type"         content="article">
+<meta property="og:site_name"    content="RD Chronicles">
+<meta property="og:title"        content="The lab that never sleeps: how agentic AI is collapsing your R&D cycle time">
+<meta property="og:description"  content="OpenAI + Ginkgo cut protein production costs 40%. Lila Sciences built 22,000m2 of autonomous lab space. The self-driving lab revolution is industrial now. By Gilles Pradel.">
+<meta property="og:image"        content="https://rdchronicles.fr/edition-06/og-option-a.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:url"          content="https://rdchronicles.fr/edition-06/option-a.html">
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="The lab that never sleeps: how agentic AI is collapsing your R&D cycle time">
+<meta name="twitter:description" content="OpenAI + Ginkgo cut protein production costs 40%. Lila Sciences built 22,000m2 of autonomous lab space. The self-driving lab revolution is industrial now.">
+<meta name="twitter:image"       content="https://rdchronicles.fr/edition-06/og-option-a.png">
+<meta name="author"              content="Gilles Pradel">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+  --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+  --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+  --space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;
+  --space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;
+  --space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;
+  --radius-sm:.375rem;--radius-md:.5rem;--radius-lg:.75rem;
+  --radius-xl:1rem;--radius-full:9999px;
+  --transition: 180ms cubic-bezier(0.16,1,0.3,1);
+  --content: 860px;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body:    'Satoshi', 'Inter', sans-serif;
+  --font-ui:      'General Sans', 'Helvetica Neue', sans-serif;
+  --brand:         #01696F;
+  --brand-hover:   #0c5055;
+  --brand-bg:      #d0f0f0;
+}
+:root, [data-theme="dark"] {
+  --bg:        #0f1112;
+  --surface:   #161819;
+  --surface-2: #1c1f20;
+  --surface-off:#212426;
+  --divider:   #272b2d;
+  --border:    #30353a;
+  --text:      #e3e5e8;
+  --muted:     #7a8088;
+  --faint:     #454c52;
+  --inverse:   #0f1112;
+  --brand:     #3ecfcf;
+  --brand-hover:#5dd9d9;
+  --brand-bg:  #0d2828;
+  --shadow:    0 4px 24px rgba(0,0,0,.5);
+}
+[data-theme="light"] {
+  --bg:        #f5f6f8;
+  --surface:   #ffffff;
+  --surface-2: #f9fafb;
+  --surface-off:#edf0f3;
+  --divider:   #dde1e7;
+  --border:    #c8cfd8;
+  --text:      #1a1d22;
+  --muted:     #58606e;
+  --faint:     #9aa0aa;
+  --inverse:   #ffffff;
+  --brand:     #01696F;
+  --brand-hover:#0c5055;
+  --brand-bg:  #d0f0f0;
+  --shadow:    0 4px 24px rgba(0,0,0,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;scroll-padding-top:80px}
+body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);color:var(--text);background:var(--bg);line-height:1.65}
+img,svg{display:block;max-width:100%}
+p,li{max-width:70ch;text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+button{cursor:pointer;background:none;border:none;color:inherit;font:inherit}
+a{color:var(--brand);text-decoration:none;transition:color var(--transition)}
+a:hover{color:var(--brand-hover)}
+::selection{background:var(--brand-bg);color:var(--text)}
+.container{max-width:var(--content);margin:0 auto;padding:0 var(--space-6)}
+.site-header{position:sticky;top:0;z-index:100;background:oklch(from var(--bg) l c h / 0.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color var(--transition),box-shadow var(--transition)}
+.site-header.scrolled{border-color:var(--divider);box-shadow:var(--shadow)}
+.header-inner{height:60px;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.logo{display:flex;align-items:center;gap:var(--space-3);text-decoration:none}
+.logo-mark{width:28px;height:28px;flex-shrink:0}
+.logo-name{font-family:var(--font-display);font-size:var(--text-base);color:var(--text);font-weight:400}
+.logo-tag{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted)}
+.header-right{display:flex;align-items:center;gap:var(--space-3)}
+.theme-toggle{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);color:var(--muted);transition:background var(--transition),color var(--transition)}
+.theme-toggle:hover{background:var(--surface);color:var(--text)}
+.hero{padding:var(--space-16) 0 var(--space-12);position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--divider) 1px,transparent 1px),linear-gradient(90deg,var(--divider) 1px,transparent 1px);background-size:48px 48px;opacity:.18;pointer-events:none}
+.hero-glow{position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:300px;pointer-events:none;background:radial-gradient(ellipse,var(--brand) 0%,transparent 70%);opacity:.05}
+.hero-inner{position:relative;z-index:1}
+.hero-theme{display:inline-flex;align-items:center;gap:var(--space-2);font-family:var(--font-ui);font-size:var(--text-xs);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin-bottom:var(--space-5)}
+.hero-theme-dot{width:5px;height:5px;border-radius:50%;background:var(--brand);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-title{font-family:var(--font-display);font-size:var(--text-3xl);font-weight:400;line-height:1.12;letter-spacing:-.02em;color:var(--text);margin-bottom:var(--space-6)}
+.hero-title em{font-style:italic;color:var(--brand)}
+.hero-lead{font-size:var(--text-lg);color:var(--muted);max-width:54ch;margin-bottom:var(--space-8);line-height:1.6}
+.hero-meta{display:flex;flex-wrap:wrap;gap:var(--space-5);margin-bottom:var(--space-10)}
+.hero-meta-item{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint);display:flex;align-items:center;gap:var(--space-2)}
+.stats-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--divider);border:1px solid var(--divider);border-radius:var(--radius-xl);overflow:hidden;margin-top:var(--space-8)}
+.stat{background:var(--surface);padding:var(--space-5) var(--space-6);display:flex;flex-direction:column;gap:var(--space-1)}
+.stat-num{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--brand);font-weight:400;line-height:1}
+.stat-label{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);line-height:1.4}
+.stat-source{font-family:var(--font-ui);font-size:10px;color:var(--faint);margin-top:var(--space-1)}
+.article{margin-top:var(--space-12)}
+.article-grid{display:grid;grid-template-columns:1fr 220px;gap:var(--space-12);align-items:start}
+@media(max-width:720px){.article-grid{grid-template-columns:1fr}.sidebar{display:none}}
+.prose-col{}
+.section-head{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin:var(--space-10) 0 var(--space-4);display:flex;align-items:center;gap:var(--space-3)}
+.section-head::after{content:'';flex:1;height:1px;background:var(--divider)}
+.prose{font-size:var(--text-base);line-height:1.72;color:var(--text)}
+.prose p{margin-bottom:var(--space-5)}
+.prose p:first-child::first-letter{font-family:var(--font-display);font-size:3.5em;font-weight:400;float:left;line-height:.85;margin-right:.08em;margin-top:.05em;color:var(--brand)}
+.prose strong{font-weight:700;color:var(--text)}
+.prose em{font-style:italic}
+.pull-quote{border-left:3px solid var(--brand);padding:var(--space-5) var(--space-6);background:var(--surface);border-radius:0 var(--radius-lg) var(--radius-lg) 0;margin:var(--space-8) 0;font-family:var(--font-display);font-size:var(--text-lg);font-style:italic;color:var(--text);line-height:1.5}
+.pull-quote cite{display:block;margin-top:var(--space-3);font-family:var(--font-ui);font-size:var(--text-xs);font-style:normal;color:var(--muted)}
+.q-list{list-style:none;display:flex;flex-direction:column;gap:var(--space-3);margin:var(--space-6) 0}
+.q-list li{display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-4) var(--space-5);background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border)}
+.q-n{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;color:var(--brand);min-width:24px;padding-top:2px}
+.radar{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;margin-top:var(--space-6)}
+.signal{display:grid;grid-template-columns:40px 1fr auto;gap:var(--space-4);padding:var(--space-5) var(--space-6);background:var(--surface);align-items:start;transition:background var(--transition)}
+.signal:hover{background:var(--surface-2)}
+.signal-n{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;color:var(--faint);padding-top:3px}
+.signal-title{font-family:var(--font-ui);font-size:var(--text-sm);font-weight:600;color:var(--text);margin-bottom:var(--space-2)}
+.signal-body{font-size:var(--text-sm);color:var(--muted);line-height:1.55;margin-bottom:var(--space-2)}
+.signal-why{font-size:var(--text-xs);color:var(--brand);font-weight:500}
+.signal-src{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);white-space:nowrap;padding-top:3px}
+.signal-src a{color:var(--muted)}
+.signal-src a:hover{color:var(--brand)}
+.spotlight{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-6);margin:var(--space-8) 0}
+.spotlight-title{font-family:var(--font-ui);font-size:var(--text-sm);font-weight:700;color:var(--brand);margin-bottom:var(--space-3)}
+.spotlight-body{font-size:var(--text-sm);color:var(--muted);line-height:1.6}
+.cta{background:var(--surface);border:1px solid var(--brand);border-radius:var(--radius-xl);padding:var(--space-8);margin-top:var(--space-10)}
+.cta h3{font-family:var(--font-display);font-size:var(--text-xl);font-weight:400;color:var(--text);margin-bottom:var(--space-4);line-height:1.3}
+.cta p{color:var(--muted);font-size:var(--text-sm);margin-bottom:var(--space-5)}
+.li-btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:.6rem 1.2rem;background:#0a66c2;color:#fff;border-radius:var(--radius-lg);font-family:var(--font-ui);font-size:var(--text-sm);font-weight:600;transition:background var(--transition),transform var(--transition)}
+.li-btn:hover{background:#0856ab;color:#fff;transform:translateY(-1px)}
+.tags{margin-top:var(--space-5);display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.tag{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);padding:.25rem .6rem;background:var(--surface-2);border-radius:var(--radius-full);border:1px solid var(--border)}
+.sidebar{display:flex;flex-direction:column;gap:var(--space-4);position:sticky;top:80px}
+.scard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-5)}
+.scard-label{font-family:var(--font-ui);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);margin-bottom:var(--space-2)}
+.scard-num{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--brand);font-weight:400;line-height:1.1;margin-bottom:var(--space-2)}
+.scard-desc{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);line-height:1.5}
+.site-footer{border-top:1px solid var(--divider);padding:var(--space-10) 0;margin-top:var(--space-16)}
+.footer-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.footer-left{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint);line-height:1.7}
+.footer-right{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint)}
+.footer-right a{color:var(--muted)}
+.footer-right a:hover{color:var(--brand)}
+.fade-in{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.fade-in.visible{opacity:1;transform:none}
+@media(max-width:640px){
+  .stats-strip{grid-template-columns:1fr}
+  .hero-title{font-size:var(--text-2xl)}
+  .signal{grid-template-columns:32px 1fr}}
+</style>
+<script>(function(){const r=document.documentElement;r.setAttribute('data-theme',matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')})();</script>
+</head>
+<body>
+
+<header class="site-header" id="hdr">
+  <div class="container">
+    <div class="header-inner">
+      <a href="https://rdchronicles.fr" class="logo">
+        <svg class="logo-mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="2.5" fill="var(--brand)"/>
+          <ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none"/>
+          <ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(60 14 14)"/>
+          <ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(120 14 14)"/>
+        </svg>
+        <div>
+          <div class="logo-name">RD Chronicles</div>
+          <div class="logo-tag">by Gilles Pradel</div>
+        </div>
+      </a>
+      <div class="header-right">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="hero-theme"><span class="hero-theme-dot"></span>AI &amp; Agentic R&amp;D</div>
+    <h1 class="hero-title">The lab that never sleeps:<br>how <em>agentic AI</em> is collapsing<br>your R&amp;D cycle time</h1>
+    <p class="hero-lead">OpenAI and Ginkgo Bioworks cut protein production costs by 40% using GPT-5 to orchestrate 30,000 autonomous experiments. The self-driving lab revolution has gone industrial. Here is what that means for your R&amp;D strategy.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Gilles Pradel
+      </span>
+      <span class="hero-meta-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        6 min read
+      </span>
+    </div>
+    <div class="stats-strip fade-in">
+      <div class="stat"><span class="stat-num">40%</span><span class="stat-label">protein production cost reduction — GPT-5 + Ginkgo Bioworks autonomous lab</span><span class="stat-source">OpenAI + Ginkgo, 2026</span></div>
+      <div class="stat"><span class="stat-num">22,000m²</span><span class="stat-label">AI Science Factory — largest autonomous R&amp;D facility in the world</span><span class="stat-source">Lila Sciences, 2026</span></div>
+      <div class="stat"><span class="stat-num">$52B</span><span class="stat-label">agentic AI market by 2030, up from $7.8B today</span><span class="stat-source">Industry analysts, 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<main class="article">
+  <div class="container">
+    <div class="article-grid">
+      <div class="prose-col">
+
+<div class="section-head">The Signal You Should Not Miss</div>
+<div class="pull-quote fade-in">
+  <p>"OpenAI and Ginkgo Bioworks tested more than 30,000 experimental conditions over six months. They demonstrated that blending Ginkgo's Reconfigurable Automation Cart cloud lab with the GPT-5 LLM reduces the cost-per-gram of protein production by 40% relative to state-of-the-art methods. Protein yield improved by 27%."</p>
+  <cite>— Nature, March 2026</cite>
+</div>
+<div class="prose fade-in">
+  <p>That is not a pharma story. No human set up a single one of those 30,000 experiments. GPT-5 designed them, ran them, interpreted the results, and decided what to run next — in a closed loop that operated continuously. The result was a 40% cost reduction and a 27% yield improvement. This is the benchmark every R&amp;D-intensive organization should now be measuring itself against.</p>
+</div>
+
+<div class="section-head">From Research &amp; Development to Research &amp; Prediction</div>
+<div class="prose fade-in">
+  <p class="drop-cap">For three decades, R&amp;D meant running experiments until something worked. The bottleneck was always the same: the physical experiment. Slow, expensive, constrained by human working hours and lab capacity. Agentic AI is dismantling that constraint — not by making experiments faster, but by removing humans from the experiment loop entirely.</p>
+
+  <p>Lila Sciences has built what may be the world's largest AI-driven research facility: <strong>22,000 square metres of automated lab space</strong>, running R&amp;D as a continuous autonomous service for pharmaceutical and materials science clients. Their system does not just execute experiments — it designs them, interprets results, updates its model, and decides what to run next. Continuously. Without human intervention in the cycle.</p>
+
+  <p>The University of Toronto's Acceleration Consortium, backed by a <strong>CAD $200 million government grant</strong>, operates a fleet of 50 autonomous robots across multiple universities under Alán Aspuru-Guzik. His stated ambition: automate any chemical reaction. "Solve that problem," he says, "and the world is yours."</p>
+
+  <p>At Novartis, an internal platform called <strong>MicroCycle</strong> autonomously synthesizes, purifies, and tests compounds — then analyzes data and selects the next compound to synthesize, without human intervention in the loop. Pharmaceutical Technology called it, in a March 25 feature, one of the platforms approaching Level 5 autonomy: humans only set goals and receive results.</p>
+
+  <p>The strategic implication for leadership is precise: the organizations that will lead R&amp;D in 2030 are not the ones with the most brilliant scientists. They are the ones with the <strong>best-designed autonomous research pipelines</strong>. The human scientist becomes the strategist. The machine becomes the experimenter.</p>
+</div>
+
+<div class="section-head">What This Changes About Capital Allocation</div>
+<div class="prose fade-in">
+  <p>The shift from human-led to agent-led experimentation is not a productivity optimization. It is a structural change in how scientific value gets created. When you can run 10,000 experiments for the cost of 100, the rational response is not to run 10,000 experiments on your existing portfolio of questions. It is to ask far more <strong>ambitious questions</strong>.</p>
+
+  <p>The constraint shifts from "what can we afford to test?" to "what is worth testing?" That is a strategic question, not a scientific one — and it belongs in the boardroom, not just the lab.</p>
+
+  <p>The talent model changes too. The T-shaped engineer who can orchestrate AI research systems — who has deep enough domain science to judge outputs critically, and enough systems thinking to design the right experimental loops — is worth dramatically more than a specialist who can only run experiments manually. The organizations building this capability now will have a structural advantage within three years.</p>
+</div>
+
+<p style="font-size:var(--text-sm);color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--space-4)">Three actions for R&amp;D leadership this quarter:</p>
+<ul class="q-list fade-in">
+  <li><span class="q-n">01</span><span><strong>Map one high-volume experimental workflow</strong> — literature synthesis, compound screening, failure mode analysis — and assess whether an agentic layer could run it autonomously. The criterion is not "perfect?" but "good enough to free up my scientists?"</span></li>
+  <li><span class="q-n">02</span><span><strong>Audit your data infrastructure</strong> — agentic research systems are only as good as the data they can access and the feedback loops they can close. Siloed systems and undigitized lab notebooks are the first constraint to remove.</span></li>
+  <li><span class="q-n">03</span><span><strong>Reframe the AI investment question at board level</strong> — the question is not "what is our AI budget?" It is "what is our agentic R&amp;D roadmap, and what is the competitive cost of not having one?"</span></li>
+</ul>
+
+<div class="section-head">The Radar — 3 Signals</div>
+<div class="radar fade-in">
+  <div class="signal">
+    <div class="signal-n">1</div>
+    <div>
+      <div class="signal-title">OpenAI + Ginkgo Bioworks: GPT-5 cuts protein production cost by 40%</div>
+      <p class="signal-body">30,000 experimental conditions in six months, fully autonomous. Cost-per-gram fell 40%. Yield improved 27%. The experiment used Ginkgo's Reconfigurable Automation Cart cloud lab orchestrated by GPT-5 in a closed loop — no human experiment setup at any stage.</p>
+      <div class="signal-why">→ LLMs are now outperforming traditional Bayesian optimization in complex experimental spaces. This is the new benchmark for autonomous R&amp;D.</div>
+    </div>
+    <div class="signal-src"><a href="https://www.nature.com/articles/d41586-026-00974-2" target="_blank" rel="noopener">Nature ↗</a></div>
+  </div>
+  <div class="signal">
+    <div class="signal-n">2</div>
+    <div>
+      <div class="signal-title">Lila Sciences builds 22,000m² AI Science Factory — autonomous R&amp;D as a service</div>
+      <p class="signal-body">The UK government's Advanced Research and Innovation Agency awarded Lila Sciences £500,000 to test whether its AI NanoScientist robot can synthesize and improve nanoparticle stability. The facility offers autonomous R&amp;D as a commercial service to pharma and materials clients.</p>
+      <div class="signal-why">→ Autonomous lab capacity is becoming a purchasable commodity. The question is whether your scientific and data infrastructure is ready to use it effectively.</div>
+    </div>
+    <div class="signal-src"><a href="https://www.pharmaceutical-technology.com/features/researchers-become-scientific-tastemakers-by-handing-more-rnd-to-autonomous-labs/" target="_blank" rel="noopener">Pharma Technology ↗</a></div>
+  </div>
+  <div class="signal">
+    <div class="signal-n">3</div>
+    <div>
+      <div class="signal-title">Gartner: 40% of enterprise apps will embed AI agents by end of 2026 — up from under 5% in 2025</div>
+      <p class="signal-body">The agentic AI market is projected to grow from $7.8 billion today to over $52 billion by 2030. Multi-agent system inquiries surged 1,445% between Q1 2024 and Q2 2025. Deloitte expects 75% of companies to invest in agentic AI in 2026.</p>
+      <div class="signal-why">→ The window to build organizational capability in agentic AI before it becomes table stakes is closing fast.</div>
+    </div>
+    <div class="signal-src"><a href="https://machinelearningmastery.com/7-agentic-ai-trends-to-watch-in-2026/" target="_blank" rel="noopener">ML Mastery ↗</a></div>
+  </div>
+</div>
+
+<div class="spotlight fade-in">
+  <div class="spotlight-title">The Shift: From R&amp;D to R&amp;P (Research &amp; Prediction)</div>
+  <p class="spotlight-body">The most precise framing of where agentic AI takes R&amp;D comes from the pharma world, where the shift is furthest along. The new model is not "run experiments faster." It is "predict outcomes before you run them — and only build what the prediction says will work." Drug discovery is the leading edge of this. By 2026, the organizations leading life sciences R&amp;D are those that use AI not just as a tool but as an engine to transition discovery from high-risk trial-and-error to calculated, predictable forecast. Every R&amp;D-intensive sector — materials, manufacturing, chemicals, energy — is 12 to 36 months behind pharma on this curve.</p>
+</div>
+
+<div class="cta fade-in">
+  <h3>Is your R&amp;D organization structured to capture machine-speed insights — or still running on human-pace governance?</h3>
+  <p>The lab that never sleeps is operational. The strategic gap is not technology — it is organizational readiness. I am particularly curious about examples from industrial R&amp;D and advanced manufacturing, where the self-driving lab model is less discussed but the opportunity is just as large.</p>
+  <a href="https://www.linkedin.com/in/gillespradel" class="li-btn" target="_blank" rel="noopener">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    Commenter sur LinkedIn
+  </a>
+  <div class="tags"><span class="tag">#RDChronicles</span><span class="tag">#AgenticAI</span><span class="tag">#SelfDrivingLabs</span><span class="tag">#RDStrategy</span><span class="tag">#AIinRD</span><span class="tag">#AutonomousResearch</span><span class="tag">#EngineeringLeadership</span><span class="tag">#FutureOfRD</span></div>
+</div>
+
+      </div>
+      <aside class="sidebar">
+        <div class="scard"><div class="scard-label">OpenAI + Ginkgo, 2026</div><div class="scard-num">40%</div><div class="scard-desc">protein production cost reduction — GPT-5 autonomous closed-loop lab</div></div>
+        <div class="scard"><div class="scard-label">Lila Sciences</div><div class="scard-num">22,000m²</div><div class="scard-desc">AI Science Factory — autonomous R&amp;D as a service</div></div>
+        <div class="scard"><div class="scard-label">Gartner, 2026</div><div class="scard-num">40%</div><div class="scard-desc">of enterprise apps will embed AI agents by end of 2026</div></div>
+        <div class="scard"><div class="scard-label">University of Toronto</div><div class="scard-num">50</div><div class="scard-desc">autonomous robots — CAD $200M Acceleration Consortium</div></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- LinkedIn Subscribe Banner -->
+<section style="background:var(--surface);border-top:1px solid var(--divider);padding:var(--space-10) 0;margin-top:var(--space-12)">
+  <div style="max-width:var(--content);margin:0 auto;padding:0 var(--space-6);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-6)">
+    <div>
+      <div style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:400;font-style:italic;color:var(--text);margin-bottom:var(--space-2)">Ne manquez aucune edition.</div>
+      <div style="font-family:var(--font-ui);font-size:var(--text-sm);color:var(--muted)">RD Chronicles — la newsletter R&amp;D qui arrive toutes les 2 semaines dans votre LinkedIn.</div>
+    </div>
+    <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7313827013595693059"
+       target="_blank" rel="noopener"
+       style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;background:#0a66c2;color:#fff;border-radius:0.75rem;font-family:var(--font-ui);font-weight:700;font-size:var(--text-sm);text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background 180ms cubic-bezier(.16,1,.3,1),transform 180ms cubic-bezier(.16,1,.3,1)"
+       onmouseover="this.style.background='#0856ab';this.style.transform='translateY(-1px)'"
+       onmouseout="this.style.background='#0a66c2';this.style.transform='translateY(0)'">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+        <rect x="2" y="9" width="4" height="12"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+      S'abonner a RD Chronicles
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left"><strong>RD Chronicles</strong> by Gilles Pradel &middot; rdchronicles.fr</div>
+      <div class="footer-right"><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener">Created with Perplexity Computer</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const h=document.getElementById('hdr');
+window.addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>20),{passive:true});
+(function(){
+  const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;
+  let d=r.getAttribute('data-theme')||'dark';
+  const M='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  const S='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+  if(t){t.innerHTML=d==='dark'?M:S;t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.innerHTML=d==='dark'?M:S})}
+})();
+document.querySelectorAll('.fade-in').forEach(el=>{
+  new IntersectionObserver(([e])=>{if(e.isIntersecting){el.classList.add('visible')}},{threshold:.1}).observe(el)
+});
+</script>
+</body>
+</html>
