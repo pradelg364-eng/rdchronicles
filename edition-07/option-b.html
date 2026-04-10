@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RD Chronicles — The technology radar your team is not running</title>
+<meta name="description" content="6-8 months earlier tech identification. 60% reduction in prior art search time. The systematic technology intelligence process most R&D teams are missing. By Gilles Pradel.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RD Chronicles">
+<meta property="og:title" content="The technology radar your team is not running — and why it is costing you months.">
+<meta property="og:description" content="6-8 months earlier identification of relevant technology. 60% reduction in prior art search time. Here is the systematic scouting process most R&D and engineering teams are missing.">
+<meta property="og:image" content="https://rdchronicles.fr/edition-07/og-option-b.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:url" content="https://rdchronicles.fr/edition-07/option-b.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The technology radar your team is not running — and why it is costing you months.">
+<meta name="twitter:description" content="6-8 months earlier technology identification. 60% reduction in prior art search time. The scouting process most engineering teams are missing.">
+<meta name="twitter:image" content="https://rdchronicles.fr/edition-07/og-option-b.png">
+<meta name="author" content="Gilles Pradel">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+:root{--text-xs:clamp(.75rem,.7rem + .25vw,.875rem);--text-sm:clamp(.875rem,.8rem + .35vw,1rem);--text-base:clamp(1rem,.95rem + .25vw,1.125rem);--text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);--text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);--text-3xl:clamp(2.5rem,1rem + 4vw,5rem);--space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--radius-sm:.375rem;--radius-md:.5rem;--radius-lg:.75rem;--radius-xl:1rem;--radius-full:9999px;--transition:180ms cubic-bezier(.16,1,.3,1);--content:860px;--font-display:'Instrument Serif',Georgia,serif;--font-body:'Satoshi','Inter',sans-serif;--font-ui:'General Sans','Helvetica Neue',sans-serif}
+:root,[data-theme="dark"]{--bg:#0f1112;--surface:#161819;--surface-2:#1c1f20;--divider:#272b2d;--border:#30353a;--text:#e3e5e8;--muted:#7a8088;--faint:#454c52;--brand:#3ecfcf;--brand-hover:#5dd9d9;--brand-bg:#0d2828;--shadow:0 4px 24px rgba(0,0,0,.5)}
+[data-theme="light"]{--bg:#f5f6f8;--surface:#fff;--surface-2:#f9fafb;--divider:#dde1e7;--border:#c8cfd8;--text:#1a1d22;--muted:#58606e;--faint:#9aa0aa;--brand:#01696F;--brand-hover:#0c5055;--brand-bg:#d0f0f0;--shadow:0 4px 24px rgba(0,0,0,.08)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:80px}
+body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);color:var(--text);background:var(--bg);line-height:1.65}
+img,svg{display:block;max-width:100%}
+p,li{max-width:70ch;text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+button{cursor:pointer;background:none;border:none;color:inherit;font:inherit}
+a{color:var(--brand);text-decoration:none;transition:color var(--transition)}
+a:hover{color:var(--brand-hover)}
+.container{max-width:var(--content);margin:0 auto;padding:0 var(--space-6)}
+.site-header{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color var(--transition),box-shadow var(--transition)}
+.site-header.scrolled{border-color:var(--divider);box-shadow:var(--shadow)}
+.header-inner{height:60px;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.logo{display:flex;align-items:center;gap:var(--space-3);text-decoration:none}
+.logo-mark{width:28px;height:28px;flex-shrink:0}
+.logo-name{font-family:var(--font-display);font-size:var(--text-base);color:var(--text)}
+.logo-tag{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted)}
+.theme-toggle{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);color:var(--muted);transition:background var(--transition),color var(--transition)}
+.theme-toggle:hover{background:var(--surface);color:var(--text)}
+.hero{padding:var(--space-16) 0 var(--space-12);position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--divider) 1px,transparent 1px),linear-gradient(90deg,var(--divider) 1px,transparent 1px);background-size:48px 48px;opacity:.18;pointer-events:none}
+.hero-glow{position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,var(--brand) 0%,transparent 70%);opacity:.05;pointer-events:none}
+.hero-inner{position:relative;z-index:1}
+.hero-theme{display:inline-flex;align-items:center;gap:var(--space-2);font-family:var(--font-ui);font-size:var(--text-xs);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin-bottom:var(--space-5)}
+.hero-dot{width:5px;height:5px;border-radius:50%;background:var(--brand);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-title{font-family:var(--font-display);font-size:var(--text-3xl);line-height:1.1;letter-spacing:-.02em;color:var(--text);margin-bottom:var(--space-6)}
+.hero-title em{font-style:italic;color:var(--brand)}
+.hero-lead{font-size:var(--text-lg);color:var(--muted);max-width:54ch;margin-bottom:var(--space-8);line-height:1.6}
+.hero-meta{display:flex;flex-wrap:wrap;gap:var(--space-5);margin-bottom:var(--space-10)}
+.hero-meta-item{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint);display:flex;align-items:center;gap:var(--space-2)}
+.stats-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--divider);border:1px solid var(--divider);border-radius:var(--radius-xl);overflow:hidden;margin-top:var(--space-8)}
+.stat{background:var(--surface);padding:var(--space-5) var(--space-6);display:flex;flex-direction:column;gap:var(--space-1)}
+.stat-num{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--brand);line-height:1}
+.stat-label{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);line-height:1.4}
+.stat-source{font-family:var(--font-ui);font-size:10px;color:var(--faint);margin-top:var(--space-1)}
+.article{margin-top:var(--space-12)}
+.article-grid{display:grid;grid-template-columns:1fr 220px;gap:var(--space-12);align-items:start}
+@media(max-width:720px){.article-grid{grid-template-columns:1fr}.sidebar{display:none}}
+.section-head{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin:var(--space-10) 0 var(--space-4);display:flex;align-items:center;gap:var(--space-3)}
+.section-head::after{content:'';flex:1;height:1px;background:var(--divider)}
+.prose{font-size:var(--text-base);line-height:1.72;color:var(--text)}
+.prose p{margin-bottom:var(--space-5)}
+.prose p:first-child::first-letter{font-family:var(--font-display);font-size:3.5em;float:left;line-height:.85;margin-right:.08em;margin-top:.05em;color:var(--brand)}
+.prose strong{font-weight:700;color:var(--text)}
+.pull-quote{border-left:3px solid var(--brand);padding:var(--space-5) var(--space-6);background:var(--surface);border-radius:0 var(--radius-lg) var(--radius-lg) 0;margin:var(--space-8) 0;font-family:var(--font-display);font-size:var(--text-lg);font-style:italic;color:var(--text);line-height:1.5}
+.q-list{list-style:none;display:flex;flex-direction:column;gap:var(--space-3);margin:var(--space-6) 0}
+.q-list li{display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-4) var(--space-5);background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border)}
+.q-n{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;color:var(--brand);min-width:24px;padding-top:2px}
+.radar{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;margin-top:var(--space-6)}
+.signal{display:grid;grid-template-columns:40px 1fr auto;gap:var(--space-4);padding:var(--space-5) var(--space-6);background:var(--surface);align-items:start;transition:background var(--transition)}
+.signal:hover{background:var(--surface-2)}
+.signal-n{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;color:var(--faint);padding-top:3px}
+.signal-title{font-family:var(--font-ui);font-size:var(--text-sm);font-weight:600;color:var(--text);margin-bottom:var(--space-2)}
+.signal-body{font-size:var(--text-sm);color:var(--muted);line-height:1.55;margin-bottom:var(--space-2)}
+.signal-why{font-size:var(--text-xs);color:var(--brand);font-weight:500}
+.signal-src{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);white-space:nowrap;padding-top:3px}
+.signal-src a{color:var(--muted)}
+.signal-src a:hover{color:var(--brand)}
+.spotlight{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-6);margin:var(--space-8) 0}
+.spotlight-title{font-family:var(--font-ui);font-size:var(--text-sm);font-weight:700;color:var(--brand);margin-bottom:var(--space-3)}
+.spotlight-body{font-size:var(--text-sm);color:var(--muted);line-height:1.6}
+.cta{background:var(--surface);border:1px solid var(--brand);border-radius:var(--radius-xl);padding:var(--space-8);margin-top:var(--space-10)}
+.cta h3{font-family:var(--font-display);font-size:var(--text-xl);color:var(--text);margin-bottom:var(--space-4);line-height:1.3}
+.cta p{color:var(--muted);font-size:var(--text-sm);margin-bottom:var(--space-5)}
+.li-btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:.6rem 1.2rem;background:#0a66c2;color:#fff;border-radius:var(--radius-lg);font-family:var(--font-ui);font-size:var(--text-sm);font-weight:600;transition:background var(--transition),transform var(--transition)}
+.li-btn:hover{background:#0856ab;color:#fff;transform:translateY(-1px)}
+.tags{margin-top:var(--space-5);display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.tag{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);padding:.25rem .6rem;background:var(--surface-2);border-radius:var(--radius-full);border:1px solid var(--border)}
+.sidebar{display:flex;flex-direction:column;gap:var(--space-4);position:sticky;top:80px}
+.scard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-5)}
+.scard-label{font-family:var(--font-ui);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);margin-bottom:var(--space-2)}
+.scard-num{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--brand);line-height:1.1;margin-bottom:var(--space-2)}
+.scard-desc{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);line-height:1.5}
+.site-footer{border-top:1px solid var(--divider);padding:var(--space-10) 0;margin-top:var(--space-16)}
+.footer-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.footer-left{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint)}
+.footer-right{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint)}
+.footer-right a{color:var(--muted)}
+.footer-right a:hover{color:var(--brand)}
+.fade-in{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.fade-in.visible{opacity:1;transform:none}
+@media(max-width:640px){.stats-strip{grid-template-columns:1fr}.hero-title{font-size:var(--text-2xl)}.signal{grid-template-columns:32px 1fr}}
+</style>
+<script>(function(){var r=document.documentElement;r.setAttribute('data-theme',matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')})();</script>
+</head>
+<body>
+<header class="site-header" id="hdr">
+  <div class="container">
+    <div class="header-inner">
+      <a href="https://rdchronicles.fr" class="logo">
+        <svg class="logo-mark" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="2.5" fill="var(--brand)"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(60 14 14)"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(120 14 14)"/></svg>
+        <div><div class="logo-name">RD Chronicles</div><div class="logo-tag">by Gilles Pradel</div></div>
+      </a>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="hero-theme"><span class="hero-dot"></span>R&amp;D Strategy &amp; Technology Roadmap</div>
+    <h1 class="hero-title">The technology radar<br>your team is <em>not running</em> —<br>and why it costs you months.</h1>
+    <p class="hero-lead">Three months building a capability. Halfway through, someone finds a startup shipping the same thing for two years. This is not bad luck — it is a technology intelligence failure. And it is increasingly avoidable.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Gilles Pradel</span>
+      <span class="hero-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6 min read</span>
+    </div>
+    <div class="stats-strip fade-in">
+      <div class="stat"><span class="stat-num">6-8mo</span><span class="stat-label">earlier identification of relevant technology with AI-powered scouting vs traditional methods</span><span class="stat-source">AI Scouting Platforms, 2026</span></div>
+      <div class="stat"><span class="stat-num">60%</span><span class="stat-label">reduction in prior art search time with AI-powered technology intelligence tools</span><span class="stat-source">FitGap / InnovationCast, 2026</span></div>
+      <div class="stat"><span class="stat-num">40%</span><span class="stat-label">improvement in intelligence consumption efficiency — AI-curated vs manual scanning</span><span class="stat-source">Technology Scouting Research, 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<main class="article">
+  <div class="container">
+    <div class="article-grid">
+      <div class="prose-col">
+
+        <div class="section-head">The Story Engineers Recognize</div>
+        <div class="pull-quote fade-in">
+          <p>"Most R&D and product teams scout technology the same way they always have: conference talks, LinkedIn posts, quarterly analyst reports. It is reactive, patchy, and heavily biased toward whatever is currently loud in the market — not what is actually relevant to the technical problems the team is trying to solve."</p>
+        </div>
+        <div class="prose fade-in">
+          <p>The team spends three months building a capability in-house. Halfway through, someone finds a startup that has been shipping exactly that capability for two years — with a production-ready API. The project continues because it is too far along to change course. Six months later, a different team contracts with the startup directly. This is not a bad-luck story. It is a technology intelligence failure. In 2026, it is increasingly avoidable.</p>
+        </div>
+
+        <div class="section-head">From Reactive Scanning to Systematic Intelligence</div>
+        <div class="prose fade-in">
+          <p>The shift the best engineering and product teams are making is from reactive scanning to systematic intelligence. The difference is structural, not just about effort. The core tool is the Technology Radar — an internal, living map of the technologies relevant to your domain, organized by maturity and strategic relevance.</p>
+          <p>You do not need a dedicated innovation team or a six-figure platform to run one. You need three things: a defined technology scope, a small cross-functional group responsible for maintaining it (three to five people), and a quarterly review cadence.</p>
+        </div>
+
+        <div class="section-head">The Four-Ring Structure That Forces Decisions</div>
+        <ul class="q-list fade-in">
+          <li><span class="q-n">Adopt</span><span>The technology is proven in your context and should be used by default. Not "we could use this" — "this is the standard."</span></li>
+          <li><span class="q-n">Trial</span><span>Worth piloting in a real project — not a sandbox, a live use case with real stakes.</span></li>
+          <li><span class="q-n">Assess</span><span>Worth watching but not ready to pilot. Someone is accountable for monitoring it.</span></li>
+          <li><span class="q-n">Hold</span><span>Either unproven, risky, or no longer relevant. Should not be adopted without explicit discussion.</span></li>
+        </ul>
+        <div class="prose fade-in">
+          <p>What this structure does is force explicit decisions. The invisible default of "we are not using that yet" gets replaced with "this is on Hold because of X" or "this is in Assess because we are watching the Y development." Teams that make this shift stop being surprised by competitive technology moves. They saw them coming — and documented why they chose not to act earlier.</p>
+        </div>
+
+        <div class="section-head">The AI Layer Changing Technology Scouting</div>
+        <div class="prose fade-in">
+          <p>The manual version of technology scouting has always been a volume problem. There is too much signal to monitor comprehensively. AI-powered scouting tools are changing that equation: <strong>60% reduction in prior art search time</strong>, <strong>6-8 months of earlier identification</strong> of relevant startup activity, and <strong>40% improvement in intelligence consumption efficiency</strong>.</p>
+          <p>Six to eight months of earlier identification is not a marginal advantage. In a fast-moving technology domain, it is the difference between being a first mover and a fast follower. For engineering teams, it changes the build-vs-buy decision at the start of a project rather than three months in.</p>
+          <p>Microsoft Research president Peter Lee describes the 2026 shift: AI is moving from answering questions to actively joining the research process — generating hypotheses, controlling experiments, collaborating with researchers. The same is happening in technology intelligence: AI is not replacing the strategic judgment about what to build, it is replacing the weeks of manual scanning that should inform that judgment.</p>
+        </div>
+
+        <p style="font-size:var(--text-sm);color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--space-4)">Three steps to start this week:</p>
+        <ul class="q-list fade-in">
+          <li><span class="q-n">01</span><span><strong>Define your technology watch areas.</strong> Pick the three domains most directly relevant to your current roadmap — not the ones most intellectually interesting, the ones where competitive moves would most directly affect your delivery.</span></li>
+          <li><span class="q-n">02</span><span><strong>Set up the minimum viable signal stream.</strong> For each watch area: one preprint server (arXiv, bioRxiv, ChemRxiv), one to two patent classification codes, one startup database filtered to your space. Monthly cadence. Shared document. No platform required to start.</span></li>
+          <li><span class="q-n">03</span><span><strong>Build the radar as a communication artifact.</strong> The goal is not to track every technology — it is to make your team's current technology judgment visible, discussable, and updatable. That visibility prevents the three-month rebuild of something a startup has been shipping for two years.</span></li>
+        </ul>
+
+        <div class="section-head">The Radar — 3 Signals</div>
+        <div class="radar fade-in">
+          <div class="signal">
+            <div class="signal-n">1</div>
+            <div>
+              <div class="signal-title">IRI 2026 R&amp;D Survey: AI and data management top investment priorities</div>
+              <p class="signal-body">Nearly half of R&amp;D organizations expect budget increases in 2026, focused on AI, data management, and new business development. Over half expect a recession, adding pressure to demonstrate ROI on R&amp;D investments.</p>
+              <div class="signal-why">Teams with systematic technology intelligence will be better positioned to allocate budgets toward high-signal opportunities — and cut quickly when signals shift.</div>
+            </div>
+            <div class="signal-src"><a href="https://iriweb.org/resources/2026-rd-trends-forecast/" target="_blank" rel="noopener">IRI ↗</a></div>
+          </div>
+          <div class="signal">
+            <div class="signal-n">2</div>
+            <div>
+              <div class="signal-title">FitGap / InnovationCast 2026: AI scouting platforms deliver 60% reduction in prior art search time</div>
+              <p class="signal-body">AI-powered scouting platforms document material improvements: 60% reduction in prior art search time, 40% improvement in intelligence consumption efficiency, and earlier opportunity identification by 6-8 months. Available to teams of any size — not just large enterprises.</p>
+              <div class="signal-why">Technology scouting is no longer a resource-intensive specialist activity. A professional-grade scouting process is achievable with a part-time commitment from a small cross-functional team.</div>
+            </div>
+            <div class="signal-src"><a href="https://us.fitgap.com/search/technology-scouting-software" target="_blank" rel="noopener">FitGap ↗</a></div>
+          </div>
+          <div class="signal">
+            <div class="signal-n">3</div>
+            <div>
+              <div class="signal-title">Microsoft 2026 AI Trends: AI moves from answering questions to joining the research process</div>
+              <p class="signal-body">Peter Lee (Microsoft Research): in 2026, AI will generate hypotheses, control scientific experiments, and collaborate with human research colleagues. Every R&amp;D scientist will have an AI lab assistant capable of suggesting and running experiments.</p>
+              <div class="signal-why">Technology roadmaps that do not account for this capability shift are planning for the wrong future. The engineering skills most valuable in 2026-2028 include directing and collaborating with AI research systems.</div>
+            </div>
+            <div class="signal-src"><a href="https://news.microsoft.com/source/features/ai/whats-next-in-ai-7-trends-to-watch-in-2026/" target="_blank" rel="noopener">Microsoft ↗</a></div>
+          </div>
+        </div>
+
+        <div class="spotlight fade-in">
+          <div class="spotlight-title">Tool Spotlight: The 90-Day Technology Watch</div>
+          <p class="spotlight-body">A lightweight entry point for teams just starting to build technology intelligence capability. Pick one technology domain. Commit to a 90-day monitoring sprint. Assign one person as domain owner. Produce a one-page brief at the end: what does the signal environment look like, and what decisions does it surface? The value is not primarily what you discover — it is what you learn about your team's technology blind spots. The 90-Day Watch almost always surfaces assumptions in the current roadmap that the team was not aware it was making. That visibility is worth the investment before the budget is committed, not after.</p>
+        </div>
+
+        <div class="cta fade-in">
+          <h3>Is your technology scouting systematic — or mostly reactive?</h3>
+          <p>Technology intelligence is a team sport. The teams that scout well do not have more time — they have better processes for making what they learn visible and discussable. What does your current technology watch process look like? Drop the honest answer in the comments.</p>
+          <a href="https://www.linkedin.com/in/gillespradel" class="li-btn" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            Commenter sur LinkedIn
+          </a>
+          <div class="tags"><span class="tag">#RDChronicles</span><span class="tag">#TechnologyScouting</span><span class="tag">#TechRadar</span><span class="tag">#EngineeringLeadership</span><span class="tag">#RDStrategy</span><span class="tag">#InnovationManagement</span><span class="tag">#AIinRD</span></div>
+        </div>
+      </div>
+      <aside class="sidebar">
+        <div class="scard"><div class="scard-label">AI Scouting, 2026</div><div class="scard-num">6-8mo</div><div class="scard-desc">earlier technology identification vs traditional conference + analyst report methods</div></div>
+        <div class="scard"><div class="scard-label">Prior Art Search</div><div class="scard-num">60%</div><div class="scard-desc">reduction in search time with AI-powered technology scouting platforms</div></div>
+        <div class="scard"><div class="scard-label">Intelligence Efficiency</div><div class="scard-num">40%</div><div class="scard-desc">improvement in intelligence consumption with AI-curated scouting vs manual</div></div>
+        <div class="scard"><div class="scard-label">IRI Survey, 2026</div><div class="scard-num">~50%</div><div class="scard-desc">of R&amp;D leaders expect budget increases — AI top investment priority</div></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<section style="background:var(--surface);border-top:1px solid var(--divider);padding:var(--space-10) 0;margin-top:var(--space-12)">
+  <div style="max-width:var(--content);margin:0 auto;padding:0 var(--space-6);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-6)">
+    <div>
+      <div style="font-family:var(--font-display);font-size:var(--text-xl);font-style:italic;color:var(--text);margin-bottom:var(--space-2)">Ne manquez aucune edition.</div>
+      <div style="font-family:var(--font-ui);font-size:var(--text-sm);color:var(--muted)">RD Chronicles — la newsletter R&amp;D qui arrive toutes les 2 semaines dans votre LinkedIn.</div>
+    </div>
+    <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7313827013595693059" target="_blank" rel="noopener"
+       style="display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;background:#0a66c2;color:#fff;border-radius:.75rem;font-family:var(--font-ui);font-weight:700;font-size:var(--text-sm);text-decoration:none;white-space:nowrap;flex-shrink:0">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      S'abonner a RD Chronicles
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left"><strong>RD Chronicles</strong> by Gilles Pradel &middot; rdchronicles.fr</div>
+      <div class="footer-right"><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener">Created with Perplexity Computer</a></div>
+    </div>
+  </div>
+</footer>
+<script>
+const h=document.getElementById('hdr');
+window.addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>20),{passive:true});
+(function(){const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;let d=r.getAttribute('data-theme')||'dark';const M='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';const S='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';if(t){t.innerHTML=d==='dark'?M:S;t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.innerHTML=d==='dark'?M:S})}})();
+document.querySelectorAll('.fade-in').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting)el.classList.add('visible')},{threshold:.1}).observe(el)});
+</script>
+</body>
+</html>
