@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RD Chronicles — Half your AI roles unfilled by 2027. Your talent architecture is why.</title>
+<meta name="description" content="68% of executives face a significant AI skills gap. Half of AI jobs may go unfilled by 2027. The fix is not hiring more — it is redesigning your talent architecture. By Gilles Pradel.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RD Chronicles">
+<meta property="og:title" content="Half your AI roles will go unfilled by 2027. Your talent architecture is why.">
+<meta property="og:description" content="68% of executives report a significant AI skills gap. 1 in 3 engineering roles goes unfilled. The conventional response — hire more — is not working. Here is the structural fix.">
+<meta property="og:image" content="https://rdchronicles.fr/edition-08/og-option-a.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:url" content="https://rdchronicles.fr/edition-08/option-a.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Half your AI roles will go unfilled by 2027. Your talent architecture is why.">
+<meta name="twitter:description" content="68% of executives face an AI skills gap. Hiring alone won't fix a structural problem. The shift: from headcount to capability architecture.">
+<meta name="twitter:image" content="https://rdchronicles.fr/edition-08/og-option-a.png">
+<meta name="author" content="Gilles Pradel">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+:root{--text-xs:clamp(.75rem,.7rem + .25vw,.875rem);--text-sm:clamp(.875rem,.8rem + .35vw,1rem);--text-base:clamp(1rem,.95rem + .25vw,1.125rem);--text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);--text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);--text-3xl:clamp(2.5rem,1rem + 4vw,5rem);--space-1:.25rem;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--radius-sm:.375rem;--radius-md:.5rem;--radius-lg:.75rem;--radius-xl:1rem;--radius-full:9999px;--transition:180ms cubic-bezier(.16,1,.3,1);--content:860px;--font-display:'Instrument Serif',Georgia,serif;--font-body:'Satoshi','Inter',sans-serif;--font-ui:'General Sans','Helvetica Neue',sans-serif}
+:root,[data-theme="dark"]{--bg:#0f1112;--surface:#161819;--surface-2:#1c1f20;--divider:#272b2d;--border:#30353a;--text:#e3e5e8;--muted:#7a8088;--faint:#454c52;--brand:#3ecfcf;--brand-hover:#5dd9d9;--brand-bg:#0d2828;--shadow:0 4px 24px rgba(0,0,0,.5)}
+[data-theme="light"]{--bg:#f5f6f8;--surface:#fff;--surface-2:#f9fafb;--divider:#dde1e7;--border:#c8cfd8;--text:#1a1d22;--muted:#58606e;--faint:#9aa0aa;--brand:#01696F;--brand-hover:#0c5055;--brand-bg:#d0f0f0;--shadow:0 4px 24px rgba(0,0,0,.08)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:80px}
+body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);color:var(--text);background:var(--bg);line-height:1.65}
+img,svg{display:block;max-width:100%}
+p,li{max-width:70ch;text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+button{cursor:pointer;background:none;border:none;color:inherit;font:inherit}
+a{color:var(--brand);text-decoration:none;transition:color var(--transition)}
+a:hover{color:var(--brand-hover)}
+.container{max-width:var(--content);margin:0 auto;padding:0 var(--space-6)}
+.site-header{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color var(--transition),box-shadow var(--transition)}
+.site-header.scrolled{border-color:var(--divider);box-shadow:var(--shadow)}
+.header-inner{height:60px;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.logo{display:flex;align-items:center;gap:var(--space-3);text-decoration:none}
+.logo-mark{width:28px;height:28px;flex-shrink:0}
+.logo-name{font-family:var(--font-display);font-size:var(--text-base);color:var(--text)}
+.logo-tag{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted)}
+.theme-toggle{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);color:var(--muted);transition:background var(--transition),color var(--transition)}
+.theme-toggle:hover{background:var(--surface);color:var(--text)}
+.hero{padding:var(--space-16) 0 var(--space-12);position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--divider) 1px,transparent 1px),linear-gradient(90deg,var(--divider) 1px,transparent 1px);background-size:48px 48px;opacity:.18;pointer-events:none}
+.hero-glow{position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,var(--brand) 0%,transparent 70%);opacity:.05;pointer-events:none}
+.hero-inner{position:relative;z-index:1}
+.hero-theme{display:inline-flex;align-items:center;gap:var(--space-2);font-family:var(--font-ui);font-size:var(--text-xs);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin-bottom:var(--space-5)}
+.hero-dot{width:5px;height:5px;border-radius:50%;background:var(--brand);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-title{font-family:var(--font-display);font-size:var(--text-3xl);line-height:1.1;letter-spacing:-.02em;color:var(--text);margin-bottom:var(--space-6)}
+.hero-title em{font-style:italic;color:var(--brand)}
+.hero-lead{font-size:var(--text-lg);color:var(--muted);max-width:54ch;margin-bottom:var(--space-8);line-height:1.6}
+.hero-meta{display:flex;flex-wrap:wrap;gap:var(--space-5);margin-bottom:var(--space-10)}
+.hero-meta-item{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint);display:flex;align-items:center;gap:var(--space-2)}
+.stats-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--divider);border:1px solid var(--divider);border-radius:var(--radius-xl);overflow:hidden;margin-top:var(--space-8)}
+.stat{background:var(--surface);padding:var(--space-5) var(--space-6);display:flex;flex-direction:column;gap:var(--space-1)}
+.stat-num{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--brand);line-height:1}
+.stat-label{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);line-height:1.4}
+.stat-source{font-family:var(--font-ui);font-size:10px;color:var(--faint);margin-top:var(--space-1)}
+.article{margin-top:var(--space-12)}
+.article-grid{display:grid;grid-template-columns:1fr 220px;gap:var(--space-12);align-items:start}
+@media(max-width:720px){.article-grid{grid-template-columns:1fr}.sidebar{display:none}}
+.section-head{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin:var(--space-10) 0 var(--space-4);display:flex;align-items:center;gap:var(--space-3)}
+.section-head::after{content:'';flex:1;height:1px;background:var(--divider)}
+.prose{font-size:var(--text-base);line-height:1.72;color:var(--text)}
+.prose p{margin-bottom:var(--space-5)}
+.prose p:first-child::first-letter{font-family:var(--font-display);font-size:3.5em;float:left;line-height:.85;margin-right:.08em;margin-top:.05em;color:var(--brand)}
+.prose strong{font-weight:700;color:var(--text)}
+.pull-quote{border-left:3px solid var(--brand);padding:var(--space-5) var(--space-6);background:var(--surface);border-radius:0 var(--radius-lg) var(--radius-lg) 0;margin:var(--space-8) 0;font-family:var(--font-display);font-size:var(--text-lg);font-style:italic;color:var(--text);line-height:1.5}
+.q-list{list-style:none;display:flex;flex-direction:column;gap:var(--space-3);margin:var(--space-6) 0}
+.q-list li{display:flex;gap:var(--space-4);align-items:flex-start;padding:var(--space-4) var(--space-5);background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border)}
+.q-n{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;color:var(--brand);min-width:24px;padding-top:2px}
+.radar{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;margin-top:var(--space-6)}
+.signal{display:grid;grid-template-columns:40px 1fr auto;gap:var(--space-4);padding:var(--space-5) var(--space-6);background:var(--surface);align-items:start;transition:background var(--transition)}
+.signal:hover{background:var(--surface-2)}
+.signal-n{font-family:var(--font-ui);font-size:var(--text-xs);font-weight:700;color:var(--faint);padding-top:3px}
+.signal-title{font-family:var(--font-ui);font-size:var(--text-sm);font-weight:600;color:var(--text);margin-bottom:var(--space-2)}
+.signal-body{font-size:var(--text-sm);color:var(--muted);line-height:1.55;margin-bottom:var(--space-2)}
+.signal-why{font-size:var(--text-xs);color:var(--brand);font-weight:500}
+.signal-src{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);white-space:nowrap;padding-top:3px}
+.signal-src a{color:var(--muted)}
+.signal-src a:hover{color:var(--brand)}
+.spotlight{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-6);margin:var(--space-8) 0}
+.spotlight-title{font-family:var(--font-ui);font-size:var(--text-sm);font-weight:700;color:var(--brand);margin-bottom:var(--space-3)}
+.spotlight-body{font-size:var(--text-sm);color:var(--muted);line-height:1.6}
+.cta{background:var(--surface);border:1px solid var(--brand);border-radius:var(--radius-xl);padding:var(--space-8);margin-top:var(--space-10)}
+.cta h3{font-family:var(--font-display);font-size:var(--text-xl);color:var(--text);margin-bottom:var(--space-4);line-height:1.3}
+.cta p{color:var(--muted);font-size:var(--text-sm);margin-bottom:var(--space-5)}
+.li-btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:.6rem 1.2rem;background:#0a66c2;color:#fff;border-radius:var(--radius-lg);font-family:var(--font-ui);font-size:var(--text-sm);font-weight:600;transition:background var(--transition),transform var(--transition)}
+.li-btn:hover{background:#0856ab;color:#fff;transform:translateY(-1px)}
+.tags{margin-top:var(--space-5);display:flex;flex-wrap:wrap;gap:var(--space-2)}
+.tag{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);padding:.25rem .6rem;background:var(--surface-2);border-radius:var(--radius-full);border:1px solid var(--border)}
+.sidebar{display:flex;flex-direction:column;gap:var(--space-4);position:sticky;top:80px}
+.scard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:var(--space-5)}
+.scard-label{font-family:var(--font-ui);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--faint);margin-bottom:var(--space-2)}
+.scard-num{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--brand);line-height:1.1;margin-bottom:var(--space-2)}
+.scard-desc{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--muted);line-height:1.5}
+.site-footer{border-top:1px solid var(--divider);padding:var(--space-10) 0;margin-top:var(--space-16)}
+.footer-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-4)}
+.footer-left{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint)}
+.footer-right{font-family:var(--font-ui);font-size:var(--text-xs);color:var(--faint)}
+.footer-right a{color:var(--muted)}
+.footer-right a:hover{color:var(--brand)}
+.fade-in{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+.fade-in.visible{opacity:1;transform:none}
+@media(max-width:640px){.stats-strip{grid-template-columns:1fr}.hero-title{font-size:var(--text-2xl)}.signal{grid-template-columns:32px 1fr}}
+</style>
+<script>(function(){var r=document.documentElement;r.setAttribute('data-theme',matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')})();</script>
+</head>
+<body>
+<header class="site-header" id="hdr">
+  <div class="container">
+    <div class="header-inner">
+      <a href="https://rdchronicles.fr" class="logo">
+        <svg class="logo-mark" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="2.5" fill="var(--brand)"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(60 14 14)"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(120 14 14)"/></svg>
+        <div><div class="logo-name">RD Chronicles</div><div class="logo-tag">by Gilles Pradel</div></div>
+      </a>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="hero-theme"><span class="hero-dot"></span>R&amp;D Talent &amp; Career Paths</div>
+    <h1 class="hero-title">Half your AI roles will go<br>unfilled by 2027.<br>Your <em>talent architecture</em> is why.</h1>
+    <p class="hero-lead">68% of executives face a significant AI skills gap. One in three engineering roles goes unfilled. Hiring more is not the answer. The shift: from headcount to capability architecture.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Gilles Pradel</span>
+      <span class="hero-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6 min read</span>
+    </div>
+    <div class="stats-strip fade-in">
+      <div class="stat"><span class="stat-num">68%</span><span class="stat-label">of executives report a significant AI skills gap impacting project success</span><span class="stat-source">Bain / Virtasant, Feb 2026</span></div>
+      <div class="stat"><span class="stat-num">50%</span><span class="stat-label">of AI jobs may remain unfilled by 2027 — demand growing 21% annually since 2019</span><span class="stat-source">Bain &amp; Company, 2026</span></div>
+      <div class="stat"><span class="stat-num">1 in 3</span><span class="stat-label">new engineering roles goes unfilled in 2026 due to skills gap and retirements</span><span class="stat-source">Actalent, 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<main class="article">
+  <div class="container">
+    <div class="article-grid">
+      <div class="prose-col">
+
+        <div class="section-head">The Structural Problem</div>
+        <div class="pull-quote fade-in">
+          <p>"The talent pool that matches what most R&D organizations actually need does not exist in sufficient volume. You cannot recruit your way out of a structural problem."</p>
+        </div>
+        <div class="prose fade-in">
+          <p>Bain &amp; Company put a number on the problem: demand for AI skills has grown 21% annually since 2019, and half of all AI jobs may remain unfilled by 2027. Sixty-eight percent of executives already report a significant AI skills gap that is directly impacting project success. And the conventional response — hire more, hire faster — is demonstrably not working.</p>
+          <p>Actalent's 2026 engineering workforce analysis documents a talent environment where one in three new engineering roles goes unfilled. Not because candidates do not exist, but because the roles themselves are defined using frameworks that no longer match the skills landscape. <strong>Traditional job titles are no longer a reliable shorthand</strong> for understanding the scope of a candidate's expertise.</p>
+        </div>
+
+        <div class="section-head">From Headcount to Capability Architecture</div>
+        <ul class="q-list fade-in">
+          <li><span class="q-n">01</span><span><strong>From roles to skills and outcomes.</strong> The hiring manager who specifies "senior mechanical engineer, 10 years' experience" is optimizing for a descriptor. The one who specifies "engineer who can own physical-digital integration, manage simulation workflows, and direct suppliers on technical specs" is optimizing for outcomes — and opens the search to a far wider, better-matched pool.</span></li>
+          <li><span class="q-n">02</span><span><strong>From hiring activity to capability building.</strong> Retention is now the primary competitive differentiator. The cost of turnover for a senior R&amp;D engineer — lost knowledge, replacement recruiting, productivity lag — is measured in programme months and six-figure replacement costs. Organizations investing in internal reskilling pathways and personalized career development retain the people competitors cannot hire.</span></li>
+          <li><span class="q-n">03</span><span><strong>From generalist management to T-shaped leadership.</strong> 63% of engineering firms have an AI strategy in place. The bottleneck is not the strategy — it is the people who can execute it. The T-shaped engineer (deep expertise in one domain, genuine cross-functional literacy) is now the profile that capability architecture is built around.</span></li>
+        </ul>
+
+        <div class="section-head">The Dual Career Ladder — Still the Most Under-Implemented Fix</div>
+        <div class="prose fade-in">
+          <p>Your best senior engineers leave because the only visible path forward requires them to become managers. They are not bad managers — they simply did not become engineers to run performance reviews and budget cycles. So they join a competitor, a startup, or a consultancy where they can continue doing technically excellent work at senior compensation levels. The organization loses a brilliant engineer and gains a reluctant manager.</p>
+          <p>The dual career ladder — parallel IC and management tracks, with genuine parity in compensation, status, and organizational influence — solves this directly. IBM, 3M, and Siemens implemented it decades ago and have documented the retention benefits across multiple business cycles. It is still absent, or present only in name, in the majority of R&amp;D organizations.</p>
+          <p>The implementation failure is almost always the same: the IC track exists on paper but does not deliver parity in practice. <strong>The Principal Engineer title exists; the budget authority, strategic influence, and compensation ceiling do not match an equivalent-level manager.</strong> Engineers notice this immediately. The dual career ladder only works when it is genuinely dual.</p>
+        </div>
+
+        <p style="font-size:var(--text-sm);color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--space-4)">Three actions for R&amp;D leadership this quarter:</p>
+        <ul class="q-list fade-in">
+          <li><span class="q-n">01</span><span><strong>Run a capability gap analysis, not a headcount analysis.</strong> Map the outcomes your programme requires over 18 months, then map the capabilities — not roles — needed to deliver them. Most gaps are faster and cheaper to close through targeted reskilling than external hiring.</span></li>
+          <li><span class="q-n">02</span><span><strong>Audit your dual career ladder for substance, not existence.</strong> Do your Principal Engineers have genuine budget authority, influence on technical strategy, and compensation parity with equivalent management levels? If not, you have a retention liability disguised as a career development programme.</span></li>
+          <li><span class="q-n">03</span><span><strong>Make managers accountable for retention metrics.</strong> Manager quality is the single strongest determinant of whether engineers stay or leave. Tie retention outcomes to management evaluation frameworks — as a primary accountability, not a secondary one.</span></li>
+        </ul>
+
+        <div class="section-head">The Radar — 3 Signals</div>
+        <div class="radar fade-in">
+          <div class="signal">
+            <div class="signal-n">1</div>
+            <div>
+              <div class="signal-title">Bain / Virtasant (Feb 2026): 68% of executives face AI skills gap — 50% of AI jobs unfilled by 2027</div>
+              <p class="signal-body">AI skill demand growing 21% annually. 257% increase in technical AI job listings 2018-2023. ~50% of AI openings may go unfilled by 2027. The gap is not AI research talent — it is engineers who can apply AI effectively in specific technical domains.</p>
+              <div class="signal-why">The gap cannot be closed purely through external hiring. Structured internal capability-building is a strategic necessity, not a nice-to-have.</div>
+            </div>
+            <div class="signal-src"><a href="https://www.virtasant.com/ai-today/how-to-overcome-ai-talent-shortages-with-a-t-shaped-hiring-strategy" target="_blank" rel="noopener">Virtasant ↗</a></div>
+          </div>
+          <div class="signal">
+            <div class="signal-n">2</div>
+            <div>
+              <div class="signal-title">Actalent (2026): 1 in 3 engineering roles unfilled — demand growing 13% by 2031</div>
+              <p class="signal-body">Engineering talent demand growing 13% by 2031. One third of new roles currently unfilled due to retirements, demand, and skills gap. Most in-demand: cross-disciplinary T-shaped profiles combining technical depth with adaptability and communication skills.</p>
+              <div class="signal-why">Redefining roles around outcomes and capabilities — not traditional job titles — dramatically expands the accessible talent pool.</div>
+            </div>
+            <div class="signal-src"><a href="https://www.actalentservices.com/insights/articles/engineering-workforce-trends" target="_blank" rel="noopener">Actalent ↗</a></div>
+          </div>
+          <div class="signal">
+            <div class="signal-n">3</div>
+            <div>
+              <div class="signal-title">TalentHR (Feb 2026): retention, not hiring, is the primary competitive differentiator in 2026</div>
+              <p class="signal-body">Organizations treating retention as a continuous strategy outperform those relying on reactive salary increases. Top retention drivers: transparent career mobility, personalized development, manager quality (single strongest determinant), and visible long-term investment in employee growth.</p>
+              <div class="signal-why">Retention is not an HR function. It is an R&amp;D strategy function with direct impact on programme timelines and delivery capacity.</div>
+            </div>
+            <div class="signal-src"><a href="https://www.talenthr.io/blog/talent-retention-in-2026/" target="_blank" rel="noopener">TalentHR ↗</a></div>
+          </div>
+        </div>
+
+        <div class="spotlight fade-in">
+          <div class="spotlight-title">Signal: APAC Shift — From Headcount to Workforce Design</div>
+          <p class="spotlight-body">A LinkedIn analysis from April 1, 2026, on APAC tech and engineering organizations captures the broader shift precisely: "APAC isn't short of talent. It's short of specialised capability — the skills needed to build, scale and operationalise AI." The transition being documented: from headcount to workforce design, from roles to skills and outcomes, from hiring activity to capability building. This is not an APAC story. It is a global one.</p>
+        </div>
+
+        <div class="cta fade-in">
+          <h3>Is your organization building capability systematically — or still trying to hire its way to it?</h3>
+          <p>The talent architecture problem in R&amp;D is not a 2027 problem. It is playing out in project timelines, capability gaps, and engineering exits happening right now. Where is your organization in this transition? I am particularly interested in examples of dual career ladders that genuinely work — not just on the org chart, but in practice.</p>
+          <a href="https://www.linkedin.com/in/gillespradel" class="li-btn" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            Commenter sur LinkedIn
+          </a>
+          <div class="tags"><span class="tag">#RDChronicles</span><span class="tag">#RDTalent</span><span class="tag">#EngineeringLeadership</span><span class="tag">#AISkillsGap</span><span class="tag">#DualCareerLadder</span><span class="tag">#TalentRetention</span><span class="tag">#RDStrategy</span></div>
+        </div>
+      </div>
+      <aside class="sidebar">
+        <div class="scard"><div class="scard-label">Bain / Virtasant, 2026</div><div class="scard-num">68%</div><div class="scard-desc">of executives report significant AI skills gap impacting project success</div></div>
+        <div class="scard"><div class="scard-label">Bain &amp; Company, 2026</div><div class="scard-num">50%</div><div class="scard-desc">of AI jobs may go unfilled by 2027 — demand growing 21% annually</div></div>
+        <div class="scard"><div class="scard-label">Actalent, 2026</div><div class="scard-num">1 in 3</div><div class="scard-desc">new engineering roles unfilled — demand growing 13% by 2031</div></div>
+        <div class="scard"><div class="scard-label">AI Strategy</div><div class="scard-num">63%</div><div class="scard-desc">of engineering firms now building or have an AI strategy in place</div></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<section style="background:var(--surface);border-top:1px solid var(--divider);padding:var(--space-10) 0;margin-top:var(--space-12)">
+  <div style="max-width:var(--content);margin:0 auto;padding:0 var(--space-6);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--space-6)">
+    <div>
+      <div style="font-family:var(--font-display);font-size:var(--text-xl);font-style:italic;color:var(--text);margin-bottom:var(--space-2)">Ne manquez aucune edition.</div>
+      <div style="font-family:var(--font-ui);font-size:var(--text-sm);color:var(--muted)">RD Chronicles — la newsletter R&amp;D qui arrive toutes les 2 semaines dans votre LinkedIn.</div>
+    </div>
+    <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7313827013595693059" target="_blank" rel="noopener"
+       style="display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;background:#0a66c2;color:#fff;border-radius:.75rem;font-family:var(--font-ui);font-weight:700;font-size:var(--text-sm);text-decoration:none;white-space:nowrap;flex-shrink:0">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      S'abonner a RD Chronicles
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left"><strong>RD Chronicles</strong> by Gilles Pradel &middot; rdchronicles.fr</div>
+      <div class="footer-right"><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener">Created with Perplexity Computer</a></div>
+    </div>
+  </div>
+</footer>
+<script>
+const h=document.getElementById('hdr');
+window.addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>20),{passive:true});
+(function(){const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;let d=r.getAttribute('data-theme')||'dark';const M='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';const S='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';if(t){t.innerHTML=d==='dark'?M:S;t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.innerHTML=d==='dark'?M:S})}})();
+document.querySelectorAll('.fade-in').forEach(el=>{new IntersectionObserver(([e])=>{if(e.isIntersecting)el.classList.add('visible')},{threshold:.1}).observe(el)});
+</script>
+</body>
+</html>
