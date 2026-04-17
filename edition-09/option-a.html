@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RD Chronicles — Industry 5.0 is not an upgrade. It is a system architecture decision.</title>
+<meta name="description" content="540,000 robots installed in 2024. The winners are not those with the most automation — but those with the best architecture. MBSE, Industry 5.0, Agile hardware. By Gilles Pradel.">
+<meta property="og:type" content="article"><meta property="og:site_name" content="RD Chronicles">
+<meta property="og:title" content="Industry 5.0 is not an upgrade. It is a system architecture decision.">
+<meta property="og:description" content="540,000 industrial robots installed in 2024. MBSE market growing 18.5% annually. 75% of orgs adopting Agile hardware. The intelligent factory is an architecture decision, not a technology procurement.">
+<meta property="og:image" content="https://rdchronicles.fr/edition-09/og-option-a.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="627">
+<meta property="og:url" content="https://rdchronicles.fr/edition-09/option-a.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Industry 5.0 is not an upgrade. It is a system architecture decision.">
+<meta name="twitter:description" content="540,000 robots installed in 2024. The winners are not those with the most — but those with the best architecture. By Gilles Pradel.">
+<meta name="twitter:image" content="https://rdchronicles.fr/edition-09/og-option-a.png">
+<meta name="author" content="Gilles Pradel">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+:root{--xs:clamp(.75rem,.7rem + .25vw,.875rem);--sm:clamp(.875rem,.8rem + .35vw,1rem);--base:clamp(1rem,.95rem + .25vw,1.125rem);--lg:clamp(1.125rem,1rem + .75vw,1.5rem);--xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);--3xl:clamp(2.5rem,1rem + 4vw,5rem);--s1:.25rem;--s2:.5rem;--s3:.75rem;--s4:1rem;--s5:1.25rem;--s6:1.5rem;--s8:2rem;--s10:2.5rem;--s12:3rem;--s16:4rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;--r-full:9999px;--ease:180ms cubic-bezier(.16,1,.3,1);--max:860px;--serif:'Instrument Serif',Georgia,serif;--body:'Satoshi','Inter',sans-serif;--ui:'General Sans','Helvetica Neue',sans-serif}
+:root,[data-theme="dark"]{--bg:#0f1112;--surf:#161819;--surf2:#1c1f20;--div:#272b2d;--brd:#30353a;--txt:#e3e5e8;--mut:#7a8088;--fnt:#454c52;--brand:#3ecfcf;--bhov:#5dd9d9;--bbg:#0d2828;--shad:0 4px 24px rgba(0,0,0,.5)}
+[data-theme="light"]{--bg:#f5f6f8;--surf:#fff;--surf2:#f9fafb;--div:#dde1e7;--brd:#c8cfd8;--txt:#1a1d22;--mut:#58606e;--fnt:#9aa0aa;--brand:#01696F;--bhov:#0c5055;--bbg:#d0f0f0;--shad:0 4px 24px rgba(0,0,0,.08)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:80px}
+body{min-height:100dvh;font-family:var(--body);font-size:var(--base);color:var(--txt);background:var(--bg);line-height:1.65}
+img,svg{display:block;max-width:100%}p,li{max-width:70ch;text-wrap:pretty}h1,h2,h3{text-wrap:balance}
+button{cursor:pointer;background:none;border:none;color:inherit;font:inherit}
+a{color:var(--brand);text-decoration:none;transition:color var(--ease)}a:hover{color:var(--bhov)}
+.c{max-width:var(--max);margin:0 auto;padding:0 var(--s6)}
+.hdr{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color var(--ease),box-shadow var(--ease)}
+.hdr.on{border-color:var(--div);box-shadow:var(--shad)}
+.hi{height:60px;display:flex;align-items:center;justify-content:space-between;gap:var(--s4)}
+.logo{display:flex;align-items:center;gap:var(--s3);text-decoration:none}
+.lm{width:28px;height:28px;flex-shrink:0}.ln{font-family:var(--serif);font-size:var(--base);color:var(--txt)}.lt{font-family:var(--ui);font-size:var(--xs);color:var(--mut)}
+.tt{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:var(--r-md);color:var(--mut);transition:background var(--ease),color var(--ease)}
+.tt:hover{background:var(--surf);color:var(--txt)}
+.hero{padding:var(--s16) 0 var(--s12);position:relative;overflow:hidden}
+.hg{position:absolute;inset:0;background-image:linear-gradient(var(--div) 1px,transparent 1px),linear-gradient(90deg,var(--div) 1px,transparent 1px);background-size:48px 48px;opacity:.18;pointer-events:none}
+.hglow{position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,var(--brand) 0%,transparent 70%);opacity:.05;pointer-events:none}
+.hi2{position:relative;z-index:1}
+.ht{display:inline-flex;align-items:center;gap:var(--s2);font-family:var(--ui);font-size:var(--xs);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin-bottom:var(--s5)}
+.hd{width:5px;height:5px;border-radius:50%;background:var(--brand);animation:p 2s ease infinite}
+@keyframes p{0%,100%{opacity:1}50%{opacity:.4}}
+.htl{font-family:var(--serif);font-size:var(--3xl);line-height:1.1;letter-spacing:-.02em;color:var(--txt);margin-bottom:var(--s6)}
+.htl em{font-style:italic;color:var(--brand)}
+.hl{font-size:var(--lg);color:var(--mut);max-width:54ch;margin-bottom:var(--s8);line-height:1.6}
+.hm{display:flex;flex-wrap:wrap;gap:var(--s5);margin-bottom:var(--s10)}
+.hmi{font-family:var(--ui);font-size:var(--xs);color:var(--fnt);display:flex;align-items:center;gap:var(--s2)}
+.ss{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--div);border:1px solid var(--div);border-radius:var(--r-xl);overflow:hidden;margin-top:var(--s8)}
+.st{background:var(--surf);padding:var(--s5) var(--s6);display:flex;flex-direction:column;gap:var(--s1)}
+.sn{font-family:var(--serif);font-size:var(--2xl);color:var(--brand);line-height:1}
+.sl{font-family:var(--ui);font-size:var(--xs);color:var(--mut);line-height:1.4}
+.src{font-family:var(--ui);font-size:10px;color:var(--fnt);margin-top:var(--s1)}
+.art{margin-top:var(--s12)}
+.ag{display:grid;grid-template-columns:1fr 220px;gap:var(--s12);align-items:start}
+@media(max-width:720px){.ag{grid-template-columns:1fr}.sb{display:none}}
+.sh{font-family:var(--ui);font-size:var(--xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin:var(--s10) 0 var(--s4);display:flex;align-items:center;gap:var(--s3)}
+.sh::after{content:'';flex:1;height:1px;background:var(--div)}
+.prose{font-size:var(--base);line-height:1.72;color:var(--txt)}
+.prose p{margin-bottom:var(--s5)}
+.prose p:first-child::first-letter{font-family:var(--serif);font-size:3.5em;float:left;line-height:.85;margin-right:.08em;margin-top:.05em;color:var(--brand)}
+.prose strong{font-weight:700;color:var(--txt)}
+.pq{border-left:3px solid var(--brand);padding:var(--s5) var(--s6);background:var(--surf);border-radius:0 var(--r-lg) var(--r-lg) 0;margin:var(--s8) 0;font-family:var(--serif);font-size:var(--lg);font-style:italic;color:var(--txt);line-height:1.5}
+.ql{list-style:none;display:flex;flex-direction:column;gap:var(--s3);margin:var(--s6) 0}
+.ql li{display:flex;gap:var(--s4);align-items:flex-start;padding:var(--s4) var(--s5);background:var(--surf);border-radius:var(--r-lg);border:1px solid var(--brd)}
+.qn{font-family:var(--ui);font-size:var(--xs);font-weight:700;color:var(--brand);min-width:24px;padding-top:2px}
+.radar{display:flex;flex-direction:column;gap:1px;border:1px solid var(--brd);border-radius:var(--r-xl);overflow:hidden;margin-top:var(--s6)}
+.sig{display:grid;grid-template-columns:40px 1fr auto;gap:var(--s4);padding:var(--s5) var(--s6);background:var(--surf);align-items:start;transition:background var(--ease)}
+.sig:hover{background:var(--surf2)}
+.sn2{font-family:var(--ui);font-size:var(--xs);font-weight:700;color:var(--fnt);padding-top:3px}
+.stl{font-family:var(--ui);font-size:var(--sm);font-weight:600;color:var(--txt);margin-bottom:var(--s2)}
+.sbdy{font-size:var(--sm);color:var(--mut);line-height:1.55;margin-bottom:var(--s2)}
+.sw{font-size:var(--xs);color:var(--brand);font-weight:500}
+.ss2{font-family:var(--ui);font-size:var(--xs);color:var(--mut);white-space:nowrap;padding-top:3px}
+.ss2 a{color:var(--mut)}.ss2 a:hover{color:var(--brand)}
+.spot{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r-xl);padding:var(--s6);margin:var(--s8) 0}
+.sptl{font-family:var(--ui);font-size:var(--sm);font-weight:700;color:var(--brand);margin-bottom:var(--s3)}
+.spb{font-size:var(--sm);color:var(--mut);line-height:1.6}
+.cta{background:var(--surf);border:1px solid var(--brand);border-radius:var(--r-xl);padding:var(--s8);margin-top:var(--s10)}
+.cta h3{font-family:var(--serif);font-size:var(--xl);color:var(--txt);margin-bottom:var(--s4);line-height:1.3}
+.cta p{color:var(--mut);font-size:var(--sm);margin-bottom:var(--s5)}
+.btn{display:inline-flex;align-items:center;gap:var(--s2);padding:.6rem 1.2rem;background:#0a66c2;color:#fff;border-radius:var(--r-lg);font-family:var(--ui);font-size:var(--sm);font-weight:600;transition:background var(--ease),transform var(--ease)}
+.btn:hover{background:#0856ab;color:#fff;transform:translateY(-1px)}
+.tags{margin-top:var(--s5);display:flex;flex-wrap:wrap;gap:var(--s2)}
+.tag{font-family:var(--ui);font-size:var(--xs);color:var(--mut);padding:.25rem .6rem;background:var(--surf2);border-radius:var(--r-full);border:1px solid var(--brd)}
+.sb{display:flex;flex-direction:column;gap:var(--s4);position:sticky;top:80px}
+.sc{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r-xl);padding:var(--s5)}
+.scl{font-family:var(--ui);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--fnt);margin-bottom:var(--s2)}
+.scn{font-family:var(--serif);font-size:var(--2xl);color:var(--brand);line-height:1.1;margin-bottom:var(--s2)}
+.scd{font-family:var(--ui);font-size:var(--xs);color:var(--mut);line-height:1.5}
+.ft{border-top:1px solid var(--div);padding:var(--s10) 0;margin-top:var(--s16)}
+.fi{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s4)}
+.fl,.fr{font-family:var(--ui);font-size:var(--xs);color:var(--fnt)}
+.fr a{color:var(--mut)}.fr a:hover{color:var(--brand)}
+.fi2{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s}
+.fi2.vis{opacity:1;transform:none}
+@media(max-width:640px){.ss{grid-template-columns:1fr}.htl{font-size:var(--2xl)}.sig{grid-template-columns:32px 1fr}}
+</style>
+<script>(function(){document.documentElement.setAttribute('data-theme',matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')})();</script>
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <div class="c"><div class="hi">
+    <a href="https://rdchronicles.fr" class="logo">
+      <svg class="lm" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="2.5" fill="var(--brand)"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(60 14 14)"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(120 14 14)"/></svg>
+      <div><div class="ln">RD Chronicles</div><div class="lt">by Gilles Pradel</div></div>
+    </a>
+    <button class="tt" data-tt aria-label="Toggle theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+  </div></div>
+</header>
+
+<section class="hero">
+  <div class="hg" aria-hidden="true"></div><div class="hglow" aria-hidden="true"></div>
+  <div class="c hi2">
+    <div class="ht"><span class="hd"></span>Advanced Manufacturing &amp; Technology Evaluation</div>
+    <h1 class="htl">Industry 5.0 is not an upgrade.<br>It is a <em>system architecture</em> decision.</h1>
+    <p class="hl">540,000 industrial robots installed in 2024. The organizations winning in advanced manufacturing are not those with the most automation — they are those who designed how humans, machines, data, and energy work as a cohesive whole.</p>
+    <div class="hm">
+      <span class="hmi"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Gilles Pradel</span>
+      <span class="hmi"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6 min read</span>
+    </div>
+    <div class="ss fi2">
+      <div class="st"><span class="sn">$14.8B</span><span class="sl">MBSE market projected by 2033 — growing at 18.5% CAGR from $4.5B in 2026</span><span class="src">LinkedIn / MBSE Market, 2026</span></div>
+      <div class="st"><span class="sn">540K+</span><span class="sl">industrial robots installed in 2024 alone — global installed base exceeds 4.6 million</span><span class="src">Electronics Buzz / IFR, 2026</span></div>
+      <div class="st"><span class="sn">75%</span><span class="sl">of organizations projected to have Agile interdisciplinary engineering teams by 2026</span><span class="src">Modular Management, 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<main class="art">
+  <div class="c"><div class="ag">
+    <div>
+      <div class="sh">The Architecture Gap</div>
+      <div class="pq fi2">"The factories that will succeed in the next phase will not be those with the highest number of robots, but those that architect automation systems that complement human skill and judgement."<cite style="display:block;margin-top:.75rem;font-family:var(--ui);font-size:var(--xs);font-style:normal;color:var(--mut)">— Electronics Buzz / Industry 5.0 analysis, 2026</cite></div>
+      <div class="prose fi2">
+        <p>In 2024, more than 540,000 industrial robots were installed worldwide, pushing the global installed base beyond 4.6 million units. But the organizations winning in advanced manufacturing in 2026 are not the ones with the most robots. They are the ones that have designed how humans, machines, data, and energy systems work together as a cohesive whole. The distinction between automation and architecture is where the competitive gap is forming.</p>
+        <p>Industry 4.0 taught manufacturers to connect machines, digitize processes, and use data to drive efficiency. Industry 5.0 builds on that foundation — but it represents a different kind of decision. It is not a technology upgrade. It is a strategic choice about what kind of manufacturing organization you are designing. The three principles that are becoming non-negotiable in 2026 are <strong>human-centricity, resilience, and sustainability</strong> — not values statements, but architectural requirements that change how technology is selected, integrated, and operated.</p>
+        <p>The practical test is not "how automated are we?" It is "how resilient and consistent can we be at scale?" Global customers are now evaluating manufacturing suppliers on reliability and resilience across entire production systems — not just cost and capacity.</p>
+      </div>
+
+      <div class="sh">MBSE: the Engineering Language of System Architecture</div>
+      <div class="prose fi2">
+        <p>The MBSE market was valued at <strong>$4.5 billion in 2026</strong> and is projected to reach <strong>$14.8 billion by 2033</strong> — an 18.5% CAGR. This is a reflection of how engineering-intensive industries are restructuring how complex systems get designed, verified, and operated. Model-Based Systems Engineering replaces document-centric development with a living digital model where requirements, architecture, behavior, and verification evidence are connected and traceable from day one.</p>
+        <p>Ansys released <strong>SAM 2026 R1</strong> in March, advancing SysML v2 adoption with seamless integration between system architecture and engineering analysis — enabling automatic requirement verification without scripting. The June 2026 IEEE MBSE Symposium is addressing SysML v2, digital thread governance, and AI for systems engineering: signals that MBSE is moving from aerospace and defense into industrial manufacturing at scale.</p>
+        <p>The strategic question MBSE raises: how much of your system design knowledge currently lives in documents and in people's heads that leave the company — versus in a connected model that persists, accumulates, and can be interrogated? The gap between those two states is increasingly a competitive gap.</p>
+      </div>
+
+      <div class="sh">Three Architectural Actions This Quarter</div>
+      <ul class="ql fi2">
+        <li><span class="qn">01</span><span><strong>Run an architecture audit, not a technology audit.</strong> Map how your automation stack — robotics, MES, SCADA, IIoT, digital twins — connects end-to-end. Where are the data handoffs that require manual intervention? Where does system intelligence break down at subsystem boundaries? Those are your resilience gaps.</span></li>
+        <li><span class="qn">02</span><span><strong>Assess your MBSE readiness.</strong> If your systems engineering team works primarily in Word and PowerPoint, you have a knowledge vulnerability. Identify one complex programme where requirements, architecture, and verification could be migrated to MBSE as a pilot. The capability compounds across every subsequent programme.</span></li>
+        <li><span class="qn">03</span><span><strong>Evaluate your product architecture for modularity.</strong> Agile hardware development cannot accelerate iteration if the physical architecture tightly couples every component. Identify the three interface points where late-stage design changes cause the most cascade rework — those are your modularity investment priorities.</span></li>
+      </ul>
+
+      <div class="sh">The Radar — 3 Signals</div>
+      <div class="radar fi2">
+        <div class="sig">
+          <div class="sn2">1</div>
+          <div>
+            <div class="stl">MBSE market: $4.5B in 2026 → $14.8B by 2033 (18.5% CAGR); Ansys SAM 2026 R1 advances SysML v2</div>
+            <p class="sbdy">Ansys SAM 2026 R1 (March 18) introduced SysML v2 integration between system architecture and engineering analysis — automatic requirement verification, no scripting required. The June 2026 IEEE MBSE Symposium signals enterprise digital engineering maturation.</p>
+            <div class="sw">MBSE is becoming the structural backbone of complex product development. Document-centric engineering is building a knowledge debt that compounds with every programme.</div>
+          </div>
+          <div class="ss2"><a href="https://www.ansys.com/blog/advancing-mbse-ansys-sam-2026-r1" target="_blank" rel="noopener">Ansys ↗</a></div>
+        </div>
+        <div class="sig">
+          <div class="sn2">2</div>
+          <div>
+            <div class="stl">Industry 5.0 / HRC: 540,000 robots installed in 2024; smart factories operational at scale</div>
+            <p class="sbdy">Smart factories in 2026 integrate cobots, AGVs, digital twins, and IIoT as connected architectures. Taylor &amp; Francis (March 11): human behavior prediction in HRC now enables real-time interpretation of worker movement and intent to pre-adjust robot trajectories.</p>
+            <div class="sw">Global customers evaluate manufacturers on reliability and resilience across entire production systems. Human-robot collaboration that is architecturally integrated — not bolted on — is the differentiator.</div>
+          </div>
+          <div class="ss2"><a href="https://www.americanindustrialmagazine.com/blogs/manufacturing/smart-factories-2026-ai-automation-amp-industry-5-0" target="_blank" rel="noopener">AIM ↗</a></div>
+        </div>
+        <div class="sig">
+          <div class="sn2">3</div>
+          <div>
+            <div class="stl">Agile hardware: 75% of orgs projected to have Agile interdisciplinary teams by 2026 (from 25% in 2020)</div>
+            <p class="sbdy">Agile methodology has crossed from software into hardware, driven by compressed digital prototyping timelines and additive manufacturing. One automotive manufacturer builds a complete digital car every day. Prerequisite: modular product architecture.</p>
+            <div class="sw">The development cadence that differentiated software companies is now differentiating hardware organizations. Modular architecture is the prerequisite that makes Agile iteration possible.</div>
+          </div>
+          <div class="ss2"><a href="https://www.modularmanagement.com/blog/agile-development-for-hardware-platforms" target="_blank" rel="noopener">ModMgmt ↗</a></div>
+        </div>
+      </div>
+
+      <div class="spot fi2">
+        <div class="sptl">Blueprint: Four Principles for the Intelligent Factory</div>
+        <p class="spb">Based on consistent results across advanced manufacturing operations: (1) Automate bottlenecks, not entire factories — identify where quality losses and rework originate, start there. (2) Build visibility before sophistication — real-time data across the production system before adding AI layers. (3) Design for safe, intuitive human-machine collaboration — the interface between human and robot tasks is a design decision, not an afterthought. (4) Treat energy as a core production variable, not overhead. Together, these principles support the transition from fragmented automation to resilient, scalable system architecture.</p>
+      </div>
+
+      <div class="cta fi2">
+        <h3>Which shift matters most for your organization right now — MBSE, Industry 5.0 integration, or Agile hardware?</h3>
+        <p>The intelligent factory is not a destination reached by deploying enough technology. It is a system architecture designed with intention. I am curious about where the practical friction sits in organizations that are genuinely making this transition.</p>
+        <a href="https://www.linkedin.com/in/gillespradel" class="btn" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>Commenter sur LinkedIn</a>
+        <div class="tags"><span class="tag">#RDChronicles</span><span class="tag">#Industry50</span><span class="tag">#MBSE</span><span class="tag">#AdvancedManufacturing</span><span class="tag">#AgileHardware</span><span class="tag">#SmartFactory</span><span class="tag">#HumanRobotCollaboration</span></div>
+      </div>
+    </div>
+    <aside class="sb">
+      <div class="sc"><div class="scl">MBSE Market, 2026</div><div class="scn">$14.8B</div><div class="scd">projected by 2033 at 18.5% CAGR — from $4.5B in 2026</div></div>
+      <div class="sc"><div class="scl">IFR / Electronics Buzz</div><div class="scn">540K+</div><div class="scd">industrial robots installed in 2024 — 4.6M+ global installed base</div></div>
+      <div class="sc"><div class="scl">Modular Management</div><div class="scn">75%</div><div class="scd">of orgs will have Agile interdisciplinary teams by 2026 (up from 25% in 2020)</div></div>
+      <div class="sc"><div class="scl">Ansys SAM</div><div class="scn">SysML v2</div><div class="scd">2026 R1 advances architecture-to-analysis integration for MBSE adoption</div></div>
+    </aside>
+  </div></div>
+</main>
+
+<section style="background:var(--surf);border-top:1px solid var(--div);padding:var(--s10) 0;margin-top:var(--s12)">
+  <div style="max-width:var(--max);margin:0 auto;padding:0 var(--s6);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s6)">
+    <div>
+      <div style="font-family:var(--serif);font-size:var(--xl);font-style:italic;color:var(--txt);margin-bottom:var(--s2)">Ne manquez aucune edition.</div>
+      <div style="font-family:var(--ui);font-size:var(--sm);color:var(--mut)">RD Chronicles — la newsletter R&amp;D toutes les 2 semaines dans votre LinkedIn.</div>
+    </div>
+    <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7313827013595693059" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;background:#0a66c2;color:#fff;border-radius:.75rem;font-family:var(--ui);font-weight:700;font-size:var(--sm);text-decoration:none;white-space:nowrap;flex-shrink:0">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>S'abonner a RD Chronicles</a>
+  </div>
+</section>
+
+<footer class="ft"><div class="c"><div class="fi">
+  <div class="fl"><strong>RD Chronicles</strong> by Gilles Pradel &middot; rdchronicles.fr</div>
+  <div class="fr"><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener">Created with Perplexity Computer</a></div>
+</div></div></footer>
+
+<script>
+const h=document.getElementById('hdr');
+window.addEventListener('scroll',()=>h.classList.toggle('on',scrollY>20),{passive:true});
+(function(){const t=document.querySelector('[data-tt]'),r=document.documentElement;let d=r.getAttribute('data-theme')||'dark';const M='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';const S='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';if(t){t.innerHTML=d==='dark'?M:S;t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.innerHTML=d==='dark'?M:S})}})();
+document.querySelectorAll('.fi2').forEach(el=>new IntersectionObserver(([e])=>{if(e.isIntersecting)el.classList.add('vis')},{threshold:.1}).observe(el));
+</script>
+</body></html>
