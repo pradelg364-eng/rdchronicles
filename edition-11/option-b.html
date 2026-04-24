@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RD Chronicles — The startup disrupting your product is already in an accelerator. Which one?</title>
+<meta name="description" content="Station F/ai, YC W26, TU/e ecosystem — three models of external innovation participation and what engineers and PMs should do differently. By Gilles Pradel.">
+<meta property="og:type" content="article"><meta property="og:site_name" content="RD Chronicles">
+<meta property="og:title" content="The startup disrupting your product is already in an accelerator. Which one?">
+<meta property="og:description" content="Station F/ai backed by all major AI labs. YC W26: 14 companies at $1M ARR by Demo Day. Three models of ecosystem participation for engineers and PMs — and what to do differently today.">
+<meta property="og:image" content="https://rdchronicles.fr/edition-11/og-option-b.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="627">
+<meta property="og:url" content="https://rdchronicles.fr/edition-11/option-b.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The startup disrupting your product is already in an accelerator. Which one?">
+<meta name="twitter:description" content="Station F/ai: OpenAI + Anthropic + Google + Meta + Microsoft + Mistral in one accelerator. YC W26: 14 companies at $1M ARR by Demo Day. Three ecosystem participation models for engineers and PMs.">
+<meta name="twitter:image" content="https://rdchronicles.fr/edition-11/og-option-b.png">
+<meta name="author" content="Gilles Pradel">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+:root{--xs:clamp(.75rem,.7rem + .25vw,.875rem);--sm:clamp(.875rem,.8rem + .35vw,1rem);--base:clamp(1rem,.95rem + .25vw,1.125rem);--lg:clamp(1.125rem,1rem + .75vw,1.5rem);--xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);--3xl:clamp(2.5rem,1rem + 4vw,5rem);--s1:.25rem;--s2:.5rem;--s3:.75rem;--s4:1rem;--s5:1.25rem;--s6:1.5rem;--s8:2rem;--s10:2.5rem;--s12:3rem;--s16:4rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;--r-full:9999px;--ease:180ms cubic-bezier(.16,1,.3,1);--max:860px;--serif:'Instrument Serif',Georgia,serif;--body:'Satoshi','Inter',sans-serif;--ui:'General Sans','Helvetica Neue',sans-serif}
+:root,[data-theme="dark"]{--bg:#0f1112;--surf:#161819;--surf2:#1c1f20;--div:#272b2d;--brd:#30353a;--txt:#e3e5e8;--mut:#7a8088;--fnt:#454c52;--brand:#3ecfcf;--bhov:#5dd9d9;--shad:0 4px 24px rgba(0,0,0,.5)}
+[data-theme="light"]{--bg:#f5f6f8;--surf:#fff;--surf2:#f9fafb;--div:#dde1e7;--brd:#c8cfd8;--txt:#1a1d22;--mut:#58606e;--fnt:#9aa0aa;--brand:#01696F;--bhov:#0c5055;--shad:0 4px 24px rgba(0,0,0,.08)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:80px}
+body{min-height:100dvh;font-family:var(--body);font-size:var(--base);color:var(--txt);background:var(--bg);line-height:1.65}
+img,svg{display:block;max-width:100%}p,li{max-width:70ch;text-wrap:pretty}h1,h2,h3{text-wrap:balance}
+button{cursor:pointer;background:none;border:none;color:inherit;font:inherit}
+a{color:var(--brand);text-decoration:none;transition:color var(--ease)}a:hover{color:var(--bhov)}
+.c{max-width:var(--max);margin:0 auto;padding:0 var(--s6)}
+.hdr{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color var(--ease),box-shadow var(--ease)}.hdr.on{border-color:var(--div);box-shadow:var(--shad)}
+.hi{height:60px;display:flex;align-items:center;justify-content:space-between;gap:var(--s4)}
+.logo{display:flex;align-items:center;gap:var(--s3);text-decoration:none}.lm{width:28px;height:28px;flex-shrink:0}.ln{font-family:var(--serif);font-size:var(--base);color:var(--txt)}.lt{font-family:var(--ui);font-size:var(--xs);color:var(--mut)}
+.tt{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:var(--r-md);color:var(--mut);transition:background var(--ease),color var(--ease)}.tt:hover{background:var(--surf);color:var(--txt)}
+.hero{padding:var(--s16) 0 var(--s12);position:relative;overflow:hidden}
+.hg{position:absolute;inset:0;background-image:linear-gradient(var(--div) 1px,transparent 1px),linear-gradient(90deg,var(--div) 1px,transparent 1px);background-size:48px 48px;opacity:.18;pointer-events:none}
+.hglow{position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,var(--brand) 0%,transparent 70%);opacity:.05;pointer-events:none}
+.hi2{position:relative;z-index:1}
+.ht{display:inline-flex;align-items:center;gap:var(--s2);font-family:var(--ui);font-size:var(--xs);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin-bottom:var(--s5)}
+.hd{width:5px;height:5px;border-radius:50%;background:var(--brand);animation:p 2s ease infinite}@keyframes p{0%,100%{opacity:1}50%{opacity:.4}}
+.htl{font-family:var(--serif);font-size:var(--3xl);line-height:1.1;letter-spacing:-.02em;color:var(--txt);margin-bottom:var(--s6)}.htl em{font-style:italic;color:var(--brand)}
+.hl{font-size:var(--lg);color:var(--mut);max-width:54ch;margin-bottom:var(--s8);line-height:1.6}
+.hm{display:flex;flex-wrap:wrap;gap:var(--s5);margin-bottom:var(--s10)}.hmi{font-family:var(--ui);font-size:var(--xs);color:var(--fnt);display:flex;align-items:center;gap:var(--s2)}
+.ss{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--div);border:1px solid var(--div);border-radius:var(--r-xl);overflow:hidden;margin-top:var(--s8)}
+.st{background:var(--surf);padding:var(--s5) var(--s6);display:flex;flex-direction:column;gap:var(--s1)}.sn{font-family:var(--serif);font-size:var(--2xl);color:var(--brand);line-height:1}.sl{font-family:var(--ui);font-size:var(--xs);color:var(--mut);line-height:1.4}.src{font-family:var(--ui);font-size:10px;color:var(--fnt);margin-top:var(--s1)}
+.art{margin-top:var(--s12)}.ag{display:grid;grid-template-columns:1fr 220px;gap:var(--s12);align-items:start}
+@media(max-width:720px){.ag{grid-template-columns:1fr}.sb{display:none}}
+.sh{font-family:var(--ui);font-size:var(--xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin:var(--s10) 0 var(--s4);display:flex;align-items:center;gap:var(--s3)}.sh::after{content:'';flex:1;height:1px;background:var(--div)}
+.prose{font-size:var(--base);line-height:1.72;color:var(--txt)}.prose p{margin-bottom:var(--s5)}.prose p:first-child::first-letter{font-family:var(--serif);font-size:3.5em;float:left;line-height:.85;margin-right:.08em;margin-top:.05em;color:var(--brand)}.prose strong{font-weight:700;color:var(--txt)}
+.pq{border-left:3px solid var(--brand);padding:var(--s5) var(--s6);background:var(--surf);border-radius:0 var(--r-lg) var(--r-lg) 0;margin:var(--s8) 0;font-family:var(--serif);font-size:var(--lg);font-style:italic;color:var(--txt);line-height:1.5}
+.ql{list-style:none;display:flex;flex-direction:column;gap:var(--s3);margin:var(--s6) 0}.ql li{display:flex;gap:var(--s4);align-items:flex-start;padding:var(--s4) var(--s5);background:var(--surf);border-radius:var(--r-lg);border:1px solid var(--brd)}.qn{font-family:var(--ui);font-size:var(--xs);font-weight:700;color:var(--brand);min-width:24px;padding-top:2px}
+.radar{display:flex;flex-direction:column;gap:1px;border:1px solid var(--brd);border-radius:var(--r-xl);overflow:hidden;margin-top:var(--s6)}
+.sig{display:grid;grid-template-columns:40px 1fr auto;gap:var(--s4);padding:var(--s5) var(--s6);background:var(--surf);align-items:start;transition:background var(--ease)}.sig:hover{background:var(--surf2)}
+.sn2{font-family:var(--ui);font-size:var(--xs);font-weight:700;color:var(--fnt);padding-top:3px}.stl{font-family:var(--ui);font-size:var(--sm);font-weight:600;color:var(--txt);margin-bottom:var(--s2)}.sbdy{font-size:var(--sm);color:var(--mut);line-height:1.55;margin-bottom:var(--s2)}.sw{font-size:var(--xs);color:var(--brand);font-weight:500}.ss2{font-family:var(--ui);font-size:var(--xs);color:var(--mut);white-space:nowrap;padding-top:3px}.ss2 a{color:var(--mut)}.ss2 a:hover{color:var(--brand)}
+.spot{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r-xl);padding:var(--s6);margin:var(--s8) 0}.sptl{font-family:var(--ui);font-size:var(--sm);font-weight:700;color:var(--brand);margin-bottom:var(--s3)}.spb{font-size:var(--sm);color:var(--mut);line-height:1.6}
+.cta{background:var(--surf);border:1px solid var(--brand);border-radius:var(--r-xl);padding:var(--s8);margin-top:var(--s10)}.cta h3{font-family:var(--serif);font-size:var(--xl);color:var(--txt);margin-bottom:var(--s4);line-height:1.3}.cta p{color:var(--mut);font-size:var(--sm);margin-bottom:var(--s5)}
+.btn{display:inline-flex;align-items:center;gap:var(--s2);padding:.6rem 1.2rem;background:#0a66c2;color:#fff;border-radius:var(--r-lg);font-family:var(--ui);font-size:var(--sm);font-weight:600;transition:background var(--ease),transform var(--ease)}.btn:hover{background:#0856ab;color:#fff;transform:translateY(-1px)}
+.tags{margin-top:var(--s5);display:flex;flex-wrap:wrap;gap:var(--s2)}.tag{font-family:var(--ui);font-size:var(--xs);color:var(--mut);padding:.25rem .6rem;background:var(--surf2);border-radius:var(--r-full);border:1px solid var(--brd)}
+.sb{display:flex;flex-direction:column;gap:var(--s4);position:sticky;top:80px}.sc{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r-xl);padding:var(--s5)}.scl{font-family:var(--ui);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--fnt);margin-bottom:var(--s2)}.scn{font-family:var(--serif);font-size:var(--2xl);color:var(--brand);line-height:1.1;margin-bottom:var(--s2)}.scd{font-family:var(--ui);font-size:var(--xs);color:var(--mut);line-height:1.5}
+.ft{border-top:1px solid var(--div);padding:var(--s10) 0;margin-top:var(--s16)}.fi{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s4)}.fl,.fr{font-family:var(--ui);font-size:var(--xs);color:var(--fnt)}.fr a{color:var(--mut)}.fr a:hover{color:var(--brand)}
+.fi2{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s}.fi2.vis{opacity:1;transform:none}
+@media(max-width:640px){.ss{grid-template-columns:1fr}.htl{font-size:var(--2xl)}.sig{grid-template-columns:32px 1fr}}
+</style>
+<script>(function(){document.documentElement.setAttribute('data-theme',matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')})();</script>
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <div class="c"><div class="hi">
+    <a href="https://rdchronicles.fr" class="logo">
+      <svg class="lm" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="2.5" fill="var(--brand)"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(60 14 14)"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(120 14 14)"/></svg>
+      <div><div class="ln">RD Chronicles</div><div class="lt">by Gilles Pradel</div></div>
+    </a>
+    <button class="tt" data-tt aria-label="Toggle theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+  </div></div>
+</header>
+<section class="hero">
+  <div class="hg" aria-hidden="true"></div><div class="hglow" aria-hidden="true"></div>
+  <div class="c hi2">
+    <div class="ht"><span class="hd"></span>Innovation Culture &amp; External Partnerships</div>
+    <h1 class="htl">The startup disrupting<br>your product is already in<br>an <em>accelerator</em>. Which one?</h1>
+    <p class="hl">Station F/ai: OpenAI, Anthropic, Google, Meta, Microsoft, and Mistral in one accelerator. YC W26: 14 companies at $1M ARR by Demo Day. Three ecosystem participation models for engineers and PMs.</p>
+    <div class="hm">
+      <span class="hmi"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Gilles Pradel</span>
+      <span class="hmi"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6 min read</span>
+    </div>
+    <div class="ss fi2">
+      <div class="st"><span class="sn">14</span><span class="sl">YC W26 companies hit $1M ARR by Demo Day — highest ever for any cohort; 60% of 2026 batches are AI companies</span><span class="src">YC / TechCrunch, March 2026</span></div>
+      <div class="st"><span class="sn">1-2%</span><span class="sl">YC acceptance rate from 20,000-25,000 applications per batch — the filtering function is the intelligence value</span><span class="src">Y Combinator, 2026</span></div>
+      <div class="st"><span class="sn">550+</span><span class="sl">corporate partners in Plug and Play's 60+ industry-focused programs across 35+ cities globally</span><span class="src">Plug and Play, 2026</span></div>
+    </div>
+  </div>
+</section>
+<main class="art">
+  <div class="c"><div class="ag">
+    <div>
+      <div class="sh">The Ecosystem Is Where the Future Is Being Built</div>
+      <div class="pq fi2">"Station F just launched F/ai — an AI accelerator backed simultaneously by OpenAI, Anthropic, Google, Meta, Microsoft, and Mistral. The first batch of 20 startups collectively raised EUR 34 million before Demo Day. This is where the technologies that will reshape your product category in two to four years are being built right now — not inside your R&amp;D lab, but in the ecosystem that the world's most sophisticated technology organizations have deliberately built around them."</div>
+      <div class="prose fi2">
+        <p>The question for engineers and product managers is not whether to watch this. It is how to participate in a way that gives your organization structural advantage — not just market intelligence. The external innovation ecosystem of 2026 is a layered set of structures — university programs, startup accelerators, corporate co-development platforms, and regional innovation hubs — that together create conditions for cross-organizational learning that no single entity can produce internally. Understanding which layer is most relevant to your technology domain matters, because the skills and relationships that matter in each are different.</p>
+      </div>
+      <div class="sh">Three Ecosystem Layers — and What Each Requires</div>
+      <div class="prose fi2">
+        <p><strong>Layer 1: The accelerator as technology intelligence infrastructure.</strong> Plug and Play operates 60+ industry-focused programs across 35+ cities globally with 550+ corporate partners. Its model: corporate R&amp;D organizations define a technology challenge, Plug and Play surfaces startups working on it, the corporate engages through structured sprint programs. The engineering and PM teams that know how to run these engagements — rapidly assessing a startup's technical approach, identifying gaps between current capability and production integration requirements, structuring pilots that generate genuine signal — are increasingly valuable inside large organizations. Station F's F/ai, with its OpenAI-Anthropic-Google-Meta-Microsoft-Mistral backing, is where early-stage AI development 18-24 months ahead of general availability is visible today. The skill is systematic engagement rather than accidental discovery.</p>
+        <p><strong>Layer 2: The university partnership as talent and knowledge infrastructure.</strong> ASML and TU/e's relationship — co-owned cleanroom, nearly 100 jointly supervised PhDs — exemplifies the fourth-generation university model: universities as ecosystem orchestrators rather than research service providers. For engineers and PMs inside large organizations, the practical implication: organizations doing this well embed engineers in university labs, co-supervise doctoral students whose research addresses actual technology challenges, and contribute to challenge-based learning platforms where students work on real industry problems. Engineers who build these university connections — who know the research groups working on relevant technology domains, who can translate between academic timescales and industrial product development — give their organizations 3-5 year advance warning on technology developments that will matter. That is a compounding career asset.</p>
+        <p><strong>Layer 3: The regional ecosystem as strategic positioning infrastructure.</strong> The Brainport model at TU/e determines talent supply for the entire region. The engineers and scientists coming out of that ecosystem — shaped by challenge-based learning embedded in real industrial problems from their first year of study — are qualitatively different from those coming out of more traditional educational environments. Organizations that help shape those educational environments gain access to talent pre-aligned with their technology challenges. That advantage is very difficult to replicate once it exists.</p>
+      </div>
+      <p style="font-size:var(--sm);color:var(--mut);font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:var(--s4)">Three things to do differently:</p>
+      <ul class="ql fi2">
+        <li><span class="qn">01</span><span><strong>Map the accelerator landscape in your two or three most important technology domains.</strong> Find the programs globally most active in each domain — not just YC and Techstars, but the industry-specific programs like Plug and Play's sector cohorts, Station F's F/ai for AI, or the DOE's EPIC program for energy technology. Know which companies are in the current cohorts. Follow their technical development. This gives you 12-24 months of advance signal.</span></li>
+        <li><span class="qn">02</span><span><strong>Build one genuine university connection in your primary technology domain.</strong> Not a sponsored research contract — a relationship with a specific research group whose work is directly relevant to a technology challenge you own. Attend their seminars. Read their preprints. If the opportunity exists, co-supervise a student project or doctoral candidate. The investment is small relative to the return in early technology signal and talent access.</span></li>
+        <li><span class="qn">03</span><span><strong>Push to be on the technical evaluation team for corporate accelerator programs.</strong> The ability to rapidly assess a startup's technical approach — to distinguish genuinely novel technical contribution from a well-packaged known solution — is a skill most engineers underinvest in. The more you practice it, the more valuable you are as a bridge between your organization's internal R&amp;D and the external ecosystem.</span></li>
+      </ul>
+      <div class="sh">The Radar — 3 Signals</div>
+      <div class="radar fi2">
+        <div class="sig"><div class="sn2">1</div><div><div class="stl">Station F launches F/ai (Feb 2026): all major AI model providers in one accelerator for the first time</div><p class="sbdy">OpenAI, Anthropic, Google, Meta, Microsoft, Mistral, AWS, AMD, Qualcomm, and OVH Cloud co-backing a single accelerator. 20 startups, EUR 34M raised collectively, Deal Day April 2026.</p><div class="sw">This ecosystem is where AI applications reaching production readiness in 2027-2028 are being built today. Engineers and PMs who engage with it systematically have 18-24 months of advance signal on their AI integration roadmap.</div></div><div class="ss2"><a href="https://www.stationf.co/programs/fai" target="_blank" rel="noopener">Station F ↗</a></div></div>
+        <div class="sig"><div class="sn2">2</div><div><div class="stl">YC W26 batch (March 2026): 14 companies hit $1M ARR by Demo Day — 60% of batches are AI companies</div><p class="sbdy">196 companies in the W26 batch. 14 reached $1M ARR before public presentation — highest ever for any YC cohort. Acceptance rate: 1.5-2% from 20,000-25,000 applications per batch.</p><div class="sw">The filtering function of top-tier accelerators — 1-2% acceptance rates from tens of thousands of applications — means cohort companies represent a curated view of where the most viable early-stage technical innovation is concentrated.</div></div><div class="ss2"><a href="https://www.ycombinator.com/blog/yc-w26-demo-day" target="_blank" rel="noopener">YC ↗</a></div></div>
+        <div class="sig"><div class="sn2">3</div><div><div class="stl">Taylor &amp; Francis (March 3, 2026): 4GU model — TU/e and ASML's co-invested cleanroom and 100 joint PhDs</div><p class="sbdy">The fourth-generation university model moves beyond teaching and research to become a regional innovation ecosystem orchestrator. ASML's joint cleanroom and 100 co-supervised PhDs at TU/e demonstrates how corporate R&D gains structural talent and technology advantages through ecosystem co-investment.</p><div class="sw">The talent supply advantage of ecosystem participation is cumulative. Engineers who help build these connections inside their organizations create structural advantages that persist long after any individual contribution.</div></div><div class="ss2"><a href="https://www.tandfonline.com/doi/full/10.1080/08956308.2026.2618461" target="_blank" rel="noopener">T&amp;F ↗</a></div></div>
+      </div>
+      <div class="spot fi2"><div class="sptl">The YC Filter</div><p class="spb">Y Combinator's 1.5-2% acceptance rate from 20,000-25,000 applications per batch is not primarily a funding mechanism. It is the world's most rigorous public filter of early-stage technical innovation. The 196 companies in the W26 batch represent the distilled result of evaluating tens of thousands of ideas across every technology domain. For engineers tracking technology developments in their domain, the YC cohort list is a curated snapshot of where early-stage commercial validation is concentrating. Reading through the technical abstracts of cohort companies in your domain once per quarter is one of the highest-information-density activities available for technology intelligence at zero cost.</p></div>
+      <div class="cta fi2"><h3>What does your current ecosystem participation look like?</h3><p>Systematic external innovation participation is increasingly what separates engineers who see the future coming from those who are surprised by it. The startup that will define your next product category is probably in a corporate accelerator cohort right now. Which programs are you tracking?</p><a href="https://www.linkedin.com/in/gillespradel" class="btn" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>Commenter sur LinkedIn</a>
+      <div class="tags"><span class="tag">#RDChronicles</span><span class="tag">#OpenInnovation</span><span class="tag">#StartupEcosystem</span><span class="tag">#TechScouting</span><span class="tag">#EngineeringLeadership</span><span class="tag">#InnovationCulture</span><span class="tag">#UniversityPartnerships</span></div></div>
+    </div>
+    <aside class="sb">
+      <div class="sc"><div class="scl">YC / TechCrunch, March 2026</div><div class="scn">14</div><div class="scd">companies at $1M ARR by Demo Day in YC W26 — highest ever; 60% AI companies</div></div>
+      <div class="sc"><div class="scl">Y Combinator, 2026</div><div class="scn">1-2%</div><div class="scd">acceptance rate from 20-25K applications per batch — the filter is the intelligence value</div></div>
+      <div class="sc"><div class="scl">Station F, Feb 2026</div><div class="scn">6+</div><div class="scd">major AI model providers co-backing F/ai — OpenAI, Anthropic, Google, Meta, Microsoft, Mistral</div></div>
+      <div class="sc"><div class="scl">Plug and Play, 2026</div><div class="scn">550+</div><div class="scd">corporate partners across 60+ industry programs in 35+ cities globally</div></div>
+    </aside>
+  </div></div>
+</main>
+<section style="background:var(--surf);border-top:1px solid var(--div);padding:var(--s10) 0;margin-top:var(--s12)">
+  <div style="max-width:var(--max);margin:0 auto;padding:0 var(--s6);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s6)">
+    <div><div style="font-family:var(--serif);font-size:var(--xl);font-style:italic;color:var(--txt);margin-bottom:var(--s2)">Ne manquez aucune edition.</div><div style="font-family:var(--ui);font-size:var(--sm);color:var(--mut)">RD Chronicles — la newsletter R&amp;D toutes les 2 semaines dans votre LinkedIn.</div></div>
+    <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7313827013595693059" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;background:#0a66c2;color:#fff;border-radius:.75rem;font-family:var(--ui);font-weight:700;font-size:var(--sm);text-decoration:none;white-space:nowrap;flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>S'abonner a RD Chronicles</a>
+  </div>
+</section>
+<footer class="ft"><div class="c"><div class="fi"><div class="fl"><strong>RD Chronicles</strong> by Gilles Pradel &middot; rdchronicles.fr</div><div class="fr"><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener">Created with Perplexity Computer</a></div></div></div></footer>
+<script>
+const h=document.getElementById('hdr');
+window.addEventListener('scroll',()=>h.classList.toggle('on',scrollY>20),{passive:true});
+(function(){const t=document.querySelector('[data-tt]'),r=document.documentElement;let d=r.getAttribute('data-theme')||'dark';const M='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';const S='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';if(t){t.innerHTML=d==='dark'?M:S;t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.innerHTML=d==='dark'?M:S})}})();
+document.querySelectorAll('.fi2').forEach(el=>new IntersectionObserver(([e])=>{if(e.isIntersecting)el.classList.add('vis')},{threshold:.1}).observe(el));
+</script>
+</body></html>
