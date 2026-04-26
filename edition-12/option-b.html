@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RD Chronicles — An AI team just discovered two antibodies. Here is how to build yours.</title>
+<meta name="description" content="Nature: PI agent + specialist LLM team = 92 antibody candidates, 2 confirmed. Three multi-agent workflow patterns for engineering teams. By Gilles Pradel.">
+<meta property="og:type" content="article"><meta property="og:site_name" content="RD Chronicles">
+<meta property="og:title" content="An AI team just discovered two antibodies. Here is how to build yours.">
+<meta property="og:description" content="PI agent + specialist LLM research team = 92 antibody candidates, 2 experimentally confirmed. Three multi-agent workflow patterns for engineering and PM teams. Plan-Execute-Review, PI with Specialist Team, Critic-in-the-Loop.">
+<meta property="og:image" content="https://rdchronicles.fr/edition-12/og-option-b.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="627">
+<meta property="og:url" content="https://rdchronicles.fr/edition-12/option-b.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="An AI team just discovered two antibodies. Here is how to build yours.">
+<meta name="twitter:description" content="Nature: PI agent + specialist LLM team = 92 antibody candidates, 2 confirmed. Three multi-agent workflow patterns for engineers: Plan-Execute-Review, PI with Specialist Team, Critic-in-the-Loop.">
+<meta name="twitter:image" content="https://rdchronicles.fr/edition-12/og-option-b.png">
+<meta name="author" content="Gilles Pradel">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+:root{--xs:clamp(.75rem,.7rem + .25vw,.875rem);--sm:clamp(.875rem,.8rem + .35vw,1rem);--base:clamp(1rem,.95rem + .25vw,1.125rem);--lg:clamp(1.125rem,1rem + .75vw,1.5rem);--xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);--3xl:clamp(2.5rem,1rem + 4vw,5rem);--s1:.25rem;--s2:.5rem;--s3:.75rem;--s4:1rem;--s5:1.25rem;--s6:1.5rem;--s8:2rem;--s10:2.5rem;--s12:3rem;--s16:4rem;--r-md:.5rem;--r-lg:.75rem;--r-xl:1rem;--r-full:9999px;--ease:180ms cubic-bezier(.16,1,.3,1);--max:860px;--serif:'Instrument Serif',Georgia,serif;--body:'Satoshi','Inter',sans-serif;--ui:'General Sans','Helvetica Neue',sans-serif}
+:root,[data-theme="dark"]{--bg:#0f1112;--surf:#161819;--surf2:#1c1f20;--div:#272b2d;--brd:#30353a;--txt:#e3e5e8;--mut:#7a8088;--fnt:#454c52;--brand:#3ecfcf;--bhov:#5dd9d9;--shad:0 4px 24px rgba(0,0,0,.5)}
+[data-theme="light"]{--bg:#f5f6f8;--surf:#fff;--surf2:#f9fafb;--div:#dde1e7;--brd:#c8cfd8;--txt:#1a1d22;--mut:#58606e;--fnt:#9aa0aa;--brand:#01696F;--bhov:#0c5055;--shad:0 4px 24px rgba(0,0,0,.08)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth;scroll-padding-top:80px}
+body{min-height:100dvh;font-family:var(--body);font-size:var(--base);color:var(--txt);background:var(--bg);line-height:1.65}
+img,svg{display:block;max-width:100%}p,li{max-width:70ch;text-wrap:pretty}h1,h2,h3{text-wrap:balance}
+button{cursor:pointer;background:none;border:none;color:inherit;font:inherit}
+a{color:var(--brand);text-decoration:none;transition:color var(--ease)}a:hover{color:var(--bhov)}
+.c{max-width:var(--max);margin:0 auto;padding:0 var(--s6)}
+.hdr{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color var(--ease),box-shadow var(--ease)}.hdr.on{border-color:var(--div);box-shadow:var(--shad)}
+.hi{height:60px;display:flex;align-items:center;justify-content:space-between;gap:var(--s4)}
+.logo{display:flex;align-items:center;gap:var(--s3);text-decoration:none}.lm{width:28px;height:28px;flex-shrink:0}.ln{font-family:var(--serif);font-size:var(--base);color:var(--txt)}.lt{font-family:var(--ui);font-size:var(--xs);color:var(--mut)}
+.tt{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:var(--r-md);color:var(--mut);transition:background var(--ease),color var(--ease)}.tt:hover{background:var(--surf);color:var(--txt)}
+.hero{padding:var(--s16) 0 var(--s12);position:relative;overflow:hidden}
+.hg{position:absolute;inset:0;background-image:linear-gradient(var(--div) 1px,transparent 1px),linear-gradient(90deg,var(--div) 1px,transparent 1px);background-size:48px 48px;opacity:.18;pointer-events:none}
+.hglow{position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,var(--brand) 0%,transparent 70%);opacity:.05;pointer-events:none}
+.hi2{position:relative;z-index:1}
+.ht{display:inline-flex;align-items:center;gap:var(--s2);font-family:var(--ui);font-size:var(--xs);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin-bottom:var(--s5)}
+.hd{width:5px;height:5px;border-radius:50%;background:var(--brand);animation:p 2s ease infinite}@keyframes p{0%,100%{opacity:1}50%{opacity:.4}}
+.htl{font-family:var(--serif);font-size:var(--3xl);line-height:1.1;letter-spacing:-.02em;color:var(--txt);margin-bottom:var(--s6)}.htl em{font-style:italic;color:var(--brand)}
+.hl{font-size:var(--lg);color:var(--mut);max-width:54ch;margin-bottom:var(--s8);line-height:1.6}
+.hm{display:flex;flex-wrap:wrap;gap:var(--s5);margin-bottom:var(--s10)}.hmi{font-family:var(--ui);font-size:var(--xs);color:var(--fnt);display:flex;align-items:center;gap:var(--s2)}
+.ss{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--div);border:1px solid var(--div);border-radius:var(--r-xl);overflow:hidden;margin-top:var(--s8)}
+.st{background:var(--surf);padding:var(--s5) var(--s6);display:flex;flex-direction:column;gap:var(--s1)}.sn{font-family:var(--serif);font-size:var(--2xl);color:var(--brand);line-height:1}.sl{font-family:var(--ui);font-size:var(--xs);color:var(--mut);line-height:1.4}.src{font-family:var(--ui);font-size:10px;color:var(--fnt);margin-top:var(--s1)}
+.art{margin-top:var(--s12)}.ag{display:grid;grid-template-columns:1fr 220px;gap:var(--s12);align-items:start}
+@media(max-width:720px){.ag{grid-template-columns:1fr}.sb{display:none}}
+.sh{font-family:var(--ui);font-size:var(--xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin:var(--s10) 0 var(--s4);display:flex;align-items:center;gap:var(--s3)}.sh::after{content:'';flex:1;height:1px;background:var(--div)}
+.prose{font-size:var(--base);line-height:1.72;color:var(--txt)}.prose p{margin-bottom:var(--s5)}.prose p:first-child::first-letter{font-family:var(--serif);font-size:3.5em;float:left;line-height:.85;margin-right:.08em;margin-top:.05em;color:var(--brand)}.prose strong{font-weight:700;color:var(--txt)}
+.pq{border-left:3px solid var(--brand);padding:var(--s5) var(--s6);background:var(--surf);border-radius:0 var(--r-lg) var(--r-lg) 0;margin:var(--s8) 0;font-family:var(--serif);font-size:var(--lg);font-style:italic;color:var(--txt);line-height:1.5}
+.ql{list-style:none;display:flex;flex-direction:column;gap:var(--s3);margin:var(--s6) 0}.ql li{display:flex;gap:var(--s4);align-items:flex-start;padding:var(--s4) var(--s5);background:var(--surf);border-radius:var(--r-lg);border:1px solid var(--brd)}.qn{font-family:var(--ui);font-size:var(--xs);font-weight:700;color:var(--brand);min-width:64px;padding-top:2px}
+.radar{display:flex;flex-direction:column;gap:1px;border:1px solid var(--brd);border-radius:var(--r-xl);overflow:hidden;margin-top:var(--s6)}
+.sig{display:grid;grid-template-columns:40px 1fr auto;gap:var(--s4);padding:var(--s5) var(--s6);background:var(--surf);align-items:start;transition:background var(--ease)}.sig:hover{background:var(--surf2)}
+.sn2{font-family:var(--ui);font-size:var(--xs);font-weight:700;color:var(--fnt);padding-top:3px}.stl{font-family:var(--ui);font-size:var(--sm);font-weight:600;color:var(--txt);margin-bottom:var(--s2)}.sbdy{font-size:var(--sm);color:var(--mut);line-height:1.55;margin-bottom:var(--s2)}.sw{font-size:var(--xs);color:var(--brand);font-weight:500}.ss2{font-family:var(--ui);font-size:var(--xs);color:var(--mut);white-space:nowrap;padding-top:3px}.ss2 a{color:var(--mut)}.ss2 a:hover{color:var(--brand)}
+.spot{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r-xl);padding:var(--s6);margin:var(--s8) 0}.sptl{font-family:var(--ui);font-size:var(--sm);font-weight:700;color:var(--brand);margin-bottom:var(--s3)}.spb{font-size:var(--sm);color:var(--mut);line-height:1.6}
+.cta{background:var(--surf);border:1px solid var(--brand);border-radius:var(--r-xl);padding:var(--s8);margin-top:var(--s10)}.cta h3{font-family:var(--serif);font-size:var(--xl);color:var(--txt);margin-bottom:var(--s4);line-height:1.3}.cta p{color:var(--mut);font-size:var(--sm);margin-bottom:var(--s5)}
+.btn{display:inline-flex;align-items:center;gap:var(--s2);padding:.6rem 1.2rem;background:#0a66c2;color:#fff;border-radius:var(--r-lg);font-family:var(--ui);font-size:var(--sm);font-weight:600;transition:background var(--ease),transform var(--ease)}.btn:hover{background:#0856ab;color:#fff;transform:translateY(-1px)}
+.tags{margin-top:var(--s5);display:flex;flex-wrap:wrap;gap:var(--s2)}.tag{font-family:var(--ui);font-size:var(--xs);color:var(--mut);padding:.25rem .6rem;background:var(--surf2);border-radius:var(--r-full);border:1px solid var(--brd)}
+.sb{display:flex;flex-direction:column;gap:var(--s4);position:sticky;top:80px}.sc{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r-xl);padding:var(--s5)}.scl{font-family:var(--ui);font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--fnt);margin-bottom:var(--s2)}.scn{font-family:var(--serif);font-size:var(--2xl);color:var(--brand);line-height:1.1;margin-bottom:var(--s2)}.scd{font-family:var(--ui);font-size:var(--xs);color:var(--mut);line-height:1.5}
+.ft{border-top:1px solid var(--div);padding:var(--s10) 0;margin-top:var(--s16)}.fi{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s4)}.fl,.fr{font-family:var(--ui);font-size:var(--xs);color:var(--fnt)}.fr a{color:var(--mut)}.fr a:hover{color:var(--brand)}
+.fi2{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s}.fi2.vis{opacity:1;transform:none}
+@media(max-width:640px){.ss{grid-template-columns:1fr}.htl{font-size:var(--2xl)}.sig{grid-template-columns:32px 1fr}}
+</style>
+<script>(function(){document.documentElement.setAttribute('data-theme',matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light')})();</script>
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <div class="c"><div class="hi">
+    <a href="https://rdchronicles.fr" class="logo">
+      <svg class="lm" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="2.5" fill="var(--brand)"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(60 14 14)"/><ellipse cx="14" cy="14" rx="11.5" ry="4.8" stroke="var(--brand)" stroke-width="1.4" fill="none" transform="rotate(120 14 14)"/></svg>
+      <div><div class="ln">RD Chronicles</div><div class="lt">by Gilles Pradel</div></div>
+    </a>
+    <button class="tt" data-tt aria-label="Toggle theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+  </div></div>
+</header>
+<section class="hero">
+  <div class="hg" aria-hidden="true"></div><div class="hglow" aria-hidden="true"></div>
+  <div class="c hi2">
+    <div class="ht"><span class="hd"></span>AI &amp; Agentic R&amp;D</div>
+    <h1 class="htl">An AI team just discovered<br><em>two antibodies</em>.<br>Here is how to build yours.</h1>
+    <p class="hl">Nature: PI agent + specialist LLM team = 92 antibody candidates, 2 experimentally confirmed. Three multi-agent workflow patterns for engineering teams — and what to build this quarter.</p>
+    <div class="hm">
+      <span class="hmi"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Gilles Pradel</span>
+      <span class="hmi"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6 min read</span>
+    </div>
+    <div class="ss fi2">
+      <div class="st"><span class="sn">92</span><span class="sl">antibody candidates from PI agent + specialist LLM team — 2 experimentally confirmed against SARS-CoV-2 variants</span><span class="src">Nature, January 2026</span></div>
+      <div class="st"><span class="sn">40%</span><span class="sl">of agentic AI projects fail — not because of model quality but because of architectural inadequacy</span><span class="src">Research consensus, 2026</span></div>
+      <div class="st"><span class="sn">3</span><span class="sl">multi-agent patterns for engineering workflows: Plan-Execute-Review, PI with Specialist Team, Critic-in-the-Loop</span><span class="src">Architecture consensus, 2026</span></div>
+    </div>
+  </div>
+</section>
+<main class="art">
+  <div class="c"><div class="ag">
+    <div>
+      <div class="sh">Multi-Agent AI as Workflow Engineering, Not Automation Theater</div>
+      <div class="pq fi2">"The most important thing to understand about multi-agent AI systems in 2026 is what they are not. They are not a smarter version of a single AI assistant. They are not a collection of AI tools running in parallel. They are workflow engineering: the deliberate design of coordinated agent teams where each agent has a specific, bounded role, the communication between agents is structured and auditable, and humans are integrated at the decision points where they add the most value."</div>
+      <div class="prose fi2">
+        <p>The failure mode is predictable. Research documents that 40% of agentic AI projects fail not because of the underlying models but because of the systems built around them. Insufficient observability. Human oversight added as an afterthought. No audit trail. No defined boundary between what the AI decides and what the human decides. The organizations seeing the best results treat multi-agent design as workflow engineering — with the same rigor they would apply to any other engineering system.</p>
+      </div>
+      <div class="sh">Three Patterns That Work for Engineering Teams</div>
+      <ul class="ql fi2">
+        <li><span class="qn">Plan-Execute-Review</span><span>A Planner agent breaks a complex task into structured sub-tasks with explicit dependencies and success criteria. Executor agents run sub-tasks in parallel where possible. A Reviewer agent validates outputs against original success criteria and flags deviations. <strong>Best for:</strong> systematic literature review, requirements tracing, technical risk assessment — any task where the structure is defined but evidence volume exceeds what a single agent can handle.</span></li>
+        <li><span class="qn">PI + Specialist Team</span><span>An orchestrating PI agent holds the overall research question, delegates to specialist agents (domain expert, experimental designer, critical reviewer, devil's advocate), synthesizes their outputs, and surfaces the resulting structured assessment to the human researcher. <strong>This is the pattern used in the Nature antibody discovery.</strong> It is directly applicable to engineering scenarios where the research question has multiple technical dimensions that benefit from specialist perspective.</span></li>
+        <li><span class="qn">Critic-in-the-Loop</span><span>Any architecture where a Critic agent explicitly reviews and challenges the outputs of the primary agent before they reach the human. <strong>Best for:</strong> high-stakes engineering decisions — design trade-off analyses, failure mode assessments, technical feasibility evaluations — where the cost of an undetected error is high. The Critic is not trying to replace human review; it is trying to catch the systematic failures that LLMs produce when unchallenged.</span></li>
+      </ul>
+      <div class="sh">What to Build This Week</div>
+      <div class="prose fi2">
+        <p>Pick one research or engineering workflow where you spend significant time on structured, repetitive sub-tasks. Common candidates: systematic literature review, competitive patent landscape analysis, requirements-to-test-case traceability, technical risk register maintenance, lessons learned synthesis across programmes.</p>
+        <p>Map the sub-tasks. Identify which are parallelizable (can run simultaneously), which require verification (a critic agent should review before output), and which require human judgment (should escalate rather than produce output). <strong>That mapping is your multi-agent architecture.</strong></p>
+        <p>The organizational design question is as important as the technical question: when the agent team produces an output, what does your review process look like? How do you verify that the agent's conclusions are actually supported by the evidence it processed? How do you build a feedback loop so that the agent architecture improves based on what your team learns? These are not AI questions. They are engineering management questions about how you want to work with an AI team.</p>
+      </div>
+      <div class="sh">The Radar — 3 Signals</div>
+      <div class="radar fi2">
+        <div class="sig"><div class="sn2">1</div><div><div class="stl">Nature (January 27, 2026): multi-agent LLM teams discovering antibodies — transparency as design requirement</div><p class="sbdy">PI agent + specialist LLM research team: 92 antibody candidates, 2 experimentally confirmed against SARS-CoV-2 variants. Nature frames transparency not as governance overhead but as a scientific validity prerequisite — outputs you cannot interrogate are outputs you cannot build on.</p><div class="sw">The antibody discovery is the template. The transparency argument is the design principle that makes it trustworthy enough to act on.</div></div><div class="ss2"><a href="https://www.nature.com/articles/s42256-026-01183-2" target="_blank" rel="noopener">Nature ↗</a></div></div>
+        <div class="sig"><div class="sn2">2</div><div><div class="stl">MACC (arXiv, March 4, 2026): how institutional mechanisms shape multi-agent scientific exploration</div><p class="sbdy">How incentives, information sharing, and reproducibility requirements shape collective exploration among independently managed AI agents. How agents challenge each other's conclusions and handle negative results are organizational design decisions — not just engineering choices.</p><div class="sw">The multi-agent system is not just a technical architecture. Design how agents share information and challenge each other's work explicitly, not by default.</div></div><div class="ss2"><a href="https://arxiv.org/abs/2603.03780" target="_blank" rel="noopener">arXiv ↗</a></div></div>
+        <div class="sig"><div class="sn2">3</div><div><div class="stl">AffinityBots / Gartner 2026: hybrid architecture — single agent by default, multi-agent only when needed</div><p class="sbdy">Multi-agent excels when work is wide (parallel directions), risky (requires independent verification), or long-running (exceeds context window). Otherwise, single agent is more cost-effective and easier to debug. 40% failure rate comes from deploying multi-agent complexity where it is not needed.</p><div class="sw">Start with a strong single-agent baseline. Add multi-agent coordination only where parallelism, specialization, or verification measurably improves outcomes.</div></div><div class="ss2"><a href="https://affinitybots.com/blog/ai-agent-teams-in-2026-how-multi-agent-systems-actually-work" target="_blank" rel="noopener">AffinityBots ↗</a></div></div>
+      </div>
+      <div class="spot fi2"><div class="sptl">The Workflow Map</div><p class="spb">Before you build anything, answer these four questions for the research workflow you are considering: Is it wide — does it require exploring many parallel directions simultaneously? Is it risky — does it require independently verified conclusions before you act? Is it long-running — does it exceed what any single context window can handle? Does the overhead of multi-agent coordination justify itself given those answers? If at least two of the first three are true, multi-agent architecture is worth considering. If none are true, a well-prompted single agent will outperform a poorly coordinated multi-agent system every time — and will be much easier to debug.</p></div>
+      <div class="cta fi2"><h3>Which engineering workflow in your current work is ready for a multi-agent approach?</h3><p>The multi-agent AI research team is a workflow architecture you can design and implement on a bounded task this quarter. The antibody discovery result shows what it can produce. The 40% failure rate shows what happens when you skip the architectural rigor. Drop your thinking in the comments.</p><a href="https://www.linkedin.com/in/gillespradel" class="btn" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>Commenter sur LinkedIn</a>
+      <div class="tags"><span class="tag">#RDChronicles</span><span class="tag">#AgenticAI</span><span class="tag">#MultiAgentAI</span><span class="tag">#EngineeringLeadership</span><span class="tag">#AIWorkflow</span><span class="tag">#ResearchAutomation</span><span class="tag">#AIinRD</span></div></div>
+    </div>
+    <aside class="sb">
+      <div class="sc"><div class="scl">Nature, January 2026</div><div class="scn">92</div><div class="scd">antibody candidates from LLM agent team — 2 experimentally confirmed</div></div>
+      <div class="sc"><div class="scl">Research consensus, 2026</div><div class="scn">40%</div><div class="scd">of agentic AI projects fail — architectural inadequacy, not model quality</div></div>
+      <div class="sc"><div class="scl">Architecture patterns</div><div class="scn">3</div><div class="scd">proven multi-agent patterns: Plan-Execute-Review, PI+Specialists, Critic-in-the-Loop</div></div>
+      <div class="sc"><div class="scl">Gartner, end-2026</div><div class="scn">40%</div><div class="scd">of enterprise apps will embed AI agents — up from under 5% in 2025</div></div>
+    </aside>
+  </div></div>
+</main>
+<section style="background:var(--surf);border-top:1px solid var(--div);padding:var(--s10) 0;margin-top:var(--s12)">
+  <div style="max-width:var(--max);margin:0 auto;padding:0 var(--s6);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s6)">
+    <div><div style="font-family:var(--serif);font-size:var(--xl);font-style:italic;color:var(--txt);margin-bottom:var(--s2)">Ne manquez aucune edition.</div><div style="font-family:var(--ui);font-size:var(--sm);color:var(--mut)">RD Chronicles — la newsletter R&amp;D toutes les 2 semaines dans votre LinkedIn.</div></div>
+    <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7313827013595693059" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;background:#0a66c2;color:#fff;border-radius:.75rem;font-family:var(--ui);font-weight:700;font-size:var(--sm);text-decoration:none;white-space:nowrap;flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>S'abonner a RD Chronicles</a>
+  </div>
+</section>
+<footer class="ft"><div class="c"><div class="fi"><div class="fl"><strong>RD Chronicles</strong> by Gilles Pradel &middot; rdchronicles.fr</div><div class="fr"><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener">Created with Perplexity Computer</a></div></div></div></footer>
+<script>
+const h=document.getElementById('hdr');
+window.addEventListener('scroll',()=>h.classList.toggle('on',scrollY>20),{passive:true});
+(function(){const t=document.querySelector('[data-tt]'),r=document.documentElement;let d=r.getAttribute('data-theme')||'dark';const M='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';const S='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';if(t){t.innerHTML=d==='dark'?M:S;t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.innerHTML=d==='dark'?M:S})}})();
+document.querySelectorAll('.fi2').forEach(el=>new IntersectionObserver(([e])=>{if(e.isIntersecting)el.classList.add('vis')},{threshold:.1}).observe(el));
+</script>
+</body></html>
