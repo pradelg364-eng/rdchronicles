@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quand le ROI de la R&amp;D devient une question de survie stratégique — RD Chronicles</title>
+
+  <!-- OG / Social -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Quand le ROI de la R&amp;D devient une question de survie stratégique" />
+  <meta property="og:description" content="Découplage technologique, souveraineté européenne et macro-incertitude — ce que cela change concrètement à la façon dont vous allouez votre budget innovation." />
+  <meta property="og:image" content="https://rdchronicles.fr/edition-13/og-a.png" />
+  <meta property="og:url" content="https://rdchronicles.fr/edition-13/option-a.html" />
+  <meta property="og:site_name" content="RD Chronicles" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Quand le ROI de la R&amp;D devient une question de survie stratégique" />
+  <meta name="twitter:description" content="Découplage technologique, souveraineté européenne et macro-incertitude — ce que cela change à votre allocation R&D." />
+  <meta name="twitter:image" content="https://rdchronicles.fr/edition-13/og-a.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" />
+
+  <style>
+    :root {
+      --bg: #0f1112;
+      --bg2: #161a1c;
+      --bg3: #1d2225;
+      --brand: #3ecfcf;
+      --brand-dim: #2a9494;
+      --txt: #e3e5e8;
+      --txt-mid: #9ba3ab;
+      --txt-dim: #5c6570;
+      --border: #252b2f;
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans: 'Satoshi', system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--txt);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      width: 100%;
+      height: 3px;
+      background: var(--brand);
+    }
+
+    /* NAV */
+    nav {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 24px 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--brand);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav-tag {
+      font-size: 13px;
+      color: var(--txt-mid);
+      font-weight: 500;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 24px 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--brand);
+      color: var(--bg);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--txt);
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--txt-mid);
+      max-width: 640px;
+      line-height: 1.6;
+    }
+
+    .hero-meta {
+      margin-top: 32px;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      font-size: 13px;
+      color: var(--txt-dim);
+    }
+
+    /* CONTENT */
+    .content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 16px 24px 64px;
+    }
+
+    .content p {
+      margin-bottom: 1.5em;
+      color: var(--txt);
+    }
+
+    .content h2 {
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      font-weight: 400;
+      color: var(--txt);
+      margin: 2.8em 0 0.8em;
+      line-height: 1.3;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .content h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 3px;
+      background: var(--brand);
+      border-radius: 2px;
+    }
+
+    .content blockquote {
+      border-left: 3px solid var(--brand);
+      padding: 16px 24px;
+      margin: 2em 0;
+      background: var(--bg2);
+      border-radius: 0 8px 8px 0;
+      color: var(--txt-mid);
+      font-style: italic;
+      font-size: 1.05rem;
+    }
+
+    .content ul, .content ol {
+      padding-left: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    .content li {
+      margin-bottom: 0.5em;
+      color: var(--txt);
+    }
+
+    .content strong {
+      color: var(--txt);
+      font-weight: 600;
+    }
+
+    .content a {
+      color: var(--brand);
+      text-decoration: none;
+      border-bottom: 1px solid var(--brand-dim);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .content a:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    /* STAT BOX */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 2em 0;
+    }
+
+    .stat-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--brand);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .stat-box .stat-num {
+      font-family: var(--serif);
+      font-size: 2rem;
+      color: var(--brand);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-box .stat-label {
+      font-size: 0.85rem;
+      color: var(--txt-mid);
+      line-height: 1.4;
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3em 0;
+    }
+
+    /* SUBSCRIBE BANNER */
+    .subscribe-banner {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--brand);
+      max-width: 780px;
+      margin: 0 auto 0;
+      padding: 32px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .subscribe-banner .sub-text h3 {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--txt);
+      margin-bottom: 4px;
+    }
+
+    .subscribe-banner .sub-text p {
+      font-size: 0.88rem;
+      color: var(--txt-mid);
+      margin: 0;
+    }
+
+    .sub-btn {
+      display: inline-block;
+      background: var(--brand);
+      color: var(--bg);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.15s;
+      flex-shrink: 0;
+    }
+
+    .sub-btn:hover {
+      background: #4fe0e0;
+      transform: translateY(-1px);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 24px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--txt-dim);
+    }
+
+    footer .footer-brand {
+      color: var(--brand);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    /* SOURCES */
+    .sources {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 3em;
+    }
+
+    .sources h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--txt-mid);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .sources ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sources li {
+      font-size: 0.82rem;
+      color: var(--txt-dim);
+      margin-bottom: 8px;
+      padding-left: 12px;
+      border-left: 2px solid var(--border);
+    }
+
+    .sources a {
+      color: var(--txt-dim);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--txt-dim);
+    }
+
+    .sources a:hover {
+      color: var(--brand);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8rem; }
+      .subscribe-banner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar"></div>
+
+<nav>
+  <a class="nav-brand" href="https://rdchronicles.fr">RD Chronicles</a>
+  <span class="nav-tag">R&amp;D Strategy</span>
+</nav>
+
+<article>
+  <header class="hero">
+    <span class="badge">R&amp;D Strategy</span>
+    <h1>Quand le ROI de la R&amp;D devient une question de survie stratégique</h1>
+    <p class="hero-sub">Ce que le découplage technologique, la souveraineté européenne et la macro-incertitude changent concrètement à la façon dont vous allouez votre budget innovation.</p>
+    <div class="hero-meta">
+      <span>28 avril 2026</span>
+      <span>·</span>
+      <span>RD Chronicles</span>
+      <span>·</span>
+      <span>~12 min de lecture</span>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <p>Il y a un phénomène que j'observe depuis quelques mois chez les directions générales que je côtoie : une forme de dissonance cognitive autour de la R&amp;D.</p>
+
+    <p>D'un côté, tout le monde s'accorde sur le fait que l'innovation est "stratégique". De l'autre, les CFO demandent des justifications de ROI sur des horizons de 12 à 18 mois pour des investissements dont la nature même est d'opérer sur 3 à 7 ans. Cette tension — entre la rhétorique de l'innovation et la réalité des arbitrages budgétaires — est en train de s'exacerber. Et 2026 marque, me semble-t-il, un point d'inflexion.</p>
+
+    <p>Trois dynamiques convergentes sont en train de remodeler fondamentalement la stratégie R&amp;D des entreprises industrielles et technologiques. Pas de façon abstraite. De façon très concrète, avec des effets sur les décisions de portefeuille, les localisations de laboratoires, et les modes de financement. Voici ce que les données récentes révèlent — et ce que cela implique pour vous.</p>
+
+    <div class="stat-grid">
+      <div class="stat-box">
+        <div class="stat-num">−56%</div>
+        <div class="stat-label">Budget proposé pour la NSF américaine en FY2026, de 9 à 3,9 milliards de dollars</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">14 Md€</div>
+        <div class="stat-label">Investissement Horizon Europe 2026-2027, validé par la Commission en décembre 2025</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">−14 Md$</div>
+        <div class="stat-label">Perte de R&amp;D pour l'industrie américaine des semi-conducteurs en cas de découplage total avec la Chine</div>
+      </div>
+    </div>
+
+    <h2>1. Le ROI de la R&amp;D : la mesure est cassée, mais le problème vient d'ailleurs</h2>
+
+    <p>L'<a href="https://iriweb.org/innovation-growth-drivers-2/increase-innovation-roi/" target="_blank" rel="noopener">Innovation Research Interchange</a> a identifié l'augmentation du ROI de l'innovation comme la problématique numéro un de ses membres pour 2024-2025. Ce n'est pas une surprise. Ce qui est plus intéressant, c'est le diagnostic sous-jacent : le problème n'est pas tant l'absence de valeur créée par la R&amp;D que l'absence de métriques adaptées aux horizons temporels longs et aux innovations de rupture.</p>
+
+    <p>Le <a href="https://www.deloitte.com/us/en/insights/topics/business-strategy-growth/1q-2026-cfo-signals-survey.html" target="_blank" rel="noopener">Q1 2026 CFO Signals Survey de Deloitte</a> est révélateur : les CFO identifient deux forces dominantes dans leurs décisions de gestion des coûts — la pression à investir dans les nouvelles technologies <em>et</em> la compression des marges. Ce sont deux forces contradictoires. Et quand les marges se compriment, la tentation naturelle est de couper ce qu'on ne sait pas mesurer.</p>
+
+    <p>La <a href="https://www.stlouisfed.org/on-the-economy/2026/mar/financing-rd-spending-role-corporate-cash-holdings" target="_blank" rel="noopener">Federal Reserve Bank of St. Louis a publié en mars 2026</a> une analyse montrant que les entreprises avec une forte intensité R&amp;D tendent à détenir plus de cash — mais qu'en 2025-2026, à mesure que les investissements IA ont augmenté, les ratios de cash ont baissé. Traduction : les entreprises dépensent leur réserve de prudence sur des investissements technologiques dont le ROI est, lui aussi, difficile à mesurer à court terme.</p>
+
+    <p>La vraie question stratégique n'est donc pas "comment justifier le ROI de la R&amp;D" mais "comment construire un système de mesure qui survive à un cycle économique difficile sans sacrifier les investissements à horizon long". Les entreprises qui ont résolu ce problème ont toutes en commun d'avoir séparé leurs métriques de performance R&amp;D entre trois horizons temporels distincts, avec des indicateurs spécifiques à chacun : délai de mise sur marché pour l'horizon 1, taux de transfert technologique pour l'horizon 2, options créées pour l'horizon 3.</p>
+
+    <blockquote>Ce n'est pas une révolution. C'est de la discipline.</blockquote>
+
+    <h2>2. Le découplage technologique USA-Chine : l'effet de ciseau que personne ne veut voir</h2>
+
+    <p>L'<a href="https://www.aspistrategist.org.au/us-and-chinese-tech-research-is-decoupling-aspis-critical-tech-tracker/" target="_blank" rel="noopener">Australian Strategic Policy Institute</a> a publié fin novembre 2025 une mise à jour de son Critical Tech Tracker portant sur 7 millions de publications scientifiques dans 74 technologies critiques. Le constat est sans appel : la collaboration de recherche USA-Chine est revenue à son niveau de 2005 — soit avant l'intégration massive des deux écosystèmes d'innovation.</p>
+
+    <p>En parallèle, l'<a href="https://itif.org/publications/2025/11/10/decoupling-risks-semiconductor-export-controls-harm-us-chipmakers-innovation/" target="_blank" rel="noopener">Information Technology and Innovation Foundation</a> a publié en novembre 2025 une analyse économique sur l'impact des contrôles à l'export de semi-conducteurs. Le chiffre qui devrait faire réfléchir tout dirigeant industriel : un découplage total avec la Chine réduirait les investissements R&amp;D de l'industrie américaine des semi-conducteurs de 24%, soit 14 milliards de dollars. Et un découplage à 50% entraînerait une perte de 7 milliards de dollars d'investissements R&amp;D sur cinq ans.</p>
+
+    <p>Pour les entreprises industrielles européennes, cet effet de ciseau crée une opportunité — et un risque simultanément. L'opportunité : devenir un terrain neutre pour les collaborations de recherche que les États-Unis et la Chine ne peuvent plus mener directement ensemble. Le risque : se retrouver dans l'obligation de choisir un camp technologique pour accéder aux marchés de l'un ou de l'autre, ce qui implique des décisions de localisation R&amp;D irréversibles à 5-10 ans.</p>
+
+    <p>L'<a href="https://itif.org/publications/2026/02/09/tracking-rd-leadership-us-advantage-narrowing-as-china-gains-ground/" target="_blank" rel="noopener">ITIF note par ailleurs</a> que dans quatre secteurs industriels clés — équipements électroniques et électriques, automobiles et pièces, ingénierie industrielle, industriels généralistes — les entreprises chinoises ont déjà dépassé les entreprises américaines en intensité R&amp;D ajustée par la taille. Ce n'est plus une tendance émergente. C'est une réalité compétitive.</p>
+
+    <p>La question que devrait se poser tout directeur de R&amp;D d'une entreprise industrielle : dans quels segments technologiques sommes-nous encore en avance ? Et dans lesquels allons-nous nous retrouver dans une position de suiveur dans 36 mois ?</p>
+
+    <h2>3. La souveraineté R&amp;D européenne : un moment politique, une opportunité industrielle</h2>
+
+    <p>Le 15 septembre 2025, la Commission européenne a adopté une <a href="https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/our-digital-future/european-strategy-research-and-technology-infrastructures_en" target="_blank" rel="noopener">nouvelle stratégie à long terme sur les infrastructures de recherche et technologie</a>. Dans la foulée, le Parlement européen a publié en juin 2025 un <a href="https://www.europarl.europa.eu/doceo/document/A-10-2025-0107_EN.html" target="_blank" rel="noopener">rapport détaillé sur la souveraineté technologique européenne</a>, soulignant que l'UE contribue à une part mineure de la R&amp;D mondiale en logiciels, technologies internet et électronique.</p>
+
+    <p>En décembre 2025, la Commission a adopté le programme de travail Horizon Europe 2026-2027, soit 14 milliards d'euros d'investissements R&amp;D. C'est le signal le plus fort donné depuis des années : l'Europe mise sur sa recherche comme levier de souveraineté stratégique, dans un contexte où les États-Unis coupent leurs financements fédéraux R&amp;D de façon massive.</p>
+
+    <p>Pour mettre l'ampleur de ce contraste en perspective : aux États-Unis, la NSF est ciblée par une <a href="https://www.aau.edu/key-issues/federal-research-cuts-threaten-us-innovation-and-leadership" target="_blank" rel="noopener">réduction de 56% de son budget</a> (de 9 à 3,9 milliards de dollars), la NASA par une coupe de 46%, les NIH par une réduction de 37%. Certaines universités membres de l'AAU ont vu leur financement fédéral de recherche chuter de 25 à 32% en 2025 par rapport à 2024.</p>
+
+    <p>Pendant que la recherche publique américaine est sous pression, l'Europe consolide ses infrastructures. Pour les entreprises ayant des capacités de R&amp;D des deux côtés de l'Atlantique, la fenêtre pour repositionner des activités de recherche vers l'Europe — en tirant parti des financements Horizon et des nouveaux dispositifs de partenariat public-privé — est réelle. Et elle est probablement temporaire.</p>
+
+    <h2>4. La macro-incertitude : l'arbitrage impossible et comment le résoudre</h2>
+
+    <p>Le <a href="https://www.morganlewis.com/pubs/2026/01/us-international-trade-and-investment-key-shifts-in-2025-and-what-businesses-should-know-for-2026" target="_blank" rel="noopener">rapport Morgan Lewis de janvier 2026</a> sur les échanges commerciaux internationaux donne le ton : l'environnement tarifaire est "hautement dynamique, transactionnel dans le ton, spécifique à l'industrie dans l'impact". Les entreprises doivent intégrer l'intelligence commerciale dans leurs décisions de R&amp;D — connectant le tracking de politique douanière à la stratégie technologique, à l'investissement en capital, et à la localisation des moyens de production.</p>
+
+    <p>Ce qui change en 2026 par rapport aux cycles précédents, c'est la combinaison de quatre facteurs simultanés : incertitude macroéconomique, pression sur les marges, contraintes de financement public de la recherche, et fragmentation géopolitique des chaînes d'approvisionnement technologique. Chacun de ces facteurs, pris isolément, est gérable. Ensemble, ils créent une configuration inédite.</p>
+
+    <p>Dans ce contexte, les entreprises qui maintiennent leurs positions compétitives sont celles qui ont fait trois choses : elles ont concentré leurs investissements R&amp;D sur un nombre restreint de paris technologiques à fort potentiel différenciant. Elles ont développé des modèles de financement hybrides combinant fonds propres, crédit d'impôt recherche, et cofinancement européen. Et elles ont géographiquement diversifié leurs centres de R&amp;D non pas pour des raisons de coût mais pour des raisons d'accès aux écosystèmes de talents et de résilience face aux chocs géopolitiques.</p>
+
+    <hr class="divider" />
+
+    <h2>Ce que tout cela signifie pour votre prochaine décision d'allocation</h2>
+
+    <p>Si vous êtes en train de préparer votre budget R&amp;D pour 2027 — ou si vous révisez votre portefeuille technologique en réponse aux pressions macro actuelles — trois questions méritent d'être posées avec rigueur :</p>
+
+    <p><strong>Première question :</strong> Dans quelles technologies êtes-vous encore en avance sur la compétition mondiale ? Pas sur vos marchés locaux — sur la compétition mondiale. La réponse à cette question devrait dicter où vous concentrez vos investissements de différenciation.</p>
+
+    <p><strong>Deuxième question :</strong> Quel est votre niveau d'exposition aux risques de découplage technologique ? Si une part significative de votre chaîne d'approvisionnement technologique passe par des composants ou des connaissances qui se retrouvent au cœur du découplage USA-Chine, c'est une vulnérabilité stratégique qui nécessite une réponse R&amp;D — soit par localisation, soit par substitution technologique.</p>
+
+    <p><strong>Troisième question :</strong> Tirez-vous suffisamment parti du moment européen ? Le contraste entre les coupes américaines et la consolidation européenne de la recherche crée une fenêtre d'opportunité pour accéder à des financements non-dilutifs et repositionner des activités de recherche dans des écosystèmes en croissance.</p>
+
+    <p>La R&amp;D n'est pas une dépense. C'est le seul investissement qui vous permet de créer les options stratégiques dont vous aurez besoin dans un environnement que personne n'est capable de prédire avec précision. Mais pour que cet argument survive à un comité de direction sous pression, il faut pouvoir le démontrer avec des métriques adaptées, une géographie réfléchie, et un financement intelligent.</p>
+
+    <p>C'est la définition d'une stratégie R&amp;D pour 2026.</p>
+
+    <div class="sources">
+      <h3>Sources</h3>
+      <ul>
+        <li><a href="https://www.aspistrategist.org.au/us-and-chinese-tech-research-is-decoupling-aspis-critical-tech-tracker/" target="_blank" rel="noopener">ASPI Critical Tech Tracker — US-China research collaboration data (Nov. 2025)</a></li>
+        <li><a href="https://www.bloomberg.com/news/articles/2025-11-25/us-china-tension-fuels-decoupling-in-tech-research-study-shows" target="_blank" rel="noopener">Bloomberg — US-China Tensions Fuel Decoupling in Tech Research (Nov. 2025)</a></li>
+        <li><a href="https://itif.org/publications/2026/02/09/tracking-rd-leadership-us-advantage-narrowing-as-china-gains-ground/" target="_blank" rel="noopener">ITIF — Tracking R&D Leadership: US Advantage Narrowing (Feb. 2026)</a></li>
+        <li><a href="https://itif.org/publications/2025/11/10/decoupling-risks-semiconductor-export-controls-harm-us-chipmakers-innovation/" target="_blank" rel="noopener">ITIF — Decoupling Risks: Semiconductor Export Controls (Nov. 2025)</a></li>
+        <li><a href="https://www.europarl.europa.eu/doceo/document/A-10-2025-0107_EN.html" target="_blank" rel="noopener">European Parliament — Technological Sovereignty Report (June 2025)</a></li>
+        <li><a href="https://www.deloitte.com/us/en/insights/topics/business-strategy-growth/1q-2026-cfo-signals-survey.html" target="_blank" rel="noopener">Deloitte — Q1 2026 CFO Signals Survey (Apr. 2026)</a></li>
+        <li><a href="https://www.stlouisfed.org/on-the-economy/2026/mar/financing-rd-spending-role-corporate-cash-holdings" target="_blank" rel="noopener">Federal Reserve Bank of St. Louis — Financing R&D Spending (Mar. 2026)</a></li>
+        <li><a href="https://www.aau.edu/key-issues/federal-research-cuts-threaten-us-innovation-and-leadership" target="_blank" rel="noopener">AAU — Federal Research Cuts Threaten US Innovation (July 2025)</a></li>
+        <li><a href="https://www.morganlewis.com/pubs/2026/01/us-international-trade-and-investment-key-shifts-in-2025-and-what-businesses-should-know-for-2026" target="_blank" rel="noopener">Morgan Lewis — US International Trade and Investment (Jan. 2026)</a></li>
+        <li><a href="https://iriweb.org/innovation-growth-drivers-2/increase-innovation-roi/" target="_blank" rel="noopener">Innovation Research Interchange — Increase Innovation ROI</a></li>
+      </ul>
+    </div>
+
+  </div>
+</article>
+
+<!-- SUBSCRIBE BANNER -->
+<div class="subscribe-banner">
+  <div class="sub-text">
+    <h3>S'abonner à RD Chronicles</h3>
+    <p>Analyses bi-mensuelles sur la stratégie R&amp;D et l'innovation industrielle — directement sur LinkedIn.</p>
+  </div>
+  <a class="sub-btn" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7313827013595693059" target="_blank" rel="noopener">S'abonner sur LinkedIn</a>
+</div>
+
+<footer>
+  <span class="footer-brand">RD Chronicles</span>
+  <span>© 2026 — rdchronicles.fr</span>
+</footer>
+
+</body>
+</html>

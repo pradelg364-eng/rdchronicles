@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mesurer le ROI de votre R&amp;D en période de turbulences — RD Chronicles</title>
+
+  <!-- OG / Social -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Mesurer le ROI de votre R&amp;D en période de turbulences — ce qui marche vraiment" />
+  <meta property="og:description" content="Trois outils concrets pour justifier vos budgets, naviguer le découplage et accéder aux financements européens — pendant que vos concurrents attendent que ça se calme." />
+  <meta property="og:image" content="https://rdchronicles.fr/edition-13/og-b.png" />
+  <meta property="og:url" content="https://rdchronicles.fr/edition-13/option-b.html" />
+  <meta property="og:site_name" content="RD Chronicles" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mesurer le ROI de votre R&amp;D en période de turbulences — ce qui marche vraiment" />
+  <meta name="twitter:description" content="Trois actions immédiates pour les équipes R&D qui naviguent dans un contexte macro incertain." />
+  <meta name="twitter:image" content="https://rdchronicles.fr/edition-13/og-b.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" />
+
+  <style>
+    :root {
+      --bg: #0f1112;
+      --bg2: #161a1c;
+      --bg3: #1d2225;
+      --brand: #3ecfcf;
+      --brand-dim: #2a9494;
+      --txt: #e3e5e8;
+      --txt-mid: #9ba3ab;
+      --txt-dim: #5c6570;
+      --border: #252b2f;
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans: 'Satoshi', system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--txt);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .topbar {
+      width: 100%;
+      height: 3px;
+      background: var(--brand);
+    }
+
+    nav {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 24px 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--brand);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav-tag {
+      font-size: 13px;
+      color: var(--txt-mid);
+      font-weight: 500;
+    }
+
+    .hero {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 24px 40px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--brand);
+      color: var(--bg);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--txt);
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--txt-mid);
+      max-width: 640px;
+      line-height: 1.6;
+    }
+
+    .hero-meta {
+      margin-top: 32px;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      font-size: 13px;
+      color: var(--txt-dim);
+    }
+
+    .content {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 16px 24px 64px;
+    }
+
+    .content p {
+      margin-bottom: 1.5em;
+      color: var(--txt);
+    }
+
+    .content h2 {
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      font-weight: 400;
+      color: var(--txt);
+      margin: 2.8em 0 0.8em;
+      line-height: 1.3;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .content h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 3px;
+      background: var(--brand);
+      border-radius: 2px;
+    }
+
+    .content h3 {
+      font-family: var(--sans);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--brand);
+      margin: 2em 0 0.6em;
+      letter-spacing: 0.01em;
+    }
+
+    .content blockquote {
+      border-left: 3px solid var(--brand);
+      padding: 16px 24px;
+      margin: 2em 0;
+      background: var(--bg2);
+      border-radius: 0 8px 8px 0;
+      color: var(--txt-mid);
+      font-style: italic;
+      font-size: 1.05rem;
+    }
+
+    .content ul, .content ol {
+      padding-left: 1.5em;
+      margin-bottom: 1.5em;
+    }
+
+    .content li {
+      margin-bottom: 0.6em;
+      color: var(--txt);
+    }
+
+    .content strong {
+      color: var(--txt);
+      font-weight: 600;
+    }
+
+    .content a {
+      color: var(--brand);
+      text-decoration: none;
+      border-bottom: 1px solid var(--brand-dim);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .content a:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    /* ACTION CARD */
+    .action-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--brand);
+      border-radius: 8px;
+      padding: 28px 28px 24px;
+      margin: 2em 0;
+    }
+
+    .action-card .action-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 8px;
+    }
+
+    .action-card h3 {
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--txt);
+      margin: 0 0 12px;
+    }
+
+    .action-card .time-tag {
+      display: inline-block;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--txt-mid);
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .action-card p {
+      font-size: 0.95rem;
+      color: var(--txt-mid);
+      margin-bottom: 1em;
+    }
+
+    .action-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .action-card ul {
+      padding-left: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    .action-card li {
+      font-size: 0.95rem;
+      color: var(--txt-mid);
+      margin-bottom: 0.4em;
+    }
+
+    /* STAT GRID */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 2em 0;
+    }
+
+    .stat-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--brand);
+      padding: 18px;
+      border-radius: 8px;
+    }
+
+    .stat-box .stat-num {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--brand);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-box .stat-label {
+      font-size: 0.82rem;
+      color: var(--txt-mid);
+      line-height: 1.4;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3em 0;
+    }
+
+    /* SUBSCRIBE BANNER */
+    .subscribe-banner {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--brand);
+      max-width: 780px;
+      margin: 0 auto 0;
+      padding: 32px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .subscribe-banner .sub-text h3 {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--txt);
+      margin-bottom: 4px;
+    }
+
+    .subscribe-banner .sub-text p {
+      font-size: 0.88rem;
+      color: var(--txt-mid);
+      margin: 0;
+    }
+
+    .sub-btn {
+      display: inline-block;
+      background: var(--brand);
+      color: var(--bg);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.15s;
+      flex-shrink: 0;
+    }
+
+    .sub-btn:hover {
+      background: #4fe0e0;
+      transform: translateY(-1px);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 24px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--txt-dim);
+    }
+
+    footer .footer-brand {
+      color: var(--brand);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .sources {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 3em;
+    }
+
+    .sources h3 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--txt-mid);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .sources ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sources li {
+      font-size: 0.82rem;
+      color: var(--txt-dim);
+      margin-bottom: 8px;
+      padding-left: 12px;
+      border-left: 2px solid var(--border);
+    }
+
+    .sources a {
+      color: var(--txt-dim);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--txt-dim);
+    }
+
+    .sources a:hover {
+      color: var(--brand);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8rem; }
+      .subscribe-banner { flex-direction: column; align-items: flex-start; }
+      .action-card { padding: 20px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar"></div>
+
+<nav>
+  <a class="nav-brand" href="https://rdchronicles.fr">RD Chronicles</a>
+  <span class="nav-tag">R&amp;D Practitioners</span>
+</nav>
+
+<article>
+  <header class="hero">
+    <span class="badge">R&amp;D Practitioners</span>
+    <h1>Mesurer le ROI de votre R&amp;D en période de turbulences — ce qui marche vraiment</h1>
+    <p class="hero-sub">Trois outils concrets pour justifier vos budgets, naviguer le découplage technologique, et accéder aux financements européens — pendant que vos concurrents attendent que ça se calme.</p>
+    <div class="hero-meta">
+      <span>28 avril 2026</span>
+      <span>·</span>
+      <span>RD Chronicles</span>
+      <span>·</span>
+      <span>~10 min de lecture</span>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <p>Si vous travaillez en R&amp;D en ce moment, vous avez probablement remarqué que la pression pour "montrer des résultats" a changé de nature. Ce n'est plus seulement une question d'avancement de projets ou de dépôts de brevets. Les comités de direction veulent des chiffres défendables, comparables à d'autres lignes budgétaires. Et ils les veulent sur des cycles courts.</p>
+
+    <p>Le problème, c'est que les métriques standard du contrôle de gestion ne sont pas conçues pour la R&amp;D. Et la plupart des frameworks "R&amp;D ROI" disponibles supposent un environnement stable — ce qui n'est précisément pas ce que nous vivons.</p>
+
+    <p>Cette édition est pratique. Elle s'appuie sur des données récentes et propose trois actions concrètes que vous pouvez mettre en œuvre dans les 30 prochains jours.</p>
+
+    <h2>Le contexte en chiffres</h2>
+
+    <div class="stat-grid">
+      <div class="stat-box">
+        <div class="stat-num">−56%</div>
+        <div class="stat-label">Budget NSF proposé pour FY2026 — vos partenaires universitaires américains sont sous pression</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">14 Md€</div>
+        <div class="stat-label">Horizon Europe 2026-2027 — des appels à projets ouverts maintenant</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">−24%</div>
+        <div class="stat-label">Réduction de R&amp;D semi-conducteurs US en cas de découplage total avec la Chine</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">2005</div>
+        <div class="stat-label">Niveau auquel est retombée la collaboration de recherche USA-Chine en 2025</div>
+      </div>
+    </div>
+
+    <p><strong>Sur les financements publics :</strong> Aux États-Unis, la <a href="https://www.aau.edu/key-issues/federal-research-cuts-threaten-us-innovation-and-leadership" target="_blank" rel="noopener">NSF est ciblée par une réduction de 56%</a> (de 9 à 3,9 milliards de dollars). Les NIH subissent une coupe de 37%. Pour les équipes R&amp;D qui comptent sur des partenariats académiques américains, cela signifie que vos partenaires universitaires sont sous pression budgétaire — avec des effets sur les délais, les disponibilités de chercheurs, et la continuité des collaborations.</p>
+
+    <p><strong>Sur le découplage technologique :</strong> L'<a href="https://www.aspistrategist.org.au/us-and-chinese-tech-research-is-decoupling-aspis-critical-tech-tracker/" target="_blank" rel="noopener">ASPI</a> a documenté que la collaboration de recherche USA-Chine est revenue au niveau de 2005. L'<a href="https://itif.org/publications/2025/11/10/decoupling-risks-semiconductor-export-controls-harm-us-chipmakers-innovation/" target="_blank" rel="noopener">ITIF</a> chiffre l'impact d'un découplage complet des semi-conducteurs à 14 milliards de dollars de R&amp;D en moins pour l'industrie américaine. Pour vous, ingénieur ou PM, cela se traduit concrètement : si votre roadmap technologique dépend de composants ou de briques développées dans un contexte géopolitique tendu, votre planning est exposé à des risques que votre Gantt ne capture pas.</p>
+
+    <p><strong>Sur l'Europe :</strong> La Commission a validé <a href="https://rea.ec.europa.eu/news/horizon-europe-2025-eu73-billion-eu-funding-support-research-careers-and-competitiveness-2025-05-21_en" target="_blank" rel="noopener">14 milliards d'euros pour Horizon Europe 2026-2027</a>. Ce n'est pas une déclaration d'intention — c'est un pipeline de financement avec des appels à projets ouverts.</p>
+
+    <h2>Action 1 — Construire un tableau de bord ROI R&amp;D à trois horizons</h2>
+
+    <div class="action-card">
+      <div class="action-num">Action 1 sur 3</div>
+      <h3>Tableau de bord ROI à trois horizons</h3>
+      <span class="time-tag">⏱ 2-3 semaines</span>
+      <p>Le problème avec les métriques ROI standard appliquées à la R&amp;D, c'est qu'elles confondent des projets de nature fondamentalement différente. L'<a href="https://iriweb.org/innovation-growth-iders-2/increase-innovation-roi/" target="_blank" rel="noopener">IRI recommande</a> de séparer les métriques en trois horizons :</p>
+      <ul>
+        <li><strong>Horizon 1 (0-18 mois) :</strong> Métriques financières classiques — délai de mise sur marché, réduction de coût, taux de transfert vers les équipes produit. Ce sont ces projets que vous utilisez pour défendre votre budget global en comité.</li>
+        <li><strong>Horizon 2 (18 mois-4 ans) :</strong> Métriques de progression technique — maturité des prototypes, brevets déposés dans des segments stratégiques, taux de réutilisation des briques technologiques dans d'autres projets. L'argument : "nous construisons des actifs intellectuels qui réduiront nos coûts futurs."</li>
+        <li><strong>Horizon 3 (4 ans+) :</strong> Métriques d'options créées — partenariats de recherche actifs, présence dans des consortiums de standards, capacité à recruter dans des domaines d'avenir. Non-financières mais défendables si liées aux risques stratégiques.</li>
+      </ul>
+      <p><strong>Comment l'implémenter maintenant :</strong> Cartographiez votre portefeuille actuel selon ces trois horizons. Pour chaque projet Horizon 1, identifiez un KPI financier défendable. Pour les Horizon 2 et 3, définissez une métrique de progression présentable en comité sans justification technique longue. L'objectif n'est pas la perfection analytique — c'est de pouvoir répondre à "quel est le ROI de ce projet" avec une réponse adaptée à l'horizon de temps.</p>
+    </div>
+
+    <h2>Action 2 — Cartographier vos dépendances technologiques aux zones de découplage</h2>
+
+    <div class="action-card">
+      <div class="action-num">Action 2 sur 3</div>
+      <h3>Cartographie des dépendances technologiques</h3>
+      <span class="time-tag">⏱ 1 semaine</span>
+      <p>La plupart des équipes R&amp;D ont une bonne vision de leurs dépendances fournisseurs pour la production. Peu ont une vision aussi claire de leurs dépendances technologiques pour la R&amp;D elle-même. Dans le contexte de découplage USA-Chine, cela devient un risque opérationnel concret.</p>
+      <ul>
+        <li><strong>Étape 1 :</strong> Listez vos 10 principales dépendances technologiques (composants, logiciels, API, équipements de test, briques de recherche académique). Pour chacune, identifiez le pays d'origine de la R&amp;D sous-jacente.</li>
+        <li><strong>Étape 2 :</strong> Évaluez l'exposition au découplage sur deux axes : probabilité d'être affectée par des contrôles à l'export dans les 24 mois (faible/moyen/élevé) et impact sur votre roadmap si indisponible (marginal/significatif/bloquant).</li>
+        <li><strong>Étape 3 :</strong> Pour les dépendances à exposition moyenne-élevée et impact significatif-bloquant, définissez une stratégie de mitigation : alternative technologique existante ? Coût de développement interne ? Partenariat dans une zone géopolitique moins exposée ?</li>
+      </ul>
+      <p>L'ITIF a modélisé que les entreprises de semi-conducteurs américaines perdent entre 3 et 14 milliards de dollars de R&amp;D selon le niveau de découplage. Pour les entreprises qui dépendent de ces technologies en aval, l'impact se traduit par des retards de roadmap et des coûts de substitution. Mieux vaut l'anticiper que le découvrir au moment où un composant clé devient indisponible.</p>
+    </div>
+
+    <h2>Action 3 — Identifier les opportunités de cofinancement Horizon Europe</h2>
+
+    <div class="action-card">
+      <div class="action-num">Action 3 sur 3</div>
+      <h3>Scouting Horizon Europe dans votre roadmap</h3>
+      <span class="time-tag">⏱ 3-5 jours</span>
+      <p>Le programme Horizon Europe 2026-2027 représente 14 milliards d'euros. Les premiers appels à projets pour 2025 sont déjà ouverts via le portail EU Funding &amp; Tenders. Beaucoup d'équipes R&amp;D ignorent ces opportunités parce qu'elles associent les financements européens à une lourdeur administrative excessive. Ce préjugé est partiellement en train de se corriger.</p>
+      <p>Le programme 2025 a introduit des simplifications concrètes : des descriptions de sujets plus courtes, des "lump sum grants" représentant 35% du budget total, et des processus en deux étapes permettant de soumettre une proposition courte avant d'être invité à préparer le dossier complet.</p>
+      <ul>
+        <li>Le Parlement européen a listé en juin 2025 les technologies prioritaires pour la souveraineté : <strong>semi-conducteurs, IA, quantum, cybersécurité, cloud</strong>. Si votre roadmap touche à l'un de ces domaines, vous avez une base pour un appel à projets.</li>
+        <li>Les appels ouverts sont listés sur : <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/" target="_blank" rel="noopener">ec.europa.eu/info/funding-tenders</a></li>
+        <li>Prenez vos 3-5 projets à moyen terme de votre portefeuille. Cherchez les mots-clés correspondant à leurs domaines techniques dans le portail. Pour les correspondances trouvées, vérifiez les dates de clôture et le niveau d'effort requis pour une candidature de première étape.</li>
+        <li>Si vous n'avez pas de coordinateur expérimenté, identifiez un partenaire académique ou un bureau de transfert technologique régional qui peut co-porter le dossier.</li>
+      </ul>
+      <p><strong>La règle simple :</strong> si un appel à projets finance une activité que vous feriez de toute façon avec vos propres fonds, le coût de candidature est justifiable. Si l'appel vous oblige à dévier de votre roadmap pour correspondre aux critères, c'est généralement une mauvaise idée.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <h2>Le contexte macro comme levier, pas comme excuse</h2>
+
+    <p>Dans un contexte macro incertain — tarifs, pression sur les marges, volatilité géopolitique — la tentation dans beaucoup d'organisations est d'utiliser l'incertitude comme justification pour différer les décisions d'investissement. "On verra quand ça se stabilisera."</p>
+
+    <p>Le problème avec cette posture, c'est que la fenêtre de compétitivité technologique ne se met pas en pause. L'<a href="https://itif.org/publications/2026/02/09/tracking-rd-leadership-us-advantage-narrowing-as-china-gains-ground/" target="_blank" rel="noopener">ITIF note</a> qu'en 2024, dans quatre secteurs industriels clés, les entreprises chinoises ont déjà dépassé les américaines en intensité R&amp;D ajustée par la taille. La <a href="https://www.rndtoday.co.uk/technology-strategy/2025-saw-significant-rd-restructure/" target="_blank" rel="noopener">revue RD World Online</a> confirme que le positionnement relatif se joue précisément dans les périodes de turbulences, quand certains acteurs réduisent et d'autres concentrent leurs investissements.</p>
+
+    <blockquote>Le vrai avantage compétitif des équipes R&amp;D en 2026 n'est pas technologique — il est méthodologique.</blockquote>
+
+    <p>Ceux qui savent mesurer la valeur de leurs projets de façon adaptée à chaque horizon, qui ont cartographié leurs vulnérabilités géopolitiques, et qui savent mobiliser les financements disponibles dans l'écosystème européen, seront ceux qui sortiront de cette période avec un portefeuille technologique renforcé.</p>
+
+    <p>Pas parce qu'ils ont eu plus de chance. Parce qu'ils ont préparé les bons arguments au bon moment.</p>
+
+    <div class="sources">
+      <h3>Sources</h3>
+      <ul>
+        <li><a href="https://www.aspistrategist.org.au/us-and-chinese-tech-research-is-decoupling-aspis-critical-tech-tracker/" target="_blank" rel="noopener">ASPI Critical Tech Tracker — US-China research collaboration (Nov. 2025)</a></li>
+        <li><a href="https://itif.org/publications/2025/11/10/decoupling-risks-semiconductor-export-controls-harm-us-chipmakers-innovation/" target="_blank" rel="noopener">ITIF — Decoupling Risks: Semiconductor Export Controls (Nov. 2025)</a></li>
+        <li><a href="https://itif.org/publications/2026/02/09/tracking-rd-leadership-us-advantage-narrowing-as-china-gains-ground/" target="_blank" rel="noopener">ITIF — Tracking R&D Leadership (Feb. 2026)</a></li>
+        <li><a href="https://www.europarl.europa.eu/doceo/document/A-10-2025-0107_EN.html" target="_blank" rel="noopener">European Parliament — Technological Sovereignty Report (June 2025)</a></li>
+        <li><a href="https://rea.ec.europa.eu/news/horizon-europe-2025-eu73-billion-eu-funding-support-research-careers-and-competitiveness-2025-05-21_en" target="_blank" rel="noopener">European Research Executive Agency — Horizon Europe 2025 (May 2025)</a></li>
+        <li><a href="https://www.aau.edu/key-issues/federal-research-cuts-threaten-us-innovation-and-leadership" target="_blank" rel="noopener">AAU — Federal Research Cuts Threaten US Innovation (July 2025)</a></li>
+        <li><a href="https://iriweb.org/innovation-growth-drivers-2/increase-innovation-roi/" target="_blank" rel="noopener">Innovation Research Interchange — Increase Innovation ROI</a></li>
+        <li><a href="https://www.rndtoday.co.uk/technology-strategy/2025-saw-significant-rd-restructure/" target="_blank" rel="noopener">RD World Online — R&D Restructure driven by AI and US policy (Feb. 2026)</a></li>
+        <li><a href="https://www.deloitte.com/us/en/insights/topics/business-strategy-growth/1q-2026-cfo-signals-survey.html" target="_blank" rel="noopener">Deloitte — Q1 2026 CFO Signals Survey (Apr. 2026)</a></li>
+      </ul>
+    </div>
+
+  </div>
+</article>
+
+<!-- SUBSCRIBE BANNER -->
+<div class="subscribe-banner">
+  <div class="sub-text">
+    <h3>S'abonner à RD Chronicles</h3>
+    <p>Analyses bi-mensuelles sur la stratégie R&amp;D et l'innovation industrielle — directement sur LinkedIn.</p>
+  </div>
+  <a class="sub-btn" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7313827013595693059" target="_blank" rel="noopener">S'abonner sur LinkedIn</a>
+</div>
+
+<footer>
+  <span class="footer-brand">RD Chronicles</span>
+  <span>© 2026 — rdchronicles.fr</span>
+</footer>
+
+</body>
+</html>
